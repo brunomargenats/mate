@@ -1,0 +1,25 @@
+/* ==CSS Reset==
+Some inspiration from minireset.css v0.0.4 | github.com/jgthms/minireset.css
+*/
+
+html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}
+html{box-sizing:border-box}
+*,*:before,*:after{box-sizing:inherit}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+ul,ol{padding-left: 1em;}
+nav ul{list-style:none}
+a {text-decoration: none;}
+img,embed,iframe,object,video{height:auto;max-width:100%}
+audio{max-width:100%}
+iframe{border:0}
+table{border-collapse:collapse;border-spacing:0}
+td,th{padding:0;text-align:left}
+hr, ul, ol {margin: 1em 0;}
+article {padding-bottom:2em;}
+sup {font-size: 0.6rem}
+mark {
+    display: block;
+    background-color: rgba(255,238,136,.73);
+    padding: .075em .2em .15em;
+    box-shadow: inset 0 0 .5em rgba(255,238,136,.86667);
+}

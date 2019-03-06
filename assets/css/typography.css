@@ -1,0 +1,88 @@
+/* -------------------------------------------------------------------------------- */
+/*	Typography
+/* -------------------------------------------------------------------------------- */
+
+:root {
+    --font-display: 'Alegreya Sans';
+    --font-text: 'Barlow';
+    --color-text: var(--color-gray-10);
+    --color-text-heading: var(--color-black);
+    --color-text-subtle: var(--color-gray-6);
+    --color-link: var(--color-on-background);
+    --color-link-hover: var(--color-primary);
+}
+
+html {
+    text-rendering: optimizeLegibility;
+    line-height: 1.5;
+    font-size: 15px;
+    font-family: var(--font-text), sans-serif;
+}
+
+body {color: var(--color-text);}
+
+h1,h2,h3,h4,h5,h6 {
+font-family: var(--font-display), sans-serif;
+font-weight: 700;
+}
+
+    @media (min-width: 576px) {
+    html {font-size: 16px;}
+    }
+    @media (min-width: 768px) {
+    html {font-size: 17px;}
+    }
+    @media (min-width: 992px) {
+    html {font-size: 18px;}
+    }
+    @media (min-width: 1200px) {
+    html {font-size: 19px;}
+    }
+    @media (min-width: 1600px) {
+    html {font-size: 20px;}
+    }
+
+    /*ratio: major third https://www.modularscale.com/?1&em&1.25 */
+
+    @media (max-width: 767px) {
+    h1 {font-size: 2.488rem; }
+    h2 {font-size: 2.074rem; }
+    h3 {font-size: 1.728rem; }
+    h4 {font-size: 1.44rem; }
+    h5 {font-size: 1.2rem; }
+    h6, small {font-size: 1.0rem;}
+    body {font-size: 1.1rem;}
+    h1,h2,h3,h4,h5,h6,li {line-height: 1; margin:0 0 .5rem;}
+    }
+
+    /*ratio: minor third https://www.modularscale.com/?1&em&1.2 */
+    @media (min-width: 768px) {
+    h1 {font-size: 3.052rem; }
+    h2 {font-size: 2.441rem; }
+    h3 {font-size: 1.953rem; }
+    h4 {font-size: 1.563rem; }
+    h5 {font-size: 1.25rem; }
+    h6, small {font-size: 1.1rem;}
+    body {font-size: 1.1rem;}
+    h1,h2,h3,h4,h5,h6,li {line-height: 1; margin:0 0 .7rem;}
+    }
+
+/*Paragraphs*/
+
+p, mark, ul, blockquote, figure, pre {margin-bottom:1rem;}
+
+
+/*LINKS*/
+a, a:visited {
+    color: var(--color-link);
+    border-bottom:1px dotted var(--color-link);
+}
+a:hover, a:active{
+    color:var(--color-link-hover);
+    border-bottom:1px dotted var(--color-link-hover);
+}
+
+
+a, a:hover, a:active {
+transition: color 0.3s ease, border 0.3s ease;
+}
