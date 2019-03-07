@@ -15,23 +15,22 @@
 
 			<?php get_template_part( 'templates/header', 'title'); ?>
 
-			<?php get_template_part( 'templates/byline'); ?>
+			<?php get_template_part( 'templates/postmeta'); ?>
 
 		</header>
 
 		<section class="entry-content cf">
 
-			<?php the_content(); ?>
+			<?php the_excerpt(); ?>
 
 
 		</section>
 
 		<footer class="article-footer">
 
-			<?php get_template_part( 'templates/category-tags'); ?>
+			<?php //get_template_part( 'templates/category-tags'); ?>
 
-			<?php get_template_part( 'templates/comment', 'count'); ?>
-
+			<?php //get_template_part( 'templates/comment', 'count'); ?>
 
 		</footer>
 

@@ -15,8 +15,8 @@
 
 			<?php get_template_part( 'templates/header', 'title'); ?>
 
-			<?php // Delete or comment out if you don't need this on your page or post. Edit in /templates/byline.php ?>
-			<?php get_template_part( 'templates/byline'); ?>
+			<?php // Delete or comment out if you don't need this on your page or post. Edit in /templates/postmeta.php ?>
+			<?php get_template_part( 'templates/postmeta'); ?>
 
 		</header> <?php // end article header ?>
 

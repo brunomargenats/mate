@@ -1,34 +1,54 @@
-<?php if ( $comments ) : ?>
+<?php
+// don't load it if you can't comment
+if ( post_password_required() ) {
+    return;
+}
 
-	<div class="comments">
-	  
-		<h3 class="comment-reply-title"><?php _e( 'Comments', 'mate' ) ?></h3>
-		
-		<?php wp_list_comments( array( 'style' => 'div' ) ); ?>
-		
-		<?php if ( paginate_comments_links( array( 'echo' => false ) ) ) : ?>
-		
-			<div class="pagination"><?php paginate_comments_links(); ?></div>
-		
-		<?php endif; ?>
-    
-	</div><!-- .comments -->
-  
-<?php endif;
+?>
 
-if ( comments_open() || pings_open() ) :
+<?php // You can start editing here. ?>
 
-	comment_form( array( 
-		'comment_notes_before' 	=> '', 
-		'comment_notes_after' 	=> '' 
-	) );
-	
-elseif ( $comments ) : ?>
+    <?php if ( have_comments() ) : ?>
 
-	<div id="respond">
-		
-		<p class="closed"><?php _e( 'Comments closed', 'mate' ); ?></p>
-		
-	</div><!-- #respond -->
+        <h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', 'mate' ), __( '<span>One</span> Comment', 'mate' ), __( '<span>%</span> Comments', 'mate' ) );?></h3>
 
-<?php endif; ?>
+        <section class="commentlist">
+
+          <?php wp_list_comments( array(
+                'style'             => 'div',
+                'short_ping'        => true,
+                'avatar_size'       => 40,
+                'callback'          => 'mate_comments',
+                'type'              => 'all',
+                'reply_text'        => __('Reply', 'mate'),
+                'page'              => '',
+                'per_page'          => '',
+                'reverse_top_level' => null,
+                'reverse_children'  => '',
+                'format'            => 'HTML5'
+                )
+            );
+          ?>
+
+        </section>
+
+        <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+
+        	<nav class="navigation comment-navigation" role="navigation">
+
+              	<div class="comment-nav-prev"><?php previous_comments_link( __( '&larr; Previous Comments', 'mate' ) ); ?></div>
+              	<div class="comment-nav-next"><?php next_comments_link( __( 'More Comments &rarr;', 'mate' ) ); ?></div>
+
+        	</nav>
+
+        <?php endif; ?>
+
+        <?php if ( ! comments_open() ) : ?>
+
+        	<p class="no-comments"><?php _e( 'Comments are closed.' , 'mate' ); ?></p>
+
+        <?php endif; ?>
+
+    <?php endif; ?>
+
+<?php comment_form(); ?>

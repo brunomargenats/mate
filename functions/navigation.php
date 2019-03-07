@@ -22,14 +22,19 @@ $navigation_type = 'horizontal-navigation';
 
 
 //Filtering a Class in Navigation Menu Item (to add a dropdown class)
-//https://wordpress.stackexchange.com/questions/245503/add-a-custom-class-to-nav-li-item
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
-function special_nav_class($classes, $item){
-	if (in_array('menu-item-has-children', $classes) ){
-      $classes[] = 'dropdown';
-  }
-      return $classes;
+//https://wordpress.stackexchange.com/questions/90649/add-class-to-menu-items-of-one-specific-menu-nav-menu-css-class
+
+
+add_filter( 'nav_menu_css_class', 'special_nav_class', 10, 3 );
+function special_nav_class( $classes, $item, $args ) {
+    if ( 'primary-menu' === $args->theme_location ) {
+        if (in_array('menu-item-has-children', $classes) ){
+            $classes[] = 'dropdown';
+        }
+    }
+    return $classes;
 }
+
 
 
 
@@ -38,14 +43,16 @@ function special_nav_class($classes, $item){
 add_filter( 'nav_menu_link_attributes', 'add_class_to_items_link', 10, 3 );
 
 function add_class_to_items_link( $atts, $item, $args ) {
-  // check if the item has children
-  $hasChildren = (in_array('menu-item-has-children', $item->classes));
-  if ($hasChildren) {
-    // add the desired attributes:
-    $atts['class'] = 'dropdown-toggle';
-    $atts['data-toggle'] = 'dropdown';
-    $atts['data-target'] = '#';
-  }
+    if ( 'primary-menu' === $args->theme_location ) {
+        // check if the item has children
+        $hasChildren = (in_array('menu-item-has-children', $item->classes));
+        if ($hasChildren) {
+            // add the desired attributes:
+            $atts['class'] = 'dropdown-toggle';
+            $atts['data-toggle'] = 'dropdown';
+            $atts['data-target'] = '#';
+        }
+    }
   return $atts;
 }
 

@@ -20,10 +20,19 @@ get_template_part('functions/styles-scripts');
 // Comment this if the site don't need a JS responsive navigation.
 get_template_part('functions/navigation');
 
+
 /* REGISTER SIDEBAR
 ------------------------------------------------ */
 // Comment this if the site don't need a sidebar.
 get_template_part('functions/sidebars');
+
+
+
+
+/* COMMENTS FUNCTION
+------------------------------------------------ */
+// Comment this if the site don't use comments.
+get_template_part('functions/comments');
 
 
 
@@ -65,12 +74,12 @@ if ( ! function_exists( 'mate_time_link' ) ) :
 PAGE NAVI
 *********************/
 
-/* 
+/*
 * Numeric Page Navi (built into the theme by default).
 * (Updated 2018-05-17)
-* 
-* If you're using this with a custom WP_Query, make sure 
-* to add your query variable as an argument and this 
+*
+* If you're using this with a custom WP_Query, make sure
+* to add your query variable as an argument and this
 * function will play nice. Example:
 * 
 * plate_page_navi( $query );
@@ -108,11 +117,22 @@ function mate_page_navi( $wp_query ) {
 }
 
 
-/*mioo */
 
+/*********************
+CUSTOM EXCERPT
+*********************/
 
+// custom excerpt length
+function mate_custom_excerpt_length( $length ) {
+	return 20;
+}
+ add_filter( 'excerpt_length', 'mate_custom_excerpt_length', 999 );
 
-
+ // add more link to excerpt
+ function mate_custom_excerpt_more($more) {
+	return '<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">'. __('Read More', 'mate') .'</a>';
+ }
+ add_filter('excerpt_more', 'mate_custom_excerpt_more');
 
 
 
@@ -124,36 +144,37 @@ function mate_page_navi( $wp_query ) {
 if ( ! function_exists( 'mate_setup' ) ) {
 
 	function mate_setup() {
-		
+
 		// Automatic feed
 		add_theme_support( 'automatic-feed-links' );
-		
+
 		// Set content-width
 		global $content_width;
-		if ( ! isset( $content_width ) ) $content_width = 620;
-		
+		if ( ! isset( $content_width ) ) $content_width = 1200;
+
 		// Post thumbnails
 		add_theme_support( 'post-thumbnails' );
 /*		add_image_size( 'post-image', 620, 9999 );*/
-		
+
 		// Title tag
 		add_theme_support( 'title-tag' );
-		
+
 		// Post formats
-		add_theme_support( 'post-formats', array( 'aside' ) );
-		
+		//add_theme_support( 'post-formats', array( 'aside' ) );
+
 		// Add nav menu
 		register_nav_menu( 'primary-menu', __( 'Primary Menu', 'mate' ) );
-		
+
 		// Make the theme translation ready
 		load_theme_textdomain( 'mate', get_template_directory() . '/languages' );
-		
+
 		$locale_file = get_template_directory() . "/languages/" . get_locale();
-		
+
 		if ( is_readable( $locale_file ) ) {
 			require_once( $locale_file );
 		}
-		
+
+
 	}
 	add_action( 'after_setup_theme', 'mate_setup' );
 

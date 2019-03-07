@@ -67,10 +67,6 @@ font-weight: 700;
     h1,h2,h3,h4,h5,h6,li {line-height: 1; margin:0 0 .7rem;}
     }
 
-/*Paragraphs*/
-
-p, mark, ul, blockquote, figure, pre {margin-bottom:1rem;}
-
 
 /*LINKS*/
 a, a:visited {

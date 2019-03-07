@@ -15,7 +15,6 @@ function mate_scripts_styles() {
 
 		/*   REGISTER ALL JS FOR SITE */
  		/* true = in_footer */
-		wp_register_script('mate_construct', get_theme_file_uri('/assets/js/construct.js'), array( 'jquery' ), wp_get_theme( 'mate' )->get( 'Version' ), true );
 		wp_register_script( 'mate_scripts', get_theme_file_uri('/assets/js/scripts.js'), '', wp_get_theme( 'mate' )->get( 'Version' ), true );
 		wp_register_script( 'mate_ponyfill', get_theme_file_uri('/assets/js/css-vars-ponyfill.min.js'), '', wp_get_theme( 'mate' )->get( 'Version' ), true );
 
@@ -30,9 +29,8 @@ function mate_scripts_styles() {
 			wp_enqueue_style( 'mate_forms');
 
 			/* CALL ALL SCRIPTS */
-			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {wp_enqueue_script( 'comment-reply' );}
 
-			wp_enqueue_script('mate_construct');
+
 			wp_enqueue_script('mate_ponyfill');
 			wp_enqueue_script('mate_scripts');
 

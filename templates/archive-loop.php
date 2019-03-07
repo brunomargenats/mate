@@ -21,7 +21,7 @@
                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
             </h3>
 
-			<?php get_template_part( 'templates/byline'); ?>
+			<?php get_template_part( 'templates/postmeta'); ?>
 
 		</header>
 

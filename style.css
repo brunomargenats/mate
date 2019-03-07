@@ -2,7 +2,7 @@
 
 	Theme Name: Mate
   Text Domain: mate
-	Version: 0.2
+	Version: 0.3
 	Description: Mate is an starter theme for fantastic WordPress projects
 	Tags: blog, one-column, custom-menu, featured-images, post-formats, threaded-comments, translation-ready
 	Author: Bruno Margenats
@@ -79,8 +79,9 @@ https://medium.com/codyhouse/create-your-design-system-part-3-colors-798e4729921
 
 
 #content {max-width: 760px;
-  margin:0 auto;
-  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  /*position: relative;*/
 }
 
 /* === CSS === */
@@ -157,10 +158,6 @@ z-index: 11;
   }
 
 
-  
-
-
-
     .js-nav-active .header-nav {
       z-index: 13;
     }
@@ -172,7 +169,12 @@ z-index: 11;
 
 
 
-
+/*Articles*/
+header.article-header .post-meta {margin-bottom: 1.5em}
+header.article-header .post-meta span {margin-right: 1.5em;}
+header.article-header .post-meta, header.article-header .post-meta a
+{font-weight: 700; font-size: 0.8rem; color: var(--color-gray-6); border-bottom:0;}
+header.article-header .post-meta .post-meta-categories a {color: var(--color-primary)}
 
 
 
