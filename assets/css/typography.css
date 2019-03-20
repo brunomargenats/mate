@@ -24,6 +24,7 @@ body {color: var(--color-text);}
 h1,h2,h3,h4,h5,h6 {
 font-family: var(--font-display), sans-serif;
 font-weight: 700;
+line-height: 1;
 }
 
     @media (min-width: 576px) {
@@ -52,7 +53,7 @@ font-weight: 700;
     h5 {font-size: 1.2rem; }
     h6, small {font-size: 1.0rem;}
     body {font-size: 1.1rem;}
-    h1,h2,h3,h4,h5,h6,li {line-height: 1; margin:0 0 .5rem;}
+    h1,h2,h3,h4,h5,h6,li {margin:0 0 .5rem;}
     }
 
     /*ratio: minor third https://www.modularscale.com/?1&em&1.2 */
@@ -64,7 +65,7 @@ font-weight: 700;
     h5 {font-size: 1.25rem; }
     h6, small {font-size: 1.1rem;}
     body {font-size: 1.1rem;}
-    h1,h2,h3,h4,h5,h6,li {line-height: 1; margin:0 0 .7rem;}
+    h1,h2,h3,h4,h5,h6,li { margin:0 0 .7rem;}
     }
 
 
@@ -81,4 +82,26 @@ a:hover, a:active{
 
 a, a:hover, a:active {
 transition: color 0.3s ease, border 0.3s ease;
+}
+
+/*Formatting*/
+blockquote{
+    background-color: var(--color-gray-1);
+    border-left: 5px solid var(--color-primary);
+    font-size: .9rem;
+    padding: var(--grid-spacing);
+}
+
+blockquote cite {
+font-weight: 700;
+font-size: .8rem;
+}
+
+pre {
+background-color: var(--color-gray-1);
+border: 1px solid var(--color-gray-4);
+width: 100%;
+display: block;
+font-size: .8rem;
+padding: var(--grid-spacing);
 }

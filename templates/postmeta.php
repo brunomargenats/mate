@@ -17,7 +17,10 @@
 
         // Finally, let's write all of this to the page.
         echo '' . $byline . '</span>';
+        $category_list = get_the_category_list(', ');
+        if ($category_list){
         printf( '&nbsp;&nbsp;<span class="post-meta-categories">%1$s</span>' , get_the_category_list(', ') );
+        }
         echo '&nbsp;&nbsp;<span class="posted-on">' . mate_time_link() . '</span>';
 
     } else {

@@ -14,11 +14,16 @@ get_template_part('functions/styles-scripts');
 
 
 
-
 /* JS NAVIGATION
 ------------------------------------------------ */
 // Comment this if the site don't need a JS responsive navigation.
 get_template_part('functions/navigation');
+
+
+/* CUSTOM GUTENBERG
+------------------------------------------------ */
+// Clean some gutenberg unnecessary things
+get_template_part('functions/gutenberg');
 
 
 /* REGISTER SIDEBAR
@@ -130,7 +135,7 @@ function mate_custom_excerpt_length( $length ) {
 
  // add more link to excerpt
  function mate_custom_excerpt_more($more) {
-	return '<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">'. __('Read More', 'mate') .'</a>';
+	return '<div><a class="read-more" href="'. get_permalink( get_the_ID() ) . '">'. __('Read More', 'mate') .'</a></div>';
  }
  add_filter('excerpt_more', 'mate_custom_excerpt_more');
 
@@ -154,13 +159,20 @@ if ( ! function_exists( 'mate_setup' ) ) {
 
 		// Post thumbnails
 		add_theme_support( 'post-thumbnails' );
-/*		add_image_size( 'post-image', 620, 9999 );*/
+
+		// Add thumbnails image sizes
+		/* add_image_size( 'post-image', 620, 9999 );*/
+
+		// align-wide and align-full
+		add_theme_support( 'align-wide' );
 
 		// Title tag
 		add_theme_support( 'title-tag' );
 
 		// Post formats
 		//add_theme_support( 'post-formats', array( 'aside' ) );
+
+
 
 		// Add nav menu
 		register_nav_menu( 'primary-menu', __( 'Primary Menu', 'mate' ) );
@@ -180,84 +192,4 @@ if ( ! function_exists( 'mate_setup' ) ) {
 
 }
 
-
-
-/* CUSTOMIZER SETTINGS
------------------------------------------------- */
-
-class mate_customize {
-
-	public static function mate_register ( $wp_customize ) {
-
-		// Dark Mode
-		$wp_customize->add_setting( 'mate_dark_mode', array(
-			'capability' 		=> 'edit_theme_options',
-			'sanitize_callback' => 'mate_sanitize_checkbox',
-			'transport'			=> 'postMessage'
-		) );
-
-		$wp_customize->add_control( 'mate_dark_mode', array(
-			'type' 			=> 'checkbox',
-			'section' 		=> 'colors', // Default WP section added by background_color
-			'label' 		=> __( 'Dark Mode', 'mate' ),
-			'description' 	=> __( 'Displays the site with white text and black background. If Background Color is set, only the text color will change.', 'mate' ),
-		) );
-		
-
-		// Make built-in controls use live JS preview
-		$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
-		$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
-		
-		
-		// SANITATION
-
-		// Sanitize boolean for checkbox
-		function mate_sanitize_checkbox( $checked ) {
-			return ( ( isset( $checked ) && true == $checked ) ? true : false );
-		}
-		
-	}
-
-	// Initiate the live preview JS
-	public static function mate_live_preview() {
-		wp_enqueue_script( 'mate-themecustomizer', get_template_directory_uri() . '/assets/js/theme-customizer.js', array(  'jquery', 'customize-preview' ), '', true );
-	}
-
-}
-
-// Setup the Theme Customizer settings and controls
-add_action( 'customize_register', array( 'mate_customize', 'mate_register' ) );
-
-// Enqueue live preview javascript in Theme Customizer admin screen
-add_action( 'customize_preview_init', array( 'mate_customize' , 'mate_live_preview' ) );
-
-
-/* ---------------------------------------------------------------------------------------------
-   SPECIFY GUTENBERG SUPPORT
------------------------------------------------------------------------------------------------- */
-
-
-if ( ! function_exists( 'mate_add_gutenberg_features' ) ) :
-
-	function mate_add_gutenberg_features() {
-
-		/* Gutenberg Palette --------------------------------------- */
-
-		add_theme_support( 'editor-color-palette', array(
-			array(
-				'name' 	=> _x( 'Black', 'Name of the black color in the Gutenberg palette', 'mate' ),
-				'slug' 	=> 'black',
-				'color' => '#000',
-			),
-			array(
-				'name' 	=> _x( 'White', 'Name of the white color in the Gutenberg palette', 'mate' ),
-				'slug' 	=> 'white',
-				'color' => '#fff',
-			),
-		) );
-
-	}
-	add_action( 'after_setup_theme', 'mate_add_gutenberg_features' );
-
-endif;
 

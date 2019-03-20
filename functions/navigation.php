@@ -8,7 +8,7 @@ function mate_body_classes( $classes ) {
 /* full-navigation = Only hamburger icon is shown. Full size menu (vertical) on click. */
 /* fixed-navigation = Navigation always fixed on top */
 
-$navigation_type = 'horizontal-navigation';
+$navigation_type = 'full-navigation';
 //$navigation_type = 'full-navigation';
 //$navigation_type = 'horizontal-navigation fixed-navigation';
 //$navigation_type = 'full-navigation fixed-navigation';

@@ -65,7 +65,7 @@ button,input[type="submit"], select {border: none;
     appearance:none;
 }
 
-
+input[type="submit"] {margin-top: 1rem;}
 button, input[type="submit"], input[type="checkbox"], input[type="radio"] {cursor: pointer;}
 
 
