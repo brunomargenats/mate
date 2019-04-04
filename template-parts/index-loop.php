@@ -13,24 +13,23 @@
 
 		<header class="article-header">
 
-			<?php get_template_part( 'templates/header', 'title'); ?>
+			<?php get_template_part( 'template-parts/header', 'title'); ?>
 
-			<?php get_template_part( 'templates/postmeta'); ?>
+			<?php get_template_part( 'template-parts/postmeta'); ?>
 
 		</header>
 
 		<section class="entry-content cf">
 
-			<?php the_excerpt(); ?>
-
+		<?php get_template_part( 'template-parts/content-excerpt'); ?>
 
 		</section>
 
 		<footer class="article-footer">
 
-			<?php //get_template_part( 'templates/category-tags'); ?>
+			<?php //get_template_part( 'template-parts/category-tags'); ?>
 
-			<?php //get_template_part( 'templates/comment', 'count'); ?>
+			<?php //get_template_part( 'template-parts/comment', 'count'); ?>
 
 		</footer>
 
@@ -38,10 +37,10 @@
 
 <?php endwhile; ?>
 
-    <?php get_template_part( 'templates/post-navigation'); ?>
+    <?php get_template_part( 'template-parts/post-navigation'); ?>
 
 <?php else : ?>
 
-    <?php get_template_part( 'templates/404'); ?>
+    <?php get_template_part( 'template-parts/404'); ?>
 
 <?php endif; ?>

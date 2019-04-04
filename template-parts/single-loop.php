@@ -15,8 +15,8 @@
 
 			<h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
 
-			<?php // Delete or comment out if you don't need this on your page or post. Edit in /templates/postmeta.php ?>
-			<?php get_template_part( 'templates/postmeta'); ?>
+			<?php // Delete or comment out if you don't need this on your page or post. Edit in /template-parts/postmeta.php ?>
+			<?php get_template_part( 'template-parts/postmeta'); ?>
 
 		</header> <?php // end article header ?>
 
@@ -26,13 +26,15 @@
         		get_template_part( 'format', get_post_format() ); 
         	} ?>
 
+			<?php get_template_part( 'template-parts/post-thumbnail'); ?>
+
         	<?php the_content(); ?>
 
         </section> <?php // end article section ?>
 
 		<footer class="article-footer">
 
-			<?php get_template_part( 'templates/category-tags'); ?>
+			<?php get_template_part( 'template-parts/category-tags'); ?>
 
 		</footer> <?php // end article footer ?>
 
@@ -44,6 +46,6 @@
 
 <?php else : ?>
 
-    <?php get_template_part( 'templates/404'); ?>
+    <?php get_template_part( 'template-parts/404'); ?>
 
 <?php endif; ?>

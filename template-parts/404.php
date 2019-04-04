@@ -21,6 +21,6 @@ $count = $GLOBALS['wp_query']->post_count;
         <p><?php _e( 'Your query didn\'t return anything. Try checking things.', 'mate' ); ?></p>
     </section>
     <footer class="article-footer">
-        <!-- <?php _e( 'This is the error message in the templates/404.php template.', 'mate' ); ?> -->
+        <!-- <?php _e( 'This is the error message in the template-parts/404.php template.', 'mate' ); ?> -->
     </footer>
 </article>

@@ -55,19 +55,21 @@ https://medium.com/codyhouse/create-your-design-system-part-3-colors-798e4729921
     --color-warning: #ffd137;
     --color-on-warning: #cc9d05;
 
-    /* Shades - 12 steps*/
-    --color-black: #1d1d21;
-    --color-gray-10: #2e2e31;
-    --color-gray-6: #7b7a7d;
-    --color-gray-5: #9e9d9e;
-    --color-gray-4: #adadad;
-    --color-gray-3: #c9c9ca;
-    --color-gray-2: #ebebeb;
-    --color-gray-1: #f5f4f5;
-    --color-white: white;
+    /* Shades - 10 steps. Inspiration: https://www.materialui.co/colors*/
+    --color-gray-10: #1d1d21;
+    --color-gray-9: #212121;
+    --color-gray-8: #424242;
+    --color-gray-7: #616161;
+    --color-gray-6: #757575;
+    --color-gray-5: #9E9E9E;
+    --color-gray-4: #BDBDBD;
+    --color-gray-3: #E0E0E0;
+    --color-gray-2: #EEEEEE;
+    --color-gray-1: #F5F5F5;
+    --color-gray-0: #FAFAFA;
 
     /* default border */
-    --color-border: var(--color-gray-2);
+    --color-border: var(--color-gray-4);
 
      /* LOGO */
     --logo-width:40px;
@@ -77,6 +79,11 @@ https://medium.com/codyhouse/create-your-design-system-part-3-colors-798e4729921
 
 
 /* === END OF CSS VARIABLES === */
+
+/* == debuggin tools ==
+*{outline:1px solid indigo!important}
+*{ background-color: rgba(0,0,0,0.1) }
+*/
 
 
 #content {
@@ -96,13 +103,15 @@ https://medium.com/codyhouse/create-your-design-system-part-3-colors-798e4729921
   background: var(--color-primary);
 }
 
-/*tools*/
-/** {outline:1px solid #03DAC6}*/
-
 .clearfix::after, .entry-content::after {
     content: "";
     clear: both;
     display: table;
+  }
+
+
+  .entry-content, .article-footer {
+    margin-bottom: 1rem;
   }
 
   /*HEADER*/
@@ -127,12 +136,6 @@ https://medium.com/codyhouse/create-your-design-system-part-3-colors-798e4729921
 position: relative;}
 
 
-.js-nav-active #inner-header{
-/*width: calc(100% - (var(--grid-spacing) * 2));
-max-width: calc(var(--grid-max-width) - (var(--grid-spacing) * 2));
-position: fixed;*/
-z-index: 13;
-}
 
 
 #siteinfo {/*width:100%; float:left; position:relative;*/ z-index: 11;}

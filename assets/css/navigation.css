@@ -110,8 +110,8 @@ button.nav-toggle {
   position: relative;
   display: block;
   width: 29px;
-  height: 26px;
-  top: calc(50% - 13px); /*half of heigth*/
+  height: 24px;
+  top: calc(50% - 12px); /*half of heigth*/
   background: transparent;
   border-top: 4px solid;
   border-bottom: 4px solid;
@@ -202,36 +202,59 @@ a.nav-toggle {display:none!important}
   content: "–";
 }
 
+.js-nav-active #inner-header {
+  max-width: calc(var(--container-max-width) - var(--grid-spacing) - var(--grid-spacing));
+  width:calc(100% - var(--grid-spacing) - var(--grid-spacing));
+  position: fixed;
+  z-index: 13;
+}
+
+
+
+
+
 
 /*Fixed navigation*/
 
 .fixed-navigation #header {
   position: fixed;
-  left: 50%;
-  transform: translate(-50%, 0);
+ /* left: 50%;
+  transform: translate(-50%, 0);*/
   background: var(--color-background);
   width: 100%;
   margin-top: 0;
   padding: var(--grid-spacing);
+  left:0;
 }
 .fixed-navigation #inner-header {
-  max-width: calc(var(--container-max-width) - var(--grid-spacing) - var(--grid-spacing)) !important;
   margin:0 auto;
+  max-width: calc(var(--container-max-width) - var(--grid-spacing) - var(--grid-spacing));
+  width:100%;
+  position:relative;
 }
+
+
+/*
+.js-nav-active .fixed-navigation #inner-header {
+  width: 100%;
+  position: relative;
+}*/
+
 
 .js-nav-active .fixed-navigation #header {
 height: 100%;
-padding-left: 0;
-padding-right: 0;
+/*padding-left: 0;
+padding-right: 0;*/
 }
 
+/*
 .js-nav-active .fixed-navigation #inner-header {
   left: 0;
   position: relative;
-  width: calc(100% - var(--grid-spacing) - var(--grid-spacing)) !important;
  /* height: 100%;*/
+/*}*/
 
-}
+
 .js-nav-active .fixed-navigation #nav-button {
   bottom: initial;
   /*padding-top: var(--grid-spacing);*/
@@ -292,7 +315,10 @@ position: absolute;
 
 /* HORIZONTAL MENU STYLES*/
 @media screen and (min-width: 768px) {
-
+  .js-nav-active .horizontal-navigation #inner-header{
+    width: auto;
+    position: relative;
+   }
 
   .js-nav-active .horizontal-navigation .overlay {display: none;}
 
@@ -313,7 +339,7 @@ position: absolute;
     content: "";
     width: 0;
     height: 0;
-    margin: 0.5em 0 0 0.5em;
+    margin: 0.4em 0 0 0.5em;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-top: 6px solid var(--color-link);
@@ -322,7 +348,7 @@ position: absolute;
     content: "";
     width: 0;
     height: 0;
-    margin: 0.5em 0 0 0.5em;
+    margin: 0.3em 0 0 0.5em;
     border-bottom: 6px solid transparent;
     border-top: 6px solid transparent;
     border-left: 6px solid var(--color-link);

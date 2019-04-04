@@ -57,7 +57,7 @@ https://picturepan2.github.io/spectre/elements/forms.html
 
 
 /* Mini reset*/
-button,input,select,textarea{margin:0}
+button,input,select,textarea, label{margin:1rem 0}
 button,input[type="submit"], select {border: none;
     outline: none;
     -webkit-appearance:none;
@@ -65,7 +65,8 @@ button,input[type="submit"], select {border: none;
     appearance:none;
 }
 
-input[type="submit"] {margin-top: 1rem;}
+
+
 button, input[type="submit"], input[type="checkbox"], input[type="radio"] {cursor: pointer;}
 
 
@@ -80,7 +81,7 @@ label, input, textarea, select{
    textarea,
    select
    {
-    background:var(--form-element-bg);
+    background-color:var(--form-element-bg);
     background-image:none;
     border:.05rem solid var(--form-element-border);
     border-radius:.1rem;

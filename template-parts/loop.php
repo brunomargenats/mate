@@ -13,10 +13,7 @@
 
 		<header class="article-header">
 
-			<?php get_template_part( 'templates/header', 'title'); ?>
-
-			<?php // Delete or comment out if you don't need this on your page or post. Edit in /templates/postmeta.php ?>
-			<?php get_template_part( 'templates/postmeta'); ?>
+			<?php get_template_part( 'template-parts/header', 'title'); ?>
 
 		</header> <?php // end article header ?>
 
@@ -44,10 +41,10 @@
 
 <?php endwhile; ?>
 
-<?php get_template_part( 'templates/post-navigation'); ?>
+<?php get_template_part( 'template-parts/post-navigation'); ?>
 
 <?php else : ?>
 
-    <?php get_template_part( 'templates/404'); ?>
+    <?php get_template_part( 'template-parts/404'); ?>
 
 <?php endif; ?>

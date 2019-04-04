@@ -20,11 +20,23 @@ License: Open Font License
 Source: https://fonts.google.com/specimen/Barlow
 
 Alegreya Sans
-License: Open Font License 
+License: Open Font License
 Source: https://fonts.google.com/specimen/Alegreya+Sans
 
 
 == Changelog ==
+
+Version 0.5
+-------------------------
+- Layouts and tiny grid system.
+
+Version 0.4
+-------------------------
+- Some bugs fixed
+
+Version 0.3
+-------------------------
+- Navigation
 
 Version 0.2 
 -------------------------

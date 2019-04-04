@@ -21,7 +21,7 @@
                 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
             </h3>
 
-			<?php get_template_part( 'templates/postmeta'); ?>
+			<?php get_template_part( 'template-parts/postmeta'); ?>
 
 		</header>
 
@@ -39,7 +39,7 @@
 
 		<footer class="article-footer">
 
-			<?php get_template_part( 'templates/category-tags'); ?>
+			<?php get_template_part( 'template-parts/category-tags'); ?>
 
 		</footer>
 
@@ -47,10 +47,10 @@
 
 <?php endwhile; ?>
 
-    <?php get_template_part( 'templates/post-navigation'); ?>
+    <?php get_template_part( 'template-parts/post-navigation'); ?>
 
 <?php else : ?>
 
-    <?php get_template_part( 'templates/404'); ?>
+    <?php get_template_part( 'template-parts/404'); ?>
 
 <?php endif; ?>

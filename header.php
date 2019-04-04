@@ -24,8 +24,8 @@
 
 	<body <?php body_class(); ?> itemscope itemtype="https://schema.org/WebPage">
 
-		<a class="skip-link screen-reader-text" href="#site-content"><?php _e( 'Skip to the content', 'mate' ); ?></a>
-		<a class="skip-link screen-reader-text" href="#menu-menu"><?php _e( 'Skip to the main menu', 'mate' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to the content', 'mate' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#nav"><?php _e( 'Skip to the main menu', 'mate' ); ?></a>
         <div class="overlay"> </div>
     <div id="container" class="container progressive">
 
@@ -57,8 +57,6 @@
                                 </nav>
                         </div>
                         <?php endif; ?>
-                        
-
             </div>
 
 

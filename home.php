@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <?php
-/* If "Page with sidebar" is set in blog page, we have to show the sidebar here */
 /* We get the ID of the Blog page */
 $page_for_posts = get_option( 'page_for_posts' );
 /* We get the template of the Blog page */
@@ -22,18 +21,17 @@ if($is_sidebar) {
 ?>
 <div id="content">
 
-    <div id="inner-content" class="wrap">
+	<div id="inner-content" class="wrap">
 
-        <div id="main" class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
+		<div id="main" class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
 
-            <?php get_template_part( 'template-parts/single','loop'); ?>
+			<?php get_template_part( 'template-parts/index','loop'); ?>
 
-        </div>
+		</div>
 
-    </div>
+	</div>
 
 </div>
-
 <?php
 /* Just closing sidebar column */
 if($is_sidebar) {
@@ -45,5 +43,6 @@ if($is_sidebar) {
 	';
 }
 ?>
+
 
 <?php get_footer(); ?>
