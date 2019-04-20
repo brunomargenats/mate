@@ -2,7 +2,7 @@
 
 	Theme Name: Mate
   Text Domain: mate
-	Version: 0.4
+	Version: 0.5.1
 	Description: Mate is an starter theme for fantastic WordPress projects
 	Tags: blog, one-column, custom-menu, featured-images, post-formats, threaded-comments, translation-ready
 	Author: Bruno Margenats
@@ -182,44 +182,3 @@ text-transform: uppercase}
 header.article-header .post-meta .post-meta-categories a {color: var(--color-primary)}
 
 
-
-
-/* Screen Reader Text */
-
-.screen-reader-text {
-	clip: rect( 1px, 1px, 1px, 1px );
-	height: 1px;
-	overflow: hidden;
-    position: absolute !important;
-    width: 1px;
-}
-
-.screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-weight: 700;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
-}
-
-
-
-/* ===== TO DO =====*/
-/*
-- Disable gutenberg block styles and them on theme css
-- Add css to quotes and other defaults blocs
-- Add contact form 7 compatibility and disable styles.
-- End page navigation et pagenavi
-- Estilo del blog como http://preview.themeforest.net/item/gutentype-gutenberg-wordpress-blog-theme/full_screen_preview/22486033
-*/

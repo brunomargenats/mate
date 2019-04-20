@@ -14,6 +14,7 @@ if ($page_for_blog_template == 'layouts/page-with-sidebar.php'){
 
 if($is_sidebar) {
 	echo'
+	<div class="wrapper">
 	<div class="row">
 	<div class="column col-8">
 	';
@@ -39,7 +40,7 @@ if($is_sidebar) {
 	<div class="column col-4">';
 	get_sidebar();
 	echo'</div>
-</div>
+</div></div>
 	';
 }
 ?>

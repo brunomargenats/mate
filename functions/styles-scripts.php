@@ -46,10 +46,10 @@ function mate_scripts_styles() {
 
 
 /* DEREGISTER CONTACT FORM 7 CSS */
-/*add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
+add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
 function wps_deregister_styles() {
     wp_deregister_style( 'contact-form-7' );
-}*/
+}
 
 
 /*https://stackoverflow.com/questions/19263390/wordpress-loading-multiple-scripts-with-enqueue*/

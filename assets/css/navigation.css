@@ -11,6 +11,7 @@
   .nav-collapse li {
     width: 100%;
     display: block;
+    margin-top:0;
   }
 
   .js .nav-collapse,
@@ -184,12 +185,7 @@ a.nav-toggle {display:none!important}
   padding: 0;
 }
 
-@media screen and (min-width: 768px) {
-  .horizontal-navigation .dropdown ul,
-  .horizontal-navigation .dropdown .dropdown.opened .dropdown-toggle {
-    background: var(--color-surface);
-  }
-}
+
 
 .dropdown-toggle:after {
   content: "+";
@@ -201,6 +197,17 @@ a.nav-toggle {display:none!important}
 .dropdown.opened > .dropdown-toggle:after {
   content: "–";
 }
+
+@media screen and (min-width: 768px) {
+  .horizontal-navigation .dropdown ul,
+  .horizontal-navigation .dropdown .dropdown.opened .dropdown-toggle {
+    background: var(--color-surface);
+  }
+  .horizontal-navigation .dropdown.opened > .dropdown-toggle:after {
+    content: "";
+  }
+}
+
 
 .js-nav-active #inner-header {
   max-width: calc(var(--container-max-width) - var(--grid-spacing) - var(--grid-spacing));
@@ -287,7 +294,7 @@ position: absolute;
 
 
     .full-navigation .container-menu{
-      width: 80vw;
+      width: 70vw;
       max-width: 600px;
       left: 0;bottom: 0;top: 0;right: 0;margin: 0 auto;
       display: flex;           /* establish flex container */
@@ -301,7 +308,7 @@ position: absolute;
 @media screen and (max-width: 767px) {
   /*In horizontal-navigation this is limited for mobile only*/
     .horizontal-navigation .container-menu{
-    width: 80vw;
+    width: 70vw;
     max-width: 600px;
     left: 0;bottom: 0;top: 0;right: 0;margin: 0 auto;display: flex;flex-direction: column;justify-content: center;align-items: center;
     position: fixed;
@@ -340,11 +347,14 @@ position: absolute;
     width: 0;
     height: 0;
     margin: 0.4em 0 0 0.5em;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid var(--color-link);
+    border: solid var(--color-link);
+    border-width: 0 2px 2px 0;
+    padding: 2px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
   }
   .horizontal-navigation .dropdown ul .dropdown-toggle:after {
+    /*
     content: "";
     width: 0;
     height: 0;
@@ -353,6 +363,15 @@ position: absolute;
     border-top: 6px solid transparent;
     border-left: 6px solid var(--color-link);
     position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    margin: 0.4em 0 0 0.5em;
+    border: solid var(--color-link);
+    border-width: 0 2px 2px 0;
+    padding: 2px;*/
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
   }
   .horizontal-navigation .nav-collapse a:hover {
     color: var(--color-link-hover);
@@ -370,14 +389,14 @@ position: absolute;
   .js .horizontal-navigation .nav-collapse .dropdown:hover > ul {
     clip: auto;
     position: absolute;
-    width: 10em;
-    top: 3em;
+    width: 11em;
+    top: 2.72em;
     left: 0;
     display: block !important;
   }
   .js .horizontal-navigation .nav-collapse .dropdown .dropdown:hover > ul {
     top: 0;
-    left: 10em;
+    left: 11em;
   }
   .js .horizontal-navigation .nav-collapse ul > .dropdown:last-child ul {
     left: auto;
@@ -392,7 +411,7 @@ position: absolute;
 
   .horizontal-navigation .nav-collapse a {
     margin: 0;
-    padding: 1em 1.5em;
+    padding: 0.6em 1em;
     float: left;
     text-align: center;
     /*border-bottom: 0;*/

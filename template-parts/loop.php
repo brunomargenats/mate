@@ -24,7 +24,7 @@
 		</section> <?php // end article section ?>
 
 		<footer class="article-footer">
-
+			<?php wp_link_pages(); ?>
 		</footer>
 
         <?php if( post_type_supports( get_post_type(), 'comments' ) ) {
@@ -41,7 +41,6 @@
 
 <?php endwhile; ?>
 
-<?php get_template_part( 'template-parts/post-navigation'); ?>
 
 <?php else : ?>
 

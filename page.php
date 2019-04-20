@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+	<div class="wrapper">
 		<div id="content">
 
 			<div id="inner-content" class="wrap">
@@ -11,5 +12,6 @@
 			</div>
 
 		</div>
+	</div>
 
 <?php get_footer(); ?>

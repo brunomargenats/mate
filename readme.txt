@@ -26,6 +26,15 @@ Source: https://fonts.google.com/specimen/Alegreya+Sans
 
 == Changelog ==
 
+Version 0.5.1
+-------------------------
+- Some support for bbpress
+- Post Navigation fixed
+- Grid tweaks
+- Navigation arrows fixed
+- Wrapper added
+- Comments depths fixed
+
 Version 0.5
 -------------------------
 - Layouts and tiny grid system.
