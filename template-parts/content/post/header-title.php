@@ -1,4 +1,9 @@
-<?php // WordPress custom title script
+<?php
+/**
+ * Template Part: Header Title
+ * Description: WordPress custom conditional title script
+ */
+
 
 if ( function_exists('is_tag') && is_tag() || is_category() || is_tax() ) { ?>
 
@@ -38,5 +43,3 @@ if ( function_exists('is_tag') && is_tag() || is_category() || is_tax() ) { ?>
 	<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 
 <?php }
-
-?>

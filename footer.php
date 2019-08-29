@@ -1,35 +1,18 @@
-<div class="wrapper">
-    <div class="row">
-        <div class="column col-4">1</div>
-        <div class="column col-4">2</div>
-        <div class="column col-4">3</div>
-    </div>
-    <div class="row">
-        <div class="column col-3">1</div>
-        <div class="column col-3">2</div>
-        <div class="column col-3">3</div>
-        <div class="column col-3">4</div>
-    </div>
-    <div class="row">
-        <div class="column col-3">1</div>
-        <div class="column col-2">2</div>
-        <div class="column col-2">3</div>
-        <div class="column col-2">4</div>
-        <div class="column col-3">5</div>
-    </div>
-</div>
+
+<?php
+/**
+ * The template part for footer.
+ * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#footer-php
+ */
+?>
             <footer id="footer" class="footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
                 <div id="inner-footer" class="wrap">
-                    <p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+                    <?php get_template_part( 'template-parts/footer/inner-footer-content'); ?>
                 </div>
 	        </footer><!-- footer -->
 
-    </div> <!-- end of container -->
-
+     <!-- end of container -->
 	    <?php wp_footer(); ?>
 
-
-
-
-	</body>
+</body>
 </html>

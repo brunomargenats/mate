@@ -1,11 +1,11 @@
 <?php
 /**
- *
  * Template Part: 404 Post(s) not found
  * Description: Code for post(s) not found in WordPress loop.
- *
+ * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
  */
 ?>
+
 
 <?php // get post count so we can use everywhere.
 $count = $GLOBALS['wp_query']->post_count;
@@ -13,14 +13,15 @@ $count = $GLOBALS['wp_query']->post_count;
 
 <article id="post-not-found" class="hentry post-not-found">
     <header class="article-header">
-        <h2 class="404-title">
-            <?php echo _n( 'Sorry, no post found.' , 'Sorry, no posts found.' , $count, 'mate' ); ?>
-        </h2>
+        <h1 class="404-title">
+            <?php echo _e( 'Sorry, that page can&rsquo;t be found.', 'mate' ); ?>
+        </h1>
     </header>
     <section class="entry-content">
-        <p><?php _e( 'Your query didn\'t return anything. Try checking things.', 'mate' ); ?></p>
+    <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'mate' ); ?></p>
+		<?php get_search_form(); ?>
     </section>
     <footer class="article-footer">
-        <!-- <?php _e( 'This is the error message in the template-parts/404.php template.', 'mate' ); ?> -->
+
     </footer>
 </article>

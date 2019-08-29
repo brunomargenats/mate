@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------------- */
-/*	Forms
+/*	FORMS CSS
 /* -------------------------------------------------------------------------------- */
 
 /*
@@ -32,84 +32,95 @@ https://picturepan2.github.io/spectre/elements/forms.html
 
 
 
-/* Mini reset*/
-/*button,input,select,textarea,*/
-label{
-padding: 0.7rem 0 0.5rem;
-display: inline-block;}
-button,input[type="submit"], select {border: none;
-    outline: none;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
-}
-
-
-
-button, input[type="submit"], input[type="checkbox"], input[type="radio"] {cursor: pointer;}
-
-
-
 /*Basic styles*/
-label, input, textarea, select, button{
+label,
+input,
+textarea,
+select,
+button {
     font-family: var(--font-text);
     color: var(--color-on-background)
 }
 
-   input,
-   textarea,
-   select,
-   button
-   {
-    background-color:var(--form-element-bg);
-    background-image:none;
-    border:.05rem solid var(--form-element-border);
-    border-radius:.1rem;
-    display:inline-block;
-    font-size:.8rem;
-    line-height:1.2rem;
-    max-width:100%;
-    outline:0;
-    padding:.25rem .4rem;
-    position:relative;
-    transition:background .2s,border .2s,box-shadow .2s,color .2s;
-   }
+button,
+input[type="submit"],
+input[type="checkbox"],
+input[type="radio"] {
+    cursor: pointer;
+}
 
-   input:focus, textarea:focus, select:focus {
-    border-color:var(--form-element-border-focus);
-    -moz-box-shadow:     0 0 0.2rem var(--form-element-border-focus);
-    -webkit-box-shadow:  0 0 0.2rem var(--form-element-border-focus);
-    box-shadow:          0 0 0.2rem var(--form-element-border-focus);
-   }
+input,
+textarea,
+select,
+button {
+    background-color: var(--form-element-bg);
+    background-image: none;
+    border: .05rem solid var(--form-element-border);
+    display: inline-block;
+    font-size: .8rem;
+    line-height: 1.2rem;
+    max-width: 100%;
+    outline: 0;
+    padding: .20rem .4rem;
+    position: relative;
+    transition: background .2s, border .2s, box-shadow .2s, color .2s;
+}
 
-   /*Placeholders*/
-   input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-    color:var(--form-text-placeholder);
-   }
-   input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-    color:var(--form-text-placeholder);
-   }
-   input::-ms-input-placeholder, textarea::-ms-input-placeholder {
-    color:var(--form-text-placeholder);
-   }
-   input::placeholder, textarea::placeholder {
-    color:var(--form-text-placeholder);
-   }
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--form-element-border-focus);
+    -moz-box-shadow: 0 0 0.2rem var(--form-element-border-focus);
+    -webkit-box-shadow: 0 0 0.2rem var(--form-element-border-focus);
+    box-shadow: 0 0 0.2rem var(--form-element-border-focus);
+}
 
+/*Placeholders*/
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: var(--form-text-placeholder);
+}
 
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: var(--form-text-placeholder);
+}
 
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+    color: var(--form-text-placeholder);
+}
 
-
+input::placeholder,
+textarea::placeholder {
+    color: var(--form-text-placeholder);
+}
 
 
 /*Reset styles for some input fields and textarea*/
-button {border:0;}
-
-textarea, input[type="checkbox"], input[type="radio"] {
-    height:auto;
+button {
+    border: 0;
 }
-input[type="checkbox"], input[type="radio"], input[type="submit"] {
-width:auto;
+
+textarea,
+input[type="checkbox"],
+input[type="radio"] {
+    height: auto;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="submit"] {
+    width: auto;
+}
+
+
+
+textarea {
+    /* Move the label to the top */
+    vertical-align: top;
+    /* Turn off scroll bars in IE unless needed */
+    overflow: auto;
 }
 
 
@@ -118,7 +129,14 @@ width:auto;
 select {
     vertical-align: middle;
 }
-select:not([multiple]):not([size]), input[type="date"] {
+
+select[multiple] {
+    /* Move the label to the top */
+    vertical-align: top;
+}
+
+select:not([multiple]):not([size]),
+input[type="date"] {
     background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .35rem center/.4rem .5rem;
     padding-right: 1.2rem;
 }
@@ -128,28 +146,30 @@ select:not([multiple]):not([size]), input[type="date"] {
 /* One type with bran colors, an other with blanc and white
 ligth to dark */
 
-button, input[type="submit"]
-{background: var(--btn-primary-bg);
-color: var(--btn-primary-label);
+button,
+input[type="submit"] {
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-label);
 }
 
-button:hover, input[type="submit"]:hover
-{background: var(--btn-primary-hover);}
+button:hover,
+input[type="submit"]:hover {
+    background: var(--btn-primary-hover);
+}
 
-button:active, input[type="submit"]:active,
-button:focus, input[type="submit"]:focus
-{
+button:active,
+input[type="submit"]:active,
+button:focus,
+input[type="submit"]:focus {
     background: var(--btn-primary-active);
-    -moz-box-shadow:     0 0 0.2rem var(--btn-primary-hover);
-    -webkit-box-shadow:  0 0 0.2rem var(--btn-primary-hover);
-    box-shadow:          0 0 0.2rem var(--btn-primary-hover);
+    -moz-box-shadow: 0 0 0.2rem var(--btn-primary-hover);
+    -webkit-box-shadow: 0 0 0.2rem var(--btn-primary-hover);
+    box-shadow: 0 0 0.2rem var(--btn-primary-hover);
 }
-
-
-
 
 /*RADIO BUTTONS AND CHECKBOXES*/
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
     /*float:left*/
     margin: .46rem 0.4rem .46rem 0;
 }

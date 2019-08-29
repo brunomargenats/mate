@@ -1,63 +1,53 @@
-/*! custom styles for responsive-nav.js 1.0.40 */
+/* -------------------------------------------------------------------------------- */
+/*	responsive-nav.js 1.0.40 STYLES
+/* -------------------------------------------------------------------------------- */
 
 .nav-collapse ul {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: block;
-    list-style: none;
-  }
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
 
-  .nav-collapse li {
-    width: 100%;
-    display: block;
-    margin-top:0;
-  }
+.nav-collapse li {
+  width: 100%;
+  display: block;
+  margin-top: 0;
+}
 
-  .js .nav-collapse,
-  .js .nav-collapse .dropdown ul {
-    clip: rect(0 0 0 0);
-    max-height: 0;
-    position: absolute;
-    display: block;
-    overflow: hidden;
-    zoom: 1;
-  }
+.nav-collapse,
+.nav-collapse .dropdown ul {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
 
-  .nav-collapse.opened,
-  .nav-collapse .dropdown.opened ul {
-    max-height: 9999px;
-  }
+.nav-collapse.opened,
+.nav-collapse .dropdown.opened ul {
+  max-height: 9999px;
+}
 
-  .nav-collapse .dropdown.opened > ul,
-  .nav-collapse .dropdown .dropdown.opened > ul {
-    position: relative;
-  }
-
-  .nav-toggle,
-  .dropdown-toggle {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-    position: relative;
-    z-index: 11;
-  }
+.nav-toggle,
+.dropdown-toggle {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  position: relative;
+  z-index: 11;
+}
 
 
 /* ------------------------------------------
-  NAVIGATION STYLES
+  BASE NAVIGATION STYLES
 --------------------------------------------- */
-
-.nav-collapse,
-.nav-collapse * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
 .nav-collapse {
   -webkit-user-select: none;
@@ -75,7 +65,6 @@
 }
 
 
-
 .nav-collapse li {
   float: left;
   width: 100%;
@@ -84,50 +73,66 @@
 }
 
 
-
 .nav-collapse a {
-/*  color: #fff;*/
+  /*  color: #fff;*/
   text-decoration: none;
   width: 100%;
-/*  background: #f4421a;*/
+  /*  background: #f4421a;*/
   /*border-bottom: 1px solid rgba(0,0,0, .15);*/
   padding: 0.7em 1em;
   float: left;
 }
 
 
-
-
 /* ------------------------------------------
-  NAV TOGGLE STYLES
+  NAV TOGGLE (HAMBURGER) STYLES
 --------------------------------------------- */
 #nav-button {
-  margin-left: auto;
   z-index: 13;
+}
+
+#nav-button-container {
+  overflow: hidden;
+  width: 30px;
+  margin-left: auto;
+}
+
+/* This will fix a weird translate blur bug*/
+
+button.nav-toggle,
+button.nav-toggle:active,
+button.nav-toggle:focus {
+  background: transparent !important;
 }
 
 button.nav-toggle {
   float: right;
   position: relative;
   display: block;
-  width: 29px;
+  width: 30px;
   height: 24px;
-  top: calc(50% - 12px); /*half of heigth*/
-  background: transparent;
+  top: calc(50% - 12px); /*half of height*/
   border-top: 4px solid;
   border-bottom: 4px solid;
   color: var(--color-link);
   font-size: 0;
   transition: all 0.25s ease-in-out;
   overflow: visible;
-  z-index:13;
+  z-index: 13;
+  padding: 8px 0;
 }
-button.nav-toggle:focus{
+
+button.nav-toggle:hover {
+  cursor: pointer;
+}
+
+button.nav-toggle:focus {
   box-shadow: none;
   outline: none;
 }
 
-button.nav-toggle:before, button.nav-toggle:after {
+button.nav-toggle:before,
+button.nav-toggle:after {
   content: '';
   display: block;
   width: 100%;
@@ -137,7 +142,7 @@ button.nav-toggle:before, button.nav-toggle:after {
   left: 50%;
   background: currentColor;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   transition: -webkit-transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
@@ -150,199 +155,126 @@ button.nav-toggle:hover {
 button.nav-toggle.active {
   border-color: transparent;
 }
+
 button.nav-toggle.active:before {
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
+
 button.nav-toggle.active:after {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-          transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
-
-
-a.nav-toggle {display:none!important}
 
 
 /* ------------------------------------------
   MULTIPLE LEVELS
 --------------------------------------------- */
 
-.dropdown ul a {
- /* background: var(--color-surface);*/
-  padding-left: 2em;
-}
-
-.dropdown ul ul a {
-  /*background: var(--color-surface);*/
-  padding-left: 3em;
-}
-
-
-
-
-.horizontal-navigation .dropdown ul ul {
+.dropdown ul ul {
   border: 0;
   padding: 0;
 }
 
+.dropdown ul a {
+  padding-left: 2em;
+}
+
+.dropdown ul ul a {
+  padding-left: 3em;
+}
 
 
 .dropdown-toggle:after {
   content: "+";
   font-size: 1.5em;
-  line-height: 0.8;
+  /*line-height: 0.8;*/
   float: right;
 }
 
-.dropdown.opened > .dropdown-toggle:after {
-  content: "–";
-}
-
 @media screen and (min-width: 768px) {
-  .horizontal-navigation .dropdown ul,
-  .horizontal-navigation .dropdown .dropdown.opened .dropdown-toggle {
+
+  .dropdown ul,
+  .dropdown .dropdown.opened .dropdown-toggle {
     background: var(--color-surface);
   }
-  .horizontal-navigation .dropdown.opened > .dropdown-toggle:after {
+
+  .dropdown.opened>.dropdown-toggle:after {
     content: "";
   }
 }
 
+.js-nav-active #header {
+  z-index: 12;
+}
 
+.js-nav-active .header-nav,
 .js-nav-active #inner-header {
-  max-width: calc(var(--container-max-width) - var(--grid-spacing) - var(--grid-spacing));
-  width:calc(100% - var(--grid-spacing) - var(--grid-spacing));
-  position: fixed;
   z-index: 13;
-}
-
-
-
-
-
-
-/*Fixed navigation*/
-
-.fixed-navigation #header {
-  position: fixed;
- /* left: 50%;
-  transform: translate(-50%, 0);*/
-  background: var(--color-background);
   width: 100%;
-  margin-top: 0;
-  padding: var(--grid-spacing);
-  left:0;
-}
-.fixed-navigation #inner-header {
-  margin:0 auto;
-  max-width: calc(var(--container-max-width) - var(--grid-spacing) - var(--grid-spacing));
-  width:100%;
-  position:relative;
 }
 
 
-/*
-.js-nav-active .fixed-navigation #inner-header {
-  width: 100%;
-  position: relative;
-}*/
-
-
-.js-nav-active .fixed-navigation #header {
-height: 100%;
-/*padding-left: 0;
-padding-right: 0;*/
-}
-
-/*
-.js-nav-active .fixed-navigation #inner-header {
-  left: 0;
-  position: relative;
- /* height: 100%;*/
-/*}*/
-
-
-.js-nav-active .fixed-navigation #nav-button {
-  bottom: initial;
-  /*padding-top: var(--grid-spacing);*/
-  margin-top: calc(var(--logo-heigth)/2);
-  transform: translate(0, -50%);
-}
-.js-nav-active .fixed-navigation #siteinfo {
-top: 0;
-position: absolute;
-}
-
-.fixed-navigation #content {
-  padding-top: calc(var(--logo-heigth)*2);
-}
-
-
-/* FULLSCREEN NAVIGATION */
-
-
-      .overlay{
-            height:100%;
-            z-index:10;
-            position: fixed;
-            background: var(--color-surface);
-            top: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-          }
-
-
-    .full-navigation .container-menu{
-      width: 70vw;
-      max-width: 600px;
-      left: 0;bottom: 0;top: 0;right: 0;margin: 0 auto;
-      display: flex;           /* establish flex container */
-      flex-direction: column;  /* make main axis vertical */
-      justify-content: center; /* center items vertically, in this case */
-      align-items: center;     /* center items horizontally, in this case */
-      position: fixed;
-    }
 
 
 @media screen and (max-width: 767px) {
+
+  .nav-collapse .dropdown.opened>ul,
+  .nav-collapse .dropdown .dropdown.opened>ul {
+    position: relative;
+  }
+
+  .dropdown.opened>.dropdown-toggle:after {
+    content: "–";
+  }
+
   /*In horizontal-navigation this is limited for mobile only*/
-    .horizontal-navigation .container-menu{
-    width: 70vw;
-    max-width: 600px;
-    left: 0;bottom: 0;top: 0;right: 0;margin: 0 auto;display: flex;flex-direction: column;justify-content: center;align-items: center;
-    position: fixed;
+  .container-menu {
+    position: relative;
+    top: var(--grid-spacing);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: calc(100vh - (var(--logo-height)) - (var(--grid-spacing)) - (var(--grid-spacing)) - (var(--grid-spacing)));
+    overflow: auto;
+    display: block;
   }
 
 }
 
+.container-menu ul.sub-menu {
+  background: var(--color-surface);
+}
 
 
+/* ------------------------------------------
+  HORIZONTAL MENU STYLES (768px and +)
+--------------------------------------------- */
 
-
-/* HORIZONTAL MENU STYLES*/
 @media screen and (min-width: 768px) {
-  .js-nav-active .horizontal-navigation #inner-header{
+  .js-nav-active #inner-header {
     width: auto;
     position: relative;
-   }
+  }
 
-  .js-nav-active .horizontal-navigation .overlay {display: none;}
-
-  .horizontal-navigation .nav-collapse {
+  .nav-collapse {
     width: auto;
     float: right;
   }
-  .horizontal-navigation .nav-collapse li {
+
+  .nav-collapse li {
     width: auto;
   }
 
-  .js .horizontal-navigation .nav-collapse,
-  .js .horizontal-navigation .nav-collapse .dropdown ul {
+  .js .nav-collapse,
+  .js .nav-collapse .dropdown ul {
     max-height: none;
     overflow: visible;
   }
-  .horizontal-navigation .dropdown-toggle:after {
+
+  .dropdown-toggle:after {
     content: "";
     width: 0;
     height: 0;
@@ -353,40 +285,34 @@ position: absolute;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
   }
-  .horizontal-navigation .dropdown ul .dropdown-toggle:after {
-    /*
-    content: "";
-    width: 0;
-    height: 0;
-    margin: 0.3em 0 0 0.5em;
-    border-bottom: 6px solid transparent;
-    border-top: 6px solid transparent;
-    border-left: 6px solid var(--color-link);
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    margin: 0.4em 0 0 0.5em;
-    border: solid var(--color-link);
-    border-width: 0 2px 2px 0;
-    padding: 2px;*/
+
+  .dropdown ul .dropdown-toggle:after {
+
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
   }
-  .horizontal-navigation .nav-collapse a:hover {
+
+  .nav-collapse a:hover {
     color: var(--color-link-hover);
   }
-  .horizontal-navigation .nav-collapse .dropdown {
+
+  .nav-collapse .dropdown {
     position: relative;
   }
-  .horizontal-navigation .nav-collapse .dropdown li {
+
+  .nav-collapse .dropdown li {
     width: 100%;
   }
-  .horizontal-navigation .nav-collapse .dropdown ul a {
+
+  .nav-collapse .dropdown ul a {
     text-align: left;
     border: 0;
   }
-  .js .horizontal-navigation .nav-collapse .dropdown:hover > ul {
+
+
+  /*START Hover and click navigation (for keybord compatibility).*/
+  .js .nav-collapse .dropdown:hover>ul,
+  .js .nav-collapse .dropdown.opened>ul {
     clip: auto;
     position: absolute;
     width: 11em;
@@ -394,88 +320,78 @@ position: absolute;
     left: 0;
     display: block !important;
   }
-  .js .horizontal-navigation .nav-collapse .dropdown .dropdown:hover > ul {
+
+  .js .nav-collapse .dropdown .dropdown:hover>ul,
+  .js .nav-collapse .dropdown .dropdown.opened>ul {
     top: 0;
     left: 11em;
   }
-  .js .horizontal-navigation .nav-collapse ul > .dropdown:last-child ul {
-    left: auto;
-    right: 0;
-  }
 
-  .js .horizontal-navigation .nav-collapse .dropdown:last-child .dropdown:hover > ul {
+  .js .nav-collapse .dropdown:last-child .dropdown:hover>ul,
+  .js .nav-collapse .dropdown:last-child .dropdown.opened>ul {
     right: 10em;
     left: auto;
   }
 
+  /*END Hover and click navigation*/
 
-  .horizontal-navigation .nav-collapse a {
+  .js .nav-collapse ul>.dropdown:last-child ul {
+    left: auto;
+    right: 0;
+  }
+
+  .nav-collapse a {
     margin: 0;
     padding: 0.6em 1em;
     float: left;
     text-align: center;
-    /*border-bottom: 0;*/
   }
 
-  .js .horizontal-navigation .nav-collapse {
-    position: relative!important; /* This !important will fix nav position on resizing */
+  .js .nav-collapse {
+    position: relative !important;
+    /* This !important will fix nav position on resizing */
   }
-  .js .horizontal-navigation .nav-collapse.closed,
-  .js .horizontal-navigation .nav-collapse.closed .dropdown ul {
+
+  .js .nav-collapse.closed,
+  .js .nav-collapse.closed .dropdown ul {
     max-height: none;
   }
-  .horizontal-navigation .nav-toggle {
+
+  #nav-button {
     display: none;
   }
 }
 
 
-/*Wordpress links*/
-li.current-menu-item a {color:var(--color-link-hover);}
-
-
-
-/*Transitions*/
-
+/* ------------------------------------------
+  FADE TRANSITION
+--------------------------------------------- */
 @media screen and (max-width: 767px) {
-  .horizontal-navigation .container-menu,
-  .horizontal-navigation .container-menu ul.sub-menu
-  {
+
+  .container-menu,
+  .container-menu ul.sub-menu {
     opacity: 0;
     visibility: hidden;
   }
 
-  .horizontal-navigation .container-menu ul.sub-menu{
+  .container-menu ul.sub-menu {
     position: relative;
     height: 0;
   }
 
 
 }
-.full-navigation .container-menu, .overlay,
-.full-navigation .container-menu ul.sub-menu,
-.full-navigation .container-menu ul.sub-menu ul.sub-menu
-{
-  opacity: 0;
-  visibility: hidden;
-}
-
-.full-navigation .container-menu ul.sub-menu{
-  position: relative;
-  height: 0;
-}
 
 .fade,
 .container-menu.fade,
-.container-menu ul > li.opened > ul.sub-menu,
-.container-menu ul > li.opened > ul.sub-menu > li.opened > ul.sub-menu
-{
+.container-menu ul>li.opened>ul.sub-menu,
+.container-menu ul>li.opened>ul.sub-menu>li.opened>ul.sub-menu {
   opacity: 1;
   visibility: visible;
 }
 
-.container-menu ul > li.opened > ul.sub-menu,
-.container-menu ul > li.opened > ul.sub-menu > li.opened > ul.sub-menu{
+.container-menu ul>li.opened>ul.sub-menu,
+.container-menu ul>li.opened>ul.sub-menu>li.opened>ul.sub-menu {
   height: auto;
 }
 
@@ -484,17 +400,61 @@ li.current-menu-item a {color:var(--color-link-hover);}
 .container-menu,
 .container-menu ul.sub-menu,
 .container-menu .dropdown-active ul.sub-menu,
-.overlay
-{
-transition: all 0.4s ease-in-out;
+.overlay {
+  transition: all 0.4s ease-in-out;
 }
 
 @media screen and (min-width: 768px) {
-  .horizontal-navigation .container-menu ul.sub-menu {opacity: 0; visibility: hidden;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;}
-  .horizontal-navigation .container-menu li.dropdown:hover ul.sub-menu,
-  .horizontal-navigation .container-menu li.dropdown ul.sub-menu li.dropdown:hover ul.sub-menu
-   {opacity: 1; visibility: visible;
+  .container-menu ul.sub-menu {
+    opacity: 0;
+    visibility: hidden;
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
   }
+
+  .container-menu li.dropdown:hover ul.sub-menu,
+  .container-menu li.dropdown ul.sub-menu li.dropdown:hover ul.sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  }
+}
+
+
+/*FIXED NAVIGATION*/
+.fixed-navigation #header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background: #fff;
+  padding: var(--grid-spacing);
+}
+
+.admin-bar.fixed-navigation #header {
+  top: 46px;
+}
+
+@media screen and (max-width: 782px) {
+  html .admin-bar.fixed-navigation #wpadminbar {
+    position: fixed;
+  }
+}
+
+@media screen and (min-width: 782px) {
+  .admin-bar.fixed-navigation #header {
+    top: 32px;
+  }
+}
+
+.fixed-navigation #header #inner-header {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.js-nav-active .fixed-navigation #header {
+  bottom: 0;
+}
+
+.fixed-navigation #container {
+  padding-top: calc(var(--logo-height) + var(--grid-spacing) + var(--grid-spacing));
 }

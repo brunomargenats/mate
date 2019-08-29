@@ -1,16 +1,6 @@
 /* -------------------------------------------------------------------------------- */
-/*	Typography
+/*	TYPOGRAPHY
 /* -------------------------------------------------------------------------------- */
-
-:root {
-    --font-display: 'Alegreya Sans';
-    --font-text: 'Barlow';
-    --color-text: var(--color-gray-10);
-    --color-text-heading: var(--color-gray-10);
-    --color-text-subtle: var(--color-gray-6);
-    --color-link: var(--color-on-background);
-    --color-link-hover: var(--color-primary);
-}
 
 html {
     text-rendering: optimizeLegibility;
@@ -19,75 +9,164 @@ html {
     font-family: var(--font-text), sans-serif;
 }
 
-body {color: var(--color-text);}
-
-h1,h2,h3,h4,h5,h6 {
-font-family: var(--font-display), sans-serif;
-font-weight: 700;
-line-height: 1;
+body {
+    color: var(--color-text);
 }
 
-    @media (min-width: 576px) {
-    html {font-size: 16px;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display), sans-serif;
+    font-weight: 700;
+    line-height: 1;
+}
+
+@media (min-width: 576px) {
+    html {
+        font-size: 16px;
     }
-    @media (min-width: 768px) {
-    html {font-size: 17px;}
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 17px;
     }
-    @media (min-width: 992px) {
-    html {font-size: 18px;}
+}
+
+@media (min-width: 992px) {
+    html {
+        font-size: 18px;
     }
-    @media (min-width: 1200px) {
-    html {font-size: 19px;}
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 19px;
     }
-    @media (min-width: 1600px) {
-    html {font-size: 20px;}
+}
+
+@media (min-width: 1600px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+/*ratio: major third https://www.modularscale.com/?1&em&1.25 */
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2.488rem;
     }
 
-    /*ratio: major third https://www.modularscale.com/?1&em&1.25 */
-
-    @media (max-width: 767px) {
-    h1 {font-size: 2.488rem; }
-    h2 {font-size: 2.074rem; }
-    h3 {font-size: 1.728rem; }
-    h4 {font-size: 1.44rem; }
-    h5 {font-size: 1.2rem; }
-    h6, small {font-size: 1.0rem;}
-    body {font-size: 1.1rem;}
-    h1,h2,h3,h4,h5,h6 {margin:.5rem 0 .5rem;}
+    h2 {
+        font-size: 2.074rem;
     }
 
-    /*ratio: minor third https://www.modularscale.com/?1&em&1.2 */
-    @media (min-width: 768px) {
-    h1 {font-size: 3.052rem; }
-    h2 {font-size: 2.441rem; }
-    h3 {font-size: 1.953rem; }
-    h4 {font-size: 1.563rem; }
-    h5 {font-size: 1.25rem; }
-    h6, small {font-size: 1.1rem;}
-    body {font-size: 1.1rem;}
-    h1,h2,h3,h4,h5,h6 { margin:.7rem 0 .7rem;}
+    h3 {
+        font-size: 1.728rem;
     }
+
+    h4 {
+        font-size: 1.44rem;
+    }
+
+    h5 {
+        font-size: 1.2rem;
+    }
+
+    h6,
+    small {
+        font-size: 1.0rem;
+    }
+
+    body {
+        font-size: 1.1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: .5rem 0 .5rem;
+    }
+}
+
+/*ratio: minor third https://www.modularscale.com/?1&em&1.2 */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3.052rem;
+    }
+
+    h2 {
+        font-size: 2.441rem;
+    }
+
+    h3 {
+        font-size: 1.953rem;
+    }
+
+    h4 {
+        font-size: 1.563rem;
+    }
+
+    h5 {
+        font-size: 1.25rem;
+    }
+
+    h6,
+    small {
+        font-size: 1.1rem;
+    }
+
+    body {
+        font-size: 1.1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: .7rem 0 .7rem;
+    }
+}
 
 
 /*LINKS*/
-a, a:visited {
+a,
+a:visited {
     color: var(--color-link);
-    border-bottom:1px dotted var(--color-link);
+    border-bottom: 2px solid var(--color-link);
 }
-a:hover, a:active{
-    color:var(--color-link-hover);
-    border-bottom:1px dotted var(--color-link-hover);
+
+a:hover,
+a:active {
+    color: var(--color-link-hover);
+    border-bottom: 2px solid var(--color-link-hover);
 }
 
 
-a, a:hover, a:active {
-transition: color 0.3s ease, border 0.3s ease;
+a,
+a:hover,
+a:active {
+    transition: color 0.3s ease, border 0.3s ease;
 }
 
 /*Formatting*/
-code, kbd, tt {background-color: var(--color-gray-2); padding: 1px}
+code,
+kbd,
+tt {
+    background-color: var(--color-gray-2);
+    padding: 1px
+}
 
-blockquote{
+blockquote {
     background-color: var(--color-gray-1);
     border-left: 5px solid var(--color-primary);
     font-size: .9rem;
@@ -95,36 +174,52 @@ blockquote{
 }
 
 blockquote cite {
-font-weight: 700;
-font-size: .8rem;
+    font-weight: 700;
+    font-size: .8rem;
 }
 
-blockquote p:last-child{margin-bottom:0;}
+blockquote p:last-child {
+    margin-bottom: 0;
+}
 
 
 pre {
-background-color: var(--color-gray-1);
-border: 1px solid var(--color-gray-4);
-width: 100%;
-display: block;
-font-size: .8rem;
-padding: var(--grid-spacing);
+    background-color: var(--color-gray-1);
+    border: 1px solid var(--color-gray-4);
+    width: 100%;
+    display: block;
+    font-size: .8rem;
+    padding: var(--grid-spacing);
 }
 
 
 table {
     border-collapse: collapse;
-    margin:1rem 0;
+    margin: 1rem 0;
 }
 
-tr:nth-child(odd){ background-color: var(--color-gray-2);}
-tr:nth-child(even){ background-color: var(--color-gray-1);}
+tr:nth-child(odd) {
+    background-color: var(--color-gray-2);
+}
+
+tr:nth-child(even) {
+    background-color: var(--color-gray-1);
+}
 
 
-table, td, th{border: 1px solid var(--color-gray-4);}
+table,
+td,
+th {
+    border: 1px solid var(--color-gray-4);
+}
 
-table th, table td {
+table th,
+table td {
     padding: calc(var(--grid-spacing) / 2)
 }
-ul, ol, li {margin:.2rem 0 .2rem;}
 
+ul,
+ol,
+li {
+    margin: .2rem 0 .2rem;
+}

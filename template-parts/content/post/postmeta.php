@@ -1,6 +1,5 @@
 <?php
 /**
- *
  * Template Part: Postmeta
  * Description: Code for postmeta using functions from WP Twenty Seventeen theme.
  */

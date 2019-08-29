@@ -1,29 +1,33 @@
 <?php
-/*
-Template Name: Page with sidebar
-*/
+/**
+ * Template Name: Page with sidebar
+ * Description: Template for pages with a sidebar.
+ */
+
 get_header(); ?>
-<div class="wrapper">
-	<div class="row">
-		<div class="column col-8">
-			<div id="content">
 
-				<div id="inner-content" class="wrap">
+<?php get_header(); ?>
 
-					<main id="main" class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
-						<?php // Edit the loop in /template-parts/loop. Or roll your own. ?>
-						<?php get_template_part( 'template-parts/loop'); ?>
-					</main>
+		<div id="content">
 
-				</div>
+			<div id="inner-content" class="wrap">
+
+				<main id="main" class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
+					<div class="wrapper">
+							<div class="grid">
+								<div class="col-sm-8">
+									<?php get_template_part( 'template-parts/content/content','page'); ?>
+								</div>
+								<div class="col-sm-4">
+									<?php get_sidebar(); ?>
+								</div>
+							</div>
+					</div>
+				</main>
 
 			</div>
+
 		</div>
 
-		<div class="column col-4">
-			<?php get_sidebar(); ?>
-		</div>
-	</div>
-</div>
-
-<?php get_footer(); ?>
+<?php
+get_footer();?>

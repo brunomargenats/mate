@@ -1,56 +1,77 @@
 <?php
-if ( ! function_exists( 'mate_load_styles_scripts' ) ) {
+/**
+ * HEADER styles and scripts (Just those that are necessary to load first)
+ */
 
-function mate_scripts_styles() {
+if ( ! function_exists( 'mate_scripts_styles_header' ) ) {
 
-		//wp_enqueue_script('jquery'); // just enqueue as its already registered
+function mate_scripts_styles_header() {
+
+		/*   REGISTER ALL CSS FOR SITE
+				 array(), wp_get_theme( 'mate' )->get( 'Version' ), true ); (true = in_footer)
+		*/
 
 
-		/*   REGISTER ALL CSS FOR SITE */
-		wp_register_style('mate_reset',get_theme_file_uri( '/assets/css/reset.css' ));
-		wp_register_style('site_style', get_stylesheet_uri(), '', null, 'all' );
-		wp_register_style('mate_grid',get_theme_file_uri( '/assets/css/grid.css' ));
-		wp_register_style('mate_typography',get_theme_file_uri( '/assets/css/typography.css' ));
-		wp_register_style('mate_forms',get_theme_file_uri( '/assets/css/forms.css' ));
+
+	//	wp_register_style('site_style', get_stylesheet_uri(), '', null, 'all' );
+		wp_register_style('mate_variables',get_theme_file_uri( '/config/variables.css' ), array(), wp_get_theme()->get( 'Version' ) );
+		wp_register_style('mate_reset',get_theme_file_uri( '/assets/css/reset.css' ), array(), wp_get_theme()->get( 'Version' ) );
+		wp_register_style('mate_base',get_theme_file_uri( '/assets/css/base.css' ), array(), wp_get_theme()->get( 'Version' ) );
+		wp_register_style('mate_grid',get_theme_file_uri( '/assets/css/grid.css' ), array(), wp_get_theme()->get( 'Version' ) );
+		wp_register_style('mate_typography',get_theme_file_uri( '/assets/css/typography.css' ), array(), wp_get_theme()->get( 'Version' ) );
+
 
 		/*   REGISTER ALL JS FOR SITE */
- 		/* true = in_footer */
-		wp_register_script( 'mate_scripts', get_theme_file_uri('/assets/js/scripts.js'), '', wp_get_theme( 'mate' )->get( 'Version' ), true );
-		wp_register_script( 'mate_ponyfill', get_theme_file_uri('/assets/js/css-vars-ponyfill.min.js'), '', wp_get_theme( 'mate' )->get( 'Version' ), true );
+
 
 		if ( ! is_admin() ) {
-
-
 			/* CALL ALL CSS*/
-			wp_enqueue_style( 'mate_reset' );
-			wp_enqueue_style( 'site_style' );
+			wp_enqueue_style( 'mate_variables');
+			wp_enqueue_style( 'mate_reset');
+			wp_enqueue_style( 'mate_base');
 			wp_enqueue_style( 'mate_grid');
 			wp_enqueue_style( 'mate_typography');
-			wp_enqueue_style( 'mate_forms');
-
-			/* CALL ALL SCRIPTS */
-
-
-			wp_enqueue_script('mate_ponyfill');
-			wp_enqueue_script('mate_scripts');
-
-
-
 
 		}
 
 	}
-	add_action( 'wp_enqueue_scripts', 'mate_scripts_styles' );
+	add_action( 'wp_enqueue_scripts', 'mate_scripts_styles_header', 80 );
 
 }
 
 
-/* DEREGISTER CONTACT FORM 7 CSS */
-add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
-function wps_deregister_styles() {
-    wp_deregister_style( 'contact-form-7' );
+
+if ( ! function_exists( 'mate_scripts_styles_footer' ) ) {
+
+	function mate_scripts_styles_footer() {
+		wp_register_style('mate_forms',get_theme_file_uri( '/assets/css/forms.css' ), array(), wp_get_theme( 'mate' )->get( 'Version' ) );
+		wp_enqueue_style( 'mate_forms');
+		wp_register_style('site_style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
+		wp_enqueue_style( 'site_style');
+	}
+	add_action( 'get_footer', 'mate_scripts_styles_footer', 80 );
+
 }
 
 
-/*https://stackoverflow.com/questions/19263390/wordpress-loading-multiple-scripts-with-enqueue*/
-?>
+
+	/**
+	 * Let's remove jquery migrate if not used
+	 */
+
+if ( ! function_exists( 'mate_remove_jquery_migrate' ) ) {
+	//Remove JQuery migrate (loaded by WordPress)
+	function mate_remove_jquery_migrate($scripts)
+	{
+		if (!is_admin() && isset($scripts->registered['jquery'])) {
+			$script = $scripts->registered['jquery'];
+			if ($script->deps) { // Check whether the script has any dependencies
+				$script->deps = array_diff($script->deps, array(
+					'jquery-migrate'
+				));
+			}
+		}
+	}
+
+	add_action('wp_default_scripts', 'mate_remove_jquery_migrate');
+}

@@ -1,184 +1,160 @@
 <?php
 
+/* MATE CONFIG: Edit this file in a child theme to change options
+------------------------------------------------ */
+get_template_part('config/config');
+/*
+
 /* GOOGLE FONTS
 ------------------------------------------------ */
-// Comment this if you don't need to install any Google Font
-get_template_part('functions/gfonts');
+if ($google_fonts){
+	get_template_part('functions/gfonts');
+}
+
 
 /* ENQUEUE DEFAULT STYLES
 ------------------------------------------------ */
 /*
-Grids, typography,
+Grids, typography, etc.
 */
 get_template_part('functions/styles-scripts');
 
 
-
-/* JS NAVIGATION
+/* JS RESPONSIVE NAVIGATION
 ------------------------------------------------ */
-// Comment this if the site don't need a JS responsive navigation.
-get_template_part('functions/navigation');
+if ($responsive_navigation){
+	get_template_part('functions/navigation');
+}
 
 
-/* CUSTOM GUTENBERG
+/* REGISTER SIDEBAR AND PAGE-WITH-SIDEBAR
 ------------------------------------------------ */
-// Clean some gutenberg unnecessary things
-get_template_part('functions/gutenberg');
-
-
-/* REGISTER SIDEBAR
------------------------------------------------- */
-// Comment this if the site don't need a sidebar.
-get_template_part('functions/sidebars');
-
-
+if ($use_sidebars){
+	get_template_part('functions/sidebars');
+}else{
+	/* Remove template "page-with-sidebar" if sidebars are unset */
+	add_filter( 'theme_page_templates', 'child_theme_remove_page_template', 20, 3);
+	function child_theme_remove_page_template( $page_templates ) {
+	unset( $page_templates['layouts/page-with-sidebar.php'] );
+	return $page_templates;
+	}
+}
 
 
 /* COMMENTS FUNCTION
 ------------------------------------------------ */
-// Comment this if the site don't use comments.
-get_template_part('functions/comments');
+if ($use_comments){
+	get_template_part('functions/comments');
+}
 
 
+/* MENUS FUNCTION
+------------------------------------------------ */
+if ($use_menus){
+	get_template_part('functions/menus');
+}
+
+/* CONTACT FORM 7 STYLES FUNCTION
+------------------------------------------------ */
+if ($cf7_styles){
+	get_template_part('functions/cf7-styles');
+}
+
+/* CONTACT FORM 7 TEMPLATES ONLY
+------------------------------------------------ */
+if ($cf7_templates_only){
+	get_template_part('functions/cf7-templates-only');
+}
 
 
-/* Bruno functions */
-// Post Time function (from WP Twenty Seventeen theme)
-if ( ! function_exists( 'mate_time_link' ) ) :
-	/**
-	 * Gets a nicely formatted string for the published date.
-	 */
-	function mate_time_link() {
-
-		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		// if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		//   $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-		// }
-
-		$time_string = sprintf( $time_string,
-			get_the_date( DATE_W3C ),
-			get_the_date(),
-			get_the_modified_date( DATE_W3C ),
-			get_the_modified_date()
-		);
-
-		// Wrap the time string in a link, and preface it with 'Posted on'.
-		return sprintf(
-
-			/* translators: %s: post date */
-			__( '<span class="screen-reader-text">Posted on</span> %s', 'mate' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-		);
+/* ADD SUPPORT FOR IE (CSS VARIABLES)
+------------------------------------------------ */
+if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE ||
+strpos($_SERVER['HTTP_USER_AGENT'], 'Trident') !== FALSE) {
+	/* LOAD SUPPORT ONLY FOR INTERNET EXPLORER */
+	if ($ie_support){
+		get_template_part('functions/ie-support');
 	}
-	endif;
-
-
-
-
-/*********************
-PAGE NAVI
-*********************/
-
-/*
-* Numeric Page Navi (built into the theme by default).
-* (Updated 2018-05-17)
-*
-* If you're using this with a custom WP_Query, make sure
-* to add your query variable as an argument and this
-* function will play nice. Example:
-* 
-* plate_page_navi( $query );
-*
-* Also make sure your query has pagination set, e.g.:
-* $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-* (or something similar)
-* See the codex: https://codex.wordpress.org/Pagination
-*
-*/
-
-function mate_page_navi( $wp_query ) {
-    $pages = $wp_query->max_num_pages;
-    $big = 999999999; // need an unlikely integer
-
-    if ( $pages > 1 ) {
-        $page_current = max(1, get_query_var('paged'));
-
-        echo '<nav class="pagination">';
-
-        echo paginate_links(array(
-            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-            'format' => '?paged=%#%',
-            'current'       => $page_current,
-            'total'         => $pages,
-            'prev_text'     => '&larr;',
-            'next_text'     => '&rarr;',
-            'type'          => 'list',
-            'end_size'      => 3,
-            'mid_size'      => 3
-        ));
-
-        echo '</nav>';
-    }
 }
 
 
 
-/*********************
-CUSTOM EXCERPT
-*********************/
 
-// custom excerpt length
-function mate_custom_excerpt_length( $length ) {
-	return 20;
+/* DISABLE EMOJIS
+------------------------------------------------ */
+if ($disabe_emojis){
+	get_template_part('functions/disable-emojis');
 }
- add_filter( 'excerpt_length', 'mate_custom_excerpt_length', 999 );
-
- // add more link to excerpt
- function mate_custom_excerpt_more($more) {
-	return '<div><a class="read-more" href="'. get_permalink( get_the_ID() ) . '">'. __('Read More', 'mate') .'</a></div>';
- }
- add_filter('excerpt_more', 'mate_custom_excerpt_more');
 
 
+/* DISABLE EMBED YOUR POSTS IN OTHERS WEB SITES
+------------------------------------------------ */
+if ($disabe_wpembed){
+	get_template_part('functions/disable-wp-embed');
+}
 
 
-/* OTHERS CONFIGS (TO CHECK) */
-/* THEME SETUP
+
+/* POST TIME FUNCTION (from WP Twenty Seventeen theme)
+------------------------------------------------ */
+get_template_part('functions/post-time');
+
+
+/* PAGE NAVI
+------------------------------------------------ */
+get_template_part('functions/page-navi');
+
+
+/* CUSTOM EXCERPT
+------------------------------------------------ */
+get_template_part('functions/custom-excerpt');
+
+
+/* ENQUEUE CUSTOM SCRIPTS
+------------------------------------------------ */
+get_template_part('functions/custom-styles-scripts'); /* LOAD NEW SCRIPTS AND STYLES FOR THIS THEME */
+
+/* THEME SETUP (Basic WP configurations)
 ------------------------------------------------ */
 
 if ( ! function_exists( 'mate_setup' ) ) {
 
 	function mate_setup() {
 
+		// Set content-width: Maximum allowed width for any content in the theme, like oEmbeds and images added to posts.
+		global $content_width;
+        if ( ! isset( $content_width ) ) $content_width = 1200;
+
 		// Automatic feed
 		add_theme_support( 'automatic-feed-links' );
-
-		// Set content-width
-		global $content_width;
-		if ( ! isset( $content_width ) ) $content_width = 1200;
 
 		// Post thumbnails
 		add_theme_support( 'post-thumbnails' );
 
-		// Add thumbnails image sizes
-		/* add_image_size( 'post-image', 620, 9999 );*/
-
-		// align-wide and align-full
+		// align-wide and align-full support
 		add_theme_support( 'align-wide' );
 
 		// Title tag
 		add_theme_support( 'title-tag' );
 
-		// Post formats
-		//add_theme_support( 'post-formats', array( 'aside' ) );
+		// Add support for editor styles.
+		add_theme_support( 'editor-styles' );
+
+		// Enqueue editor styles.
+		add_editor_style( 'assets/css/style-editor.css' );
+
+		// Post formats (I never use them, and you?)
+        //add_theme_support( 'post-formats', array( 'aside' ) );
+
+
+		// Add new thumbnails image sizes (Try to avoid that)
+		/* add_image_size( 'post-image', 620, 9999 );*/
 
 
 
-		// Add nav menu
-		register_nav_menu( 'primary-menu', __( 'Primary Menu', 'mate' ) );
+		// Make this theme translation ready:
+        load_theme_textdomain( 'mate', get_template_directory() . '/languages' );
 
-		// Make the theme translation ready
-		load_theme_textdomain( 'mate', get_template_directory() . '/languages' );
 
 		$locale_file = get_template_directory() . "/languages/" . get_locale();
 
@@ -186,10 +162,12 @@ if ( ! function_exists( 'mate_setup' ) ) {
 			require_once( $locale_file );
 		}
 
+		/* Let remove some Unnecessary things */
+		remove_action( 'wp_head', 'wp_generator' ) ;
+		remove_action( 'wp_head', 'wlwmanifest_link' ) ;
+		add_filter('xmlrpc_enabled', '__return_false');
 
 	}
 	add_action( 'after_setup_theme', 'mate_setup' );
 
 }
-
-

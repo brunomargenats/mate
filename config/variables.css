@@ -1,0 +1,83 @@
+/* -------------------------------------------------------------------------------- */
+/*	MAIN CSS CONFIGURATION FILE
+/*  How to use it: Copy this file inside /config/ in your child theme and change the
+/*  variables values if you want. You can also add your own!
+/* -------------------------------------------------------------------------------- */
+
+
+
+:root { /* === START OF CSS VARIABLES === */
+
+    /* -------------------------------------------------------------------------------- */
+    /*	SIZES */
+    --container-max-width: 1200px; /* Website container max-width. MIN: 1200px. If you change this change also $content_width in functions.php*/
+    --wrapper-max-width: 980px; /* Central content max-width (headear and footer not included. Can be 100% */
+    --grid-spacing: 20px;  /* Space between columns */
+    --logo-width:40px;
+    --logo-height:58.75px;
+
+    /* -------------------------------------------------------------------------------- */
+
+    /* -------------------------------------------------------------------------------- */
+    /*	TYPHOGRAPHY */
+    --font-display: 'Barlow';
+    --font-text: 'Open Sans';
+    --color-text: var(--color-gray-10);
+    --color-text-heading: var(--color-gray-10);
+    --color-text-subtle: var(--color-gray-6);
+    --color-link: var(--color-on-background);
+    --color-link-hover: var(--color-primary);
+    /* -------------------------------------------------------------------------------- */
+
+
+    /* -------------------------------------------------------------------------------- */
+    /*	COLORS
+    /*  System inspiration:
+    https://material.io/design/color/the-color-system.html#color-theme-creation
+    https://medium.com/codyhouse/create-your-design-system-part-3-colors-798e4729921f
+    /* -------------------------------------------------------------------------------- */
+
+        /* Color Shades Generators (15% recommended and 50% for BG) : http://scg.ar-ch.org/ or http://www.0to255.com/6200EE  */
+        --color-primary: #03DAC6;
+        --color-primary-light:#2dfce9;
+        --color-primary-dark:#028f81;
+        --color-primary-bg:#ddfffb;
+        --color-on-primary:#000 ; /*contrast*/
+
+        --color-secondary: #6200EE;
+        --color-secondary-light: #8c3bff;
+        --color-secondary-dark: #4200a1;
+        --color-secondary-bg: #f5eeff;
+        --color-on-secondary: #fff;  /*contrast*/
+
+        /*Environment: Surface, background, and error colors typically don’t represent brand*/
+        --color-background: #fff; /*body bg*/
+        --color-on-background: #1d1d21; /*body color*/
+        --color-surface: #f5f5f5;
+        --color-on-surface: #000;
+
+        /* Feedback. Color inspiration: https://www.uptowncss.com/#alerts*/
+        --color-success-light: #e3f1df;
+        --color-success-dark: #50b83c;
+        --color-error-light: #fbeae5;
+        --color-error-dark: #c31720;
+        --color-warning-light: #fcf1cd;
+        --color-warning-dark: #eec200;
+
+        /* Shades - 10 steps. Inspiration: https://www.materialui.co/colors*/
+        --color-gray-10: #1d1d21;
+        --color-gray-9: #212121;
+        --color-gray-8: #424242;
+        --color-gray-7: #616161;
+        --color-gray-6: #757575;
+        --color-gray-5: #9E9E9E;
+        --color-gray-4: #BDBDBD;
+        --color-gray-3: #E0E0E0;
+        --color-gray-2: #EEEEEE;
+        --color-gray-1: #F5F5F5;
+        --color-gray-0: #FAFAFA;
+
+        /* default border */
+        --color-border: var(--color-gray-4);
+
+    } /* === END OF CSS VARIABLES === */

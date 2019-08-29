@@ -1,15 +1,21 @@
 <?php
-if ( (! function_exists( 'mate_google_fonts' )) && (! is_admin()) ) {
-    function mate_google_fonts() {
-        wp_register_style('mate_fonts', '//fonts.googleapis.com/css?family=Alegreya+Sans:700|Barlow:400,400i,700,700i' );
-        wp_enqueue_style( 'mate_fonts');
+/**
+ * GOOGLE FONTS FUNCTIONS
+ * Description: Little function for load google fonts. Now we can also setup the display! See link below.
+ * @link https://font-display.glitch.me/ (&display=optional)
+ * @link https://fonts.google.com/
+ */
+
+
+/************* GOOGLE FONTS ********************/
+if ( (! function_exists( 'mate_google_fonts' ))) {
+    add_action( 'wp_head', 'mate_google_fonts' );
+    function mate_google_fonts() {?>
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+        <link rel="dns-prefetch" href="fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link rel="preconnect" href="fonts.googleapis.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css?family=Barlow:700|Open+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+    <?php
     }
-    add_action( 'wp_enqueue_scripts', 'mate_google_fonts' );
-
-    /*Preconnect makes google fonts faster! */
-    function mate_gfonts_prefetch() {
-        echo '<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>';
-       }
-    add_action( 'wp_head', 'mate_gfonts_prefetch' );
-
 }

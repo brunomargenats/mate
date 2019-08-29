@@ -1,4 +1,1 @@
-
-// ======================================================================= IE Ponyfill
-// Call using defaults
-cssVars();
+/* Put all your scripts here. This file wiLL load inside the footer */

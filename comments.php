@@ -1,4 +1,12 @@
 <?php
+/**
+ * The template for displaying the comments.
+ * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/comment-template/
+ */
+
+global $use_comments;
+if($use_comments){ /* START USE COMMENTS */
+
 // don't load it if you can't comment
 if ( post_password_required() ) {
     return;
@@ -51,4 +59,6 @@ if ( post_password_required() ) {
 
     <?php endif; ?>
 
-<?php comment_form(); ?>
+<?php comment_form();
+
+} /* END USE COMMENTS */

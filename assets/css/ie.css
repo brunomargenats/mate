@@ -1,0 +1,16 @@
+/* -------------------------------------------------------------------------------- */
+/*	ONLY IE CSS
+/* -------------------------------------------------------------------------------- */
+
+#nav ul.sub-menu {
+    margin-top: -1px;
+}
+
+@media screen and (min-width: 768px) {
+    .dropdown-toggle::after {
+        top: 0;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
