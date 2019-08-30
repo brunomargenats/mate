@@ -19,8 +19,14 @@
 
 	</head>
 
-	<body <?php body_class(); ?> itemscope itemtype="https://schema.org/WebPage">
-
+    <body <?php body_class(); ?> itemscope itemtype="https://schema.org/WebPage">
+    <?php
+    if ( function_exists( 'wp_body_open' ) ) {
+        wp_body_open();
+    } else {
+        do_action( 'wp_body_open' );
+    }
+    ?>
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to the content', 'mate' ); ?></a>
         <a class="skip-link screen-reader-text" href="#nav"><?php _e( 'Skip to the main menu', 'mate' ); ?></a>
 

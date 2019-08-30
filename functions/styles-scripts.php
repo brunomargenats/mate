@@ -7,13 +7,10 @@ if ( ! function_exists( 'mate_scripts_styles_header' ) ) {
 
 function mate_scripts_styles_header() {
 
-		/*   REGISTER ALL CSS FOR SITE
-				 array(), wp_get_theme( 'mate' )->get( 'Version' ), true ); (true = in_footer)
+		/*   REGISTER ALL CSS FOR THIS SITE
+				 wp_register_style( 'mate_name', get_theme_file_uri( '/assets/css/file.css' ), array(), wp_get_theme( 'mate' )->get( 'Version' ), $media );
 		*/
 
-
-
-	//	wp_register_style('site_style', get_stylesheet_uri(), '', null, 'all' );
 		wp_register_style('mate_variables',get_theme_file_uri( '/config/variables.css' ), array(), wp_get_theme()->get( 'Version' ) );
 		wp_register_style('mate_reset',get_theme_file_uri( '/assets/css/reset.css' ), array(), wp_get_theme()->get( 'Version' ) );
 		wp_register_style('mate_base',get_theme_file_uri( '/assets/css/base.css' ), array(), wp_get_theme()->get( 'Version' ) );
@@ -21,18 +18,18 @@ function mate_scripts_styles_header() {
 		wp_register_style('mate_typography',get_theme_file_uri( '/assets/css/typography.css' ), array(), wp_get_theme()->get( 'Version' ) );
 
 
-		/*   REGISTER ALL JS FOR SITE */
+		/*   REGISTER ALL JS FOR THIS SITE
+		wp_register_script( 'mate_name', get_theme_file_uri( '/assets/js/file.js' ), array(), wp_get_theme()->get( 'Version' ), true );
+	    true = in_footer
+		*/
 
 
-		if ( ! is_admin() ) {
-			/* CALL ALL CSS*/
+		/* ENQUEUE ALL CSS*/
 			wp_enqueue_style( 'mate_variables');
 			wp_enqueue_style( 'mate_reset');
 			wp_enqueue_style( 'mate_base');
 			wp_enqueue_style( 'mate_grid');
 			wp_enqueue_style( 'mate_typography');
-
-		}
 
 	}
 	add_action( 'wp_enqueue_scripts', 'mate_scripts_styles_header', 80 );

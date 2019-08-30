@@ -8,7 +8,7 @@
     <div id="siteinfo" class="col-bleed-y col-9 col-sm-auto" itemscope itemtype="https://schema.org/Organization">
         <div id="logo" itemprop="logo">
                 <a href="<?php echo home_url(); ?>" rel="nofollow" itemprop="url" title="<?php bloginfo('name'); ?>">
-                    <img width="40" height="58.75" src="<?php echo get_theme_file_uri(). '/assets/images/logo.svg' ?>" itemprop="logo" alt="<?php bloginfo('name'); ?> logo" />
+                    <img width="40" height="59" src="<?php echo get_theme_file_uri(). '/assets/images/logo.svg' ?>" itemprop="logo" alt="<?php bloginfo('name'); ?> logo" />
                 </a>
         </div>
         <?php /* uncomment if needed

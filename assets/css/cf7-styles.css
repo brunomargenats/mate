@@ -101,7 +101,7 @@ div.wpcf7 .ajax-loader {
 	vertical-align: middle;
 }
 
-div.wpcf7 .ajax-loader:after {
+div.wpcf7 .ajax-loader::after {
 	content: " ";
 	display: block;
 	width: 16px;

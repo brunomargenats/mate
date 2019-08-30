@@ -25,6 +25,15 @@ Source: https://fonts.google.com/specimen/Open+Sans
 
 
 == Changelog ==
+
+Version 0.6.1
+-------------------------
+- Added: wp_body_open after <body>. This is a very usefull new WP function.
+- Fixed: 1px bug in drop-down menus (desktop). In navigation.css file : line 319
+- Enhancement: custom-styles-scripts.php second function is now easier to understand.
+- Fixed: pseudo-elements :after and :before are now using :: across all the CSS files. Ref: https://bricss.net/post/10768584657/know-your-lingo-pseudo-class-vs-pseudo-element 
+- Added: Simple javascript for smooth Go To anchor effect.
+
 Version 0.6
 -------------------------
 - Enhancement: Grid replaced (Reflex grid)
