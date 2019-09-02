@@ -1,8 +1,8 @@
 <?php
 /**
- * GOOGLE FONTS FUNCTIONS
+ * FUNCTIONS: GOOGLE FONTS
  * Description: Little function for load google fonts. Now we can also setup the display! See link below.
- * @link https://font-display.glitch.me/ (&display=optional)
+ * @link https://font-display.glitch.me/ (&display=swap)
  * @link https://fonts.google.com/
  */
 

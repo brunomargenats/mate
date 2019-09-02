@@ -1,7 +1,7 @@
 <?php
 /**
- * CUSTOM STYLES AND SCRIPTS FUNCTIONS
- * Try to put your scripts and styles in footer function first to avoid render blocking. If it doesn't work, try the other function.
+ * FUNCTIONS: CUSTOM STYLES AND SCRIPTS FUNCTIONS
+ * Description: Here we will load all new scripts and styles. Try to put your scripts and styles in footer function first to avoid render blocking. If it doesn't work, try the other function.
  * @link https://developers.google.com/speed/docs/insights/BlockingJS
  * @link https://www.wpbeginner.com/wp-tutorials/how-to-properly-add-javascripts-and-styles-in-wordpress/
  */

@@ -9,18 +9,18 @@
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 
-		<header class="article-header">
+    <header class="article-header">
 
-			<?php get_template_part( 'template-parts/content/post/header', 'title'); ?>
+        <?php get_template_part( 'template-parts/content/post/header', 'title'); ?>
 
-		</header> <?php // end article header ?>
+    </header> <?php // end article header ?>
 
-		<section class="entry-content" itemprop="articleBody">
+    <section class="entry-content">
 
-			<?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
-			<?php the_content();
+        <?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
+        <?php the_content();
 				wp_link_pages(
 					array(
 						'before'      => '<div class="page-links">' . __( 'Pages:', 'mate' ),
@@ -32,30 +32,23 @@
 					?>
 
 
-		</section> <?php // end article section ?>
+    </section> <?php // end article section ?>
 
-		<footer class="article-footer">
-		</footer>
-		<?php
+    <footer class="article-footer">
+    </footer>
+    <?php
 		global $use_comments_in_pages;
 			if( $use_comments_in_pages && post_type_supports( get_post_type(), 'comments' ) ) {
-
 				if( comments_open() ) {
-
 					comments_template();
-
 				}
-
 			} ?>
-
-
-	</article>
+</article>
 
 <?php endwhile; ?>
 
-
 <?php else : ?>
 
-	<?php get_template_part( 'template-parts/content/content','none'); ?>
+<?php get_template_part( 'template-parts/content/content','none'); ?>
 
 <?php endif;

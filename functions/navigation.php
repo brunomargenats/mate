@@ -1,6 +1,6 @@
 <?php
 /**
- * CUSTOM NAVIGATION FUNCTIONS
+ * FUNCTIONS: CUSTOM NAVIGATION
  * Description: All functions here controls the navigation of this site.
  */
 

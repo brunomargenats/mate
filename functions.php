@@ -67,6 +67,7 @@ if ($cf7_templates_only){
 }
 
 
+
 /* ADD SUPPORT FOR IE (CSS VARIABLES)
 ------------------------------------------------ */
 if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE ||
@@ -114,9 +115,24 @@ get_template_part('functions/custom-excerpt');
 ------------------------------------------------ */
 get_template_part('functions/custom-styles-scripts'); /* LOAD NEW SCRIPTS AND STYLES FOR THIS THEME */
 
+
+/* ADD WP CLEANUP
+------------------------------------------------ */
+if ($wp_cleanup){
+get_template_part('functions/cleanup'); /* Clean up WordPress Header mess */
+}
+
+
+/* RECOMMENDED PLUGINS
+------------------------------------------------ */
+if ($recommended_plugins){
+	get_template_part('functions/recommended-plugins/recommended-plugins');
+}
+
+
+
 /* THEME SETUP (Basic WP configurations)
 ------------------------------------------------ */
-
 if ( ! function_exists( 'mate_setup' ) ) {
 
 	function mate_setup() {
@@ -143,6 +159,21 @@ if ( ! function_exists( 'mate_setup' ) ) {
 		// Enqueue editor styles.
 		add_editor_style( 'assets/css/style-editor.css' );
 
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
+
 		// Post formats (I never use them, and you?)
         //add_theme_support( 'post-formats', array( 'aside' ) );
 
@@ -161,11 +192,6 @@ if ( ! function_exists( 'mate_setup' ) ) {
 		if ( is_readable( $locale_file ) ) {
 			require_once( $locale_file );
 		}
-
-		/* Let remove some Unnecessary things */
-		remove_action( 'wp_head', 'wp_generator' ) ;
-		remove_action( 'wp_head', 'wlwmanifest_link' ) ;
-		add_filter('xmlrpc_enabled', '__return_false');
 
 	}
 	add_action( 'after_setup_theme', 'mate_setup' );

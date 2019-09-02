@@ -1,6 +1,6 @@
 <?php
 /**
- * CUSTOM NUMERIC PAGE NAVI FUNCTION
+ * FUNCTIONS: CUSTOM NUMERIC PAGE NAVI
  * Description: Custom page navi for archives.
  * @link https://codex.wordpress.org/Pagination
  * @link https://njengah.com/wordpress-custom-pagination/

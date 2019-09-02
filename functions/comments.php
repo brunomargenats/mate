@@ -1,6 +1,6 @@
 <?php
 /**
- * CUSTOM COMMENTS FUNCTIONS
+ * FUNCTIONS: CUSTOM COMMENTS
  * Description: This controls all functions for comments and when we use them.
  */
 
@@ -101,7 +101,7 @@ I don’t know why WP think that you need the self-pingback details on your blog
 if ( ! function_exists( 'mate_disable_pingback' ) ) {
 	function mate_disable_pingback( &$links ) {
 		foreach ( $links as $l => $link )
-		if ( 0 === strpos( $link, get_option( 'home' ) ) )
+		if ( 0 === strpos( $link, home_url() ) )
 		unset($links[$l]);
 	}
 	add_action( 'pre_ping', 'mate_disable_pingback' );

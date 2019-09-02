@@ -16,13 +16,15 @@ if ( post_password_required() ) {
 
 <?php // You can start editing here. ?>
 
-    <?php if ( have_comments() ) : ?>
+<?php if ( have_comments() ) : ?>
 
-        <h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', 'mate' ), __( '<span>One</span> Comment', 'mate' ), __( '<span>%</span> Comments', 'mate' ) );?></h3>
+<h3 id="comments-title" class="h2">
+    <?php comments_number( __( '<span>No</span> Comments', 'mate' ), __( '<span>One</span> Comment', 'mate' ), __( '<span>%</span> Comments', 'mate' ) );?>
+</h3>
 
-        <section class="commentlist">
+<section class="commentlist">
 
-          <?php wp_list_comments( array(
+    <?php wp_list_comments( array(
                 'style'             => 'div',
                 'short_ping'        => true,
                 'avatar_size'       => 40,
@@ -38,26 +40,26 @@ if ( post_password_required() ) {
             );
           ?>
 
-        </section>
+</section>
 
-        <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 
-        	<nav class="navigation comment-navigation" role="navigation">
+<nav class="navigation comment-navigation" role="navigation">
 
-              	<div class="comment-nav-prev"><?php previous_comments_link( __( '&larr; Previous Comments', 'mate' ) ); ?></div>
-              	<div class="comment-nav-next"><?php next_comments_link( __( 'More Comments &rarr;', 'mate' ) ); ?></div>
+    <div class="comment-nav-prev"><?php previous_comments_link( __( '&larr; Previous Comments', 'mate' ) ); ?></div>
+    <div class="comment-nav-next"><?php next_comments_link( __( 'More Comments &rarr;', 'mate' ) ); ?></div>
 
-        	</nav>
+</nav>
 
-        <?php endif; ?>
+<?php endif; ?>
 
-        <?php if ( ! comments_open() ) : ?>
+<?php if ( ! comments_open() ) : ?>
 
-        	<p class="no-comments"><?php _e( 'Comments are closed.' , 'mate' ); ?></p>
+<p class="no-comments"><?php _e( 'Comments are closed.' , 'mate' ); ?></p>
 
-        <?php endif; ?>
+<?php endif; ?>
 
-    <?php endif; ?>
+<?php endif; ?>
 
 <?php comment_form();
 

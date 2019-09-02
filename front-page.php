@@ -5,20 +5,25 @@
  */
 get_header(); ?>
 
-		<div id="content">
+<div id="content">
 
-			<div id="inner-content" class="wrap">
+    <div id="inner-content" class="wrap">
 
-				<main id="main" class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="https://schema.org/Blog">
-					<?php // Edit the loop in /template-parts/loop. Or roll your own. ?>
-					<div class="wrapper">
-						<?php get_template_part( 'template-parts/content/content','page'); ?>
-					</div>
-				</main>
+        <main id="main" class="main" role="main">
+            <?php // Edit the loop in /template-parts/loop. Or roll your own. ?>
+            <div class="wrapper">
+                <?php
+						if ( 'page' == get_option( 'show_on_front' ) ){
+							get_template_part( 'template-parts/content/content','page');
+						}else{
+							get_template_part( 'template-parts/content/content','index');
+						}
+						; ?>
+            </div>
+        </main>
 
-			</div>
+    </div>
 
-		</div>
-
+</div>
 
 <?php get_footer();

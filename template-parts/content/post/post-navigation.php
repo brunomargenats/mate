@@ -7,6 +7,6 @@
 
 <div class="post-navigation">
 
-	<?php mate_page_navi( $wp_query ); ?>
+    <?php mate_page_navi( $wp_query ); ?>
 
 </div>

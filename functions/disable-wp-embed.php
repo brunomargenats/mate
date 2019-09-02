@@ -1,7 +1,7 @@
 <?php
 /**
- * DISABLE WP EMBED
- * Description: Embed provides an easy way to embed content from one site to another. You’re probably familiar with it on sites like YouTube and Twitter. But what if you don’t want other sites embedding your stuff? In that case, this snippet is for you.
+ * FUNCTIONS: DISABLE WP EMBED
+ * Description: This function will disable the possibility of your content being embebbed in other sites. You can still embed content from YouTube, Twitter, etc.
  * @link https://www.isitwp.com/remove-everything-oembed/
  */
 

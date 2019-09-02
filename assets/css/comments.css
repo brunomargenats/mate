@@ -2,6 +2,8 @@
 /*	COMMENTS CSS
 /* -------------------------------------------------------------------------------- */
 
+.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;} /* WP added CSS*/
+
 .comment-form label {
     display: block
 }

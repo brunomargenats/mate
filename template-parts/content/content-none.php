@@ -18,8 +18,8 @@ $count = $GLOBALS['wp_query']->post_count;
         </h1>
     </header>
     <section class="entry-content">
-    <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'mate' ); ?></p>
-		<?php get_search_form(); ?>
+        <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'mate' ); ?></p>
+        <?php get_search_form(); ?>
     </section>
     <footer class="article-footer">
 

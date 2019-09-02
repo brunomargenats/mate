@@ -1,6 +1,7 @@
 <?php
 /**
- * The template part for adding a post thumbnail on post if any image is featured.
+ * Template Part: Post Thumbnail
+ * Description: The template part for adding a post thumbnail on post if any image is featured.
  * @link https://developer.wordpress.org/reference/functions/the_post_thumbnail/
  */
 ?>

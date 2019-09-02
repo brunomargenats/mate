@@ -1,6 +1,16 @@
 <?php
 /**
- * HEADER styles and scripts (Just those that are necessary to load first)
+ * FUNCTIONS: REGISTER AND EBQUEUE HEADER STYLES AND SCRIPTS
+ * Description: Register and load only important styles and scripts on header
+ * @link https://codex.wordpress.org/Function_Reference/wp_register_style
+ * @link https://developer.wordpress.org/reference/functions/wp_enqueue_style/
+ * @link https://developer.wordpress.org/reference/functions/wp_register_script/
+ * @link https://developer.wordpress.org/reference/functions/wp_enqueue_script/
+ * @link https://www.wpbeginner.com/wp-tutorials/how-to-properly-add-javascripts-and-styles-in-wordpress/
+ */
+
+/**
+ * FUNCTIONS: ADD HEADER STYLES AND SCRIPTS (JJust those that are necessary to load first)
  */
 
 if ( ! function_exists( 'mate_scripts_styles_header' ) ) {

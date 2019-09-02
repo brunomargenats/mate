@@ -1,8 +1,8 @@
 <?php
 /**
- * CUSTOM EXCERPT FUNCTIONS
- * Description: Set custom excerpt length and add a Read More link with an arrow.
- * @link https://github.com/jhildenbiddle/css-vars-ponyfill
+ * FUNCTIONS: CUSTOM EXCERPT
+ * Description: Set custom excerpt length and add a Read More link with an arrow. Read the link for more customization.
+ * @link: https://codex.wordpress.org/Customizing_the_Read_More
  */
 
 
@@ -17,7 +17,19 @@ if ( ! function_exists( 'mate_custom_excerpt_length' ) ) {
 // add more link to excerpt
 if ( ! function_exists( 'mate_custom_excerpt_more' ) ) {
     function mate_custom_excerpt_more($more) {
-        return '<div><a class="read-more" href="'. get_permalink( get_the_ID() ) . '">'. __('Read More <span>&rarr;</span>', 'mate') .'</a></div>';
+        global $post;
+        return '<div><a class="read-more" href="'. get_permalink( $post->ID ) . '">'. __('Read More <span>&rarr;</span>', 'mate') .'</a></div>';
     }
     add_filter('excerpt_more', 'mate_custom_excerpt_more');
+    add_filter( 'the_content_more_link', 'mate_custom_excerpt_more' );
+}
+
+
+if ( ! function_exists( 'mate_remove_more_link_scroll' ) ) {
+    //Prevent Page Scroll When Clicking the More Link
+    function mate_remove_more_link_scroll( $link ) {
+        $link = preg_replace( '|#more-[0-9]+|', '', $link );
+        return $link;
+    }
+    add_filter( 'the_content_more_link', 'mate_remove_more_link_scroll' );
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * CF7 CUSTOM CSS FUNCTION
+ * FUNCTIONS: CONTACT FORM 7 CUSTOM CSS FUNCTION
  * Description: Add custom CSS file based on original CF7 plugin CSS. It will load on footer.
  */
 

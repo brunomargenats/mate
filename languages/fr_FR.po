@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mate \n"
-"POT-Creation-Date: 2019-08-23 04:07+0000\n"
-"PO-Revision-Date: 2019-08-23 04:08+0000\n"
-"Last-Translator: Bruno Margenats\n"
+"POT-Creation-Date: 2019-09-02 21:58+0000\n"
+"PO-Revision-Date: 2019-09-02 21:59+0000\n"
+"Last-Translator: bruz <brunomargenats@gmail.com>\n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,82 +14,82 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Loco-Version: 2.3.0; wp-5.2.2"
 
-#: comments.php:21 template-parts/content/post/comment-count.php:9
+#: comments.php:22 template-parts/content/post/comment-count.php:10
 msgid "<span>No</span> Comments"
 msgstr "<span>Aucun</span> commentaire"
 
-#: comments.php:21 template-parts/content/post/comment-count.php:9
+#: comments.php:22 template-parts/content/post/comment-count.php:10
 msgid "<span>One</span> Comment"
 msgstr "<span>Un</span> commentaire"
 
-#: comments.php:21 template-parts/content/post/comment-count.php:9
+#: comments.php:22 template-parts/content/post/comment-count.php:10
 msgid "<span>%</span> Comments"
 msgstr "<span>%</span> commentaires"
 
-#: comments.php:31
+#: comments.php:33
 msgid "Reply"
 msgstr "R&eacute;pondre"
 
-#: comments.php:47
+#: comments.php:49
 msgid "&larr; Previous Comments"
 msgstr "&larr; Commentaires pr&eacute;c&eacute;dents"
 
-#: comments.php:48
+#: comments.php:50
 msgid "More Comments &rarr;"
 msgstr "Plus de commentaires &rarr;"
 
-#: comments.php:56
+#: comments.php:58
 msgid "Comments are closed."
 msgstr "Les commentaires sont ferm&eacute;s."
 
-#: header.php:24
+#: header.php:29
 msgid "Skip to the content"
 msgstr "Sauter au contenu"
 
-#: header.php:25
+#: header.php:30
 msgid "Skip to the main menu"
 msgstr "Sauter au menu principal"
 
-#: functions/comments.php:49
+#: functions/comments.php:52
 #, php-format
 msgid "<cite class=\"fn\">%s</cite>"
 msgstr "<cite class=\"fn\">%s</cite>"
 
-#: functions/comments.php:51
+#: functions/comments.php:54
 msgid "F jS, Y"
 msgstr "j F Y"
 
-#: functions/comments.php:53
+#: functions/comments.php:57
 msgid "(Edit)"
 msgstr "(&Eacute;diter)"
 
-#: functions/comments.php:59
+#: functions/comments.php:63
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions/comments.php:89
+#: functions/comments.php:93
 msgid "Default Avatar"
 msgstr "Avatar par d&eacute;faut"
 
-#: functions/custom-excerpt.php:17
+#: functions/custom-excerpt.php:21
 msgid "Read More <span>&rarr;</span>"
 msgstr "En savoir plus <span>&rarr;</span>"
 
-#: functions/menus.php:8 template-parts/header/inner-header-content.php:25
+#: functions/menus.php:12 template-parts/header/inner-header-content.php:36
 msgid "Primary Menu"
 msgstr "Menu principal"
 
 #. %s: post date
-#: functions/post-time.php:28
+#: functions/post-time.php:31
 #, php-format
 msgid "<span class=\"screen-reader-text\">Posted on</span> %s"
 msgstr "<span class=\"screen-reader-text\">Publi&eacute; sur</span> %s"
 
-#: functions/sidebars.php:10
+#: functions/sidebars.php:16
 msgid "Sidebar"
 msgstr "Barre latérale"
 
-#: functions/sidebars.php:11
+#: functions/sidebars.php:17
 msgid "The sidebar."
 msgstr "La barre latérale"
 
@@ -101,15 +101,57 @@ msgstr "Formulaire de contact"
 msgid "Page with sidebar"
 msgstr "Page avec barre latérale"
 
-#: mu-plugins/custom-gutenberg.php:47
-msgctxt "Name of the black color in the Gutenberg palette"
-msgid "Black"
-msgstr "Noir"
+#: functions/recommended-plugins/plugins-list.php:1
+msgid "CONTENT"
+msgstr "CONTENU"
 
-#: mu-plugins/custom-gutenberg.php:52
-msgctxt "Name of the white color in the Gutenberg palette"
-msgid "White"
-msgstr "Blanc"
+#: functions/recommended-plugins/plugins-list.php:7
+msgid "SECURITY"
+msgstr "SÉCURITÉ"
+
+#: functions/recommended-plugins/plugins-list.php:13
+msgid "MULTILINGUAL"
+msgstr "MULTILINGUE"
+
+#: functions/recommended-plugins/plugins-list.php:19
+msgid "PERFORMANCE"
+msgstr "PERFORMANCE"
+
+#: functions/recommended-plugins/recommended-plugins.php:13
+msgid "Recommended"
+msgstr "Recommandées"
+
+#: functions/recommended-plugins/recommended-plugins.php:32
+msgid "Recommended Plugins"
+msgstr "Extensions recommandées"
+
+#: functions/recommended-plugins/recommended-plugins.php:46
+msgid "Installed and active"
+msgstr "Installée et activée"
+
+#: functions/recommended-plugins/recommended-plugins.php:49
+msgid "Installed but inactive"
+msgstr "Installée mais désactivée"
+
+#: functions/recommended-plugins/recommended-plugins.php:53
+msgid "Activate it!"
+msgstr "Activer!"
+
+#: functions/recommended-plugins/recommended-plugins.php:57
+msgid "Not Installed"
+msgstr "Non installée"
+
+#: functions/recommended-plugins/recommended-plugins.php:59
+msgid "Visit official web site to download this plugin"
+msgstr "Visitez le site web officiel pour télécharger cette extension"
+
+#: functions/recommended-plugins/recommended-plugins.php:61
+msgid "Install"
+msgstr "Installer"
+
+#: functions/recommended-plugins/recommended-plugins.php:65
+msgid "More Info"
+msgstr "En savoir plus"
 
 #: template-parts/content/content-none.php:17
 msgid "Sorry, that page can&rsquo;t be found."
@@ -121,19 +163,24 @@ msgstr ""
 "Apparemment, rien n’a été trouvé à cette adresse. Essayez avec une "
 "recherche ?"
 
+#: template-parts/content/content-page.php:26
 #: template-parts/content/content-single.php:33
 msgid "Pages:"
 msgstr "Pages :"
 
-#: template-parts/header/inner-header-content.php:19
+#: template-parts/content/content-search.php:13
+msgid "Search results for:"
+msgstr "Résultats de recherche pour :"
+
+#: template-parts/header/inner-header-content.php:28
 msgid "Menu"
 msgstr "Menu"
 
-#: template-parts/header/inner-header-content.php:26
+#: template-parts/header/inner-header-content.php:37
 msgid "The Main Menu"
 msgstr "Le menu principal"
 
-#: template-parts/content/category/category-tags.php:7
+#: template-parts/content/category/category-tags.php:8
 msgid "Tags:"
 msgstr "&Eacute;tiquettes :"
 
@@ -141,7 +188,7 @@ msgstr "&Eacute;tiquettes :"
 msgid "Posts Categorized:"
 msgstr "Articles cat&eacute;goris&eacute;s :"
 
-#: template-parts/content/post/header-title.php:31
+#: template-parts/content/post/header-title.php:32
 msgid "404"
 msgstr "404"
 

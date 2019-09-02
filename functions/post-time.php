@@ -1,6 +1,6 @@
 <?php
 /**
- * POST TIME FUNCTION
+ * FUNCTIONS: ADD POST TIME
  * Description: This function shows when the post was publish.
  * @link https://github.com/WordPress/twentyseventeen/blob/master/inc/template-tags.php
  */

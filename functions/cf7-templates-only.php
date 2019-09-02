@@ -1,6 +1,6 @@
 <?php
 /**
- * CF7 TEMPLATES ONLY FUNCTION
+ * FUNCTIONS: CONTACT FORMS 7 TEMPLATES ONLY
  * Description: Deregister scripts and styles from page if "Contact Form" page template isn't set.
  */
 

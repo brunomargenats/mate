@@ -1,8 +1,8 @@
 <?php
 /**
- * SIDEBARS FUNCTIONS AND HAS_SIDEBAR DETECTION
- * Description: This function shows when the post was publish.
- * @link https://github.com/WordPress/twentyseventeen/blob/master/inc/template-tags.php
+ * FUNCTIONS: ADD SIDEBARS AND HAS_SIDEBAR DETECTION
+ * Description: Register sidebar and other sidebar functions
+ * @link https://codex.wordpress.org/Function_Reference/register_sidebar
  */
 
 

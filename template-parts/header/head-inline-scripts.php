@@ -1,8 +1,8 @@
 <?php
 /**
- * INLINE SCRIPTS IN HEADER. THIS WILL LOAD INSIDE <head></head>
- * If you want to load custom files like script.js or style.css, please use /functions/custom-styles-scripts.php
- * All other inline content goes here
+ * Template Part: Inline scripts in header.
+ * Description: This will load inside <head></head>. If you want to load custom files like script.js or style.css, please use /functions/custom-styles-scripts.php.
+ * All other inline content goes here.
  */
 ?>
 

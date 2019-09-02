@@ -1,7 +1,7 @@
 <?php
 /**
- * SITE MENUS FUNCTION (WordPress default navigation)
- * Description: Register the main navigation of this site.
+ * FUNCTIONS: WEBSITE SITE MENUS (WordPress default navigation)
+ * Description: Register the main navigation of this site and secondary navigation if needed.
  * @link https://developer.wordpress.org/reference/functions/register_nav_menu/
  */
 

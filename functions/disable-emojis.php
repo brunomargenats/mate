@@ -1,6 +1,6 @@
 <?php
 /**
- * DISABLE THE EMOJI'S
+ * FUNCTIONS: DISABLE THE EMOJI'S
  */
 
 

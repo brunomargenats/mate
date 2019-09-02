@@ -1,7 +1,7 @@
 <?php
 /**
- * IE SUPPORT FUNCTION
- * Description: This function will add support for CSS variables in IE. This function doesn't load in other browsers.
+ * FUNCTIONS: IE SUPPORT (only applied on IE)
+ * Description: This function will add support for CSS variables in IE and a custom ie.css file.
  * @link https://github.com/jhildenbiddle/css-vars-ponyfill
  */
 

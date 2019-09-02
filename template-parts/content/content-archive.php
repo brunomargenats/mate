@@ -8,49 +8,49 @@
 
 
 <?php if (have_posts()) :?>
-			<header class="page-header">
-				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
-				<?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
-			</header><!-- .page-header -->
+<header class="page-header">
+    <?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+    <?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
+</header><!-- .page-header -->
 
 <?php while (have_posts()) : the_post(); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
+    <header class="entry-header article-header">
 
-		<header class="entry-header article-header">
+        <h3 class="h2 entry-title">
+            <a href="<?php the_permalink() ?>" rel="bookmark"
+                title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+        </h3>
 
-			<h3 class="h2 entry-title">
-                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-            </h3>
+        <?php get_template_part( 'template-parts/content/post/postmeta'); ?>
 
-			<?php get_template_part( 'template-parts/content/post/postmeta'); ?>
+    </header>
 
-		</header>
+    <section class="entry-content">
 
-		<section class="entry-content">
+        <?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
 
-		<?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
+        <?php the_excerpt(); ?>
 
-			<?php the_excerpt(); ?>
+    </section>
 
-		</section>
+    <footer class="article-footer">
 
-		<footer class="article-footer">
+        <?php get_template_part( 'template-parts/content/category/category-tags'); ?>
 
-		<?php get_template_part( 'template-parts/content/category/category-tags'); ?>
+        <?php get_template_part( 'template-parts/content/post/comment', 'count'); ?>
 
-		<?php get_template_part( 'template-parts/content/post/comment', 'count'); ?>
+    </footer>
 
-		</footer>
-
-	</article> <?php // end article ?>
+</article> <?php // end article ?>
 
 <?php endwhile; ?>
 
-    <?php get_template_part( 'template-parts/content/post/post-navigation'); ?>
+<?php get_template_part( 'template-parts/content/post/post-navigation'); ?>
 
 <?php else : ?>
 
-	<?php get_template_part( 'template-parts/content/content','none'); ?>
+<?php get_template_part( 'template-parts/content/content','none'); ?>
 
 <?php endif;

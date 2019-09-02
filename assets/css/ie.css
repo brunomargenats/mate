@@ -1,16 +1,19 @@
 /* -------------------------------------------------------------------------------- */
 /*	ONLY IE CSS
 /* -------------------------------------------------------------------------------- */
+/*
+/* We need to use !important to override styles.
+*/
 
-#nav ul.sub-menu {
-    margin-top: -1px;
+
+@media screen and (max-width: 767px) {
+.nav-collapse li {margin-bottom:3px!important;}
+.nav-collapse li .dropdown-toggle {line-height: 0.8em!important;}
+.nav-collapse li .dropdown-toggle::after {font-size: 0.7em!important;}
 }
 
 @media screen and (min-width: 768px) {
-    .dropdown-toggle::after {
-        top: 0;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+    .dropdown-toggle:after {
+        margin: 0.3em 0 0 0.5em!important;
     }
 }

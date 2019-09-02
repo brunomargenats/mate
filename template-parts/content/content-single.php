@@ -8,26 +8,26 @@
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemprop="blogPost" itemtype="https://schema.org/BlogPosting">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 
-		<header class="article-header entry-header">
+    <header class="article-header entry-header">
 
-			<h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
+        <h1 class="entry-title single-title" rel="bookmark"><?php the_title(); ?></h1>
 
-			<?php // Delete or comment out if you don't need this on your page or post. Edit in /template-parts/postmeta.php ?>
-			<?php get_template_part( 'template-parts/content/post/postmeta'); ?>
+        <?php // Delete or comment out if you don't need this on your page or post. Edit in /template-parts/postmeta.php ?>
+        <?php get_template_part( 'template-parts/content/post/postmeta'); ?>
 
-		</header> <?php // end article header ?>
+    </header> <?php // end article header ?>
 
-        <section class="entry-content" itemprop="articleBody">
+    <section class="entry-content">
 
-        	<?php if ( has_post_format()) { 
+        <?php if ( has_post_format()) { 
         		get_template_part( 'format', get_post_format() ); 
         	} ?>
 
-			<?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
+        <?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
 
-			<?php the_content(); 
+        <?php the_content(); 
 			wp_link_pages(
 				array(
 					'before'      => '<div class="page-links">' . __( 'Pages:', 'mate' ),
@@ -39,15 +39,15 @@
 			?>
 
 
-        </section> <?php // end article section ?>
+    </section> <?php // end article section ?>
 
-		<footer class="article-footer">
+    <footer class="article-footer">
 
-			<?php get_template_part( 'template-parts/content/category/category-tags'); ?>
+        <?php get_template_part( 'template-parts/content/category/category-tags'); ?>
 
-		</footer> <?php // end article footer ?>
+    </footer> <?php // end article footer ?>
 
-		<?php if( post_type_supports( get_post_type(), 'comments' ) ) {
+    <?php if( post_type_supports( get_post_type(), 'comments' ) ) {
 
 			if( comments_open() ) {
 
@@ -57,7 +57,7 @@
 
 		} ?>
 
-	</article> <?php // end article ?>
+</article> <?php // end article ?>
 
 <?php endwhile; ?>
 

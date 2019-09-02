@@ -8,47 +8,47 @@
 
 <?php if (have_posts()) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php _e( 'Search results for:', 'mate' ); ?>
-				</h1>
-				<div class="page-description"><?php echo get_search_query(); ?></div>
-			</header><!-- .page-header -->
+<header class="page-header">
+    <h1 class="page-title">
+        <?php _e( 'Search results for:', 'mate' ); ?>
+    </h1>
+    <div class="page-description"><?php echo get_search_query(); ?></div>
+</header><!-- .page-header -->
 
 <?php while (have_posts()) : the_post(); ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemprop="blogPost" itemtype="https://schema.org/BlogPosting">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 
-		<header class="article-header entry-header">
+    <header class="article-header entry-header">
 
-			<?php get_template_part( 'template-parts/content/post/header', 'title'); ?>
+        <?php get_template_part( 'template-parts/content/post/header', 'title'); ?>
 
-			<?php get_template_part( 'template-parts/content/post/postmeta'); ?>
+        <?php get_template_part( 'template-parts/content/post/postmeta'); ?>
 
-		</header>
+    </header>
 
-		<section class="entry-content" itemprop="articleBody">
+    <section class="entry-content">
 
 
-		<?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
+        <?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
 
-			<?php the_excerpt(); ?>	
+        <?php the_excerpt(); ?>
 
-		</section>
+    </section>
 
-		<footer class="article-footer">
+    <footer class="article-footer">
 
-			<?php get_template_part( 'template-parts/content/category/category-tags'); ?>
+        <?php get_template_part( 'template-parts/content/category/category-tags'); ?>
 
-			<?php get_template_part( 'template-parts/content/post/comment', 'count'); ?>
+        <?php get_template_part( 'template-parts/content/post/comment', 'count'); ?>
 
-		</footer>
+    </footer>
 
-	</article>
+</article>
 
 <?php endwhile; ?>
 
-    <?php get_template_part( 'template-parts/content/post/post-navigation'); ?>
+<?php get_template_part( 'template-parts/content/post/post-navigation'); ?>
 
 <?php else : ?>
 
