@@ -74,11 +74,8 @@
 
 
 .nav-collapse a {
-  /*  color: #fff;*/
   text-decoration: none;
   width: 100%;
-  /*  background: #f4421a;*/
-  /*border-bottom: 1px solid rgba(0,0,0, .15);*/
   padding: 0.7em 1em;
   float: left;
 }
@@ -455,6 +452,6 @@ button.nav-toggle.active::after {
   bottom: 0;
 }
 
-.fixed-navigation #container {
+.fixed-navigation #site {
   padding-top: calc(var(--logo-height) + var(--grid-spacing) + var(--grid-spacing));
 }

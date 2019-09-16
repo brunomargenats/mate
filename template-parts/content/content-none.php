@@ -5,7 +5,11 @@
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
  */
 ?>
-
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+?>
 
 <?php // get post count so we can use everywhere.
 $count = $GLOBALS['wp_query']->post_count;
@@ -17,10 +21,10 @@ $count = $GLOBALS['wp_query']->post_count;
             <?php echo _e( 'Sorry, that page can&rsquo;t be found.', 'mate' ); ?>
         </h1>
     </header>
-    <section class="entry-content">
+    <div class="entry-content">
         <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'mate' ); ?></p>
         <?php get_search_form(); ?>
-    </section>
+    </div>
     <footer class="article-footer">
 
     </footer>

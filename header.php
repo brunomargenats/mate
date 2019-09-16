@@ -4,15 +4,12 @@
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
  */
 ?>
-<!DOCTYPE html>
-
+<!doctype html>
 <html <?php language_attributes(); ?>>
-
-<head profile="http://gmpg.org/xfn/11">
-
-    <meta charset='<?php bloginfo( 'charset' ); ?>'>
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
     <?php get_template_part( 'template-parts/header/head-inline-scripts'); ?>
     <?php wp_head(); ?>
 
@@ -26,16 +23,5 @@
         do_action( 'wp_body_open' );
     }
     ?>
-    <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to the content', 'mate' ); ?></a>
-    <a class="skip-link screen-reader-text" href="#nav"><?php _e( 'Skip to the main menu', 'mate' ); ?></a>
 
-    <div id="container" class="container"><?php /* Fluid Container: <div id="container" class="container fluid"> */?>
-
-        <header class="header" id="header" role="banner">
-
-            <div id="inner-header" class="clearfix">
-                <?php get_template_part( 'template-parts/header/inner-header-content'); ?>
-            </div>
-
-
-        </header><!-- header -->
+    <?php get_template_part( 'template-parts/header/inner-header-content'); ?>

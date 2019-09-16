@@ -33,9 +33,25 @@ h6 {
   hyphens: auto;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+
+
 /* == DON'T ERASE THIS TWO == */
 html {
-  box-sizing: border-box
+  box-sizing: border-box;
+  scroll-behavior: smooth; /*Smooth scrolling on the whole document*/
+  min-width: 320px !important;
 }
 
 *,
@@ -47,9 +63,6 @@ html {
 /* == DON'T ERASE THIS TWO == */
 
 
-html {
-  min-width: 320px !important;
-}
 
 @media (min-width: 321px) {
   body {
@@ -86,13 +99,15 @@ nav ul {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a img {
-  border: none;
+  text-decoration: underline;
   vertical-align: top;
 }
+
+img {font-size: 0} /*hide alt text when images are loading*/
 
 /*Remove link border-bottom if any*/
 img,
@@ -100,7 +115,8 @@ embed,
 object,
 video {
   height: auto;
-  max-width: 100%
+  max-width: 100%;
+  vertical-align: inherit;
 }
 
 audio {
@@ -197,6 +213,7 @@ pre,
 address,
 .widget {
   margin-bottom: 1rem;
+  font-style: normal;
 }
 
 

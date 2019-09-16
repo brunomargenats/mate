@@ -21,11 +21,32 @@ add_action( 'admin_menu', 'mate_add_admin_submenu' );
 function recommended_plugins_page_contents() {
 ?>
 <style>
+.update-nag, .updated, .error, .is-dismissible { display: none; }
 .green {color:#50b83c}
 .red {color:#c31720}
-.yellow {color:#ffa100}
-.green, .red, .yellow {font-style:italic; font-weight:700;}
-.mate-plugin-item {margin-bottom:1em;}
+.blue {color:#00a0d2}
+.yellow {color:#ffa100;}
+.green, .red, .blue {font-style:italic; font-weight:700;}
+.mate-plugin-item {margin-bottom:1em; padding:0.8rem; line-height:1.5em; 
+}
+
+
+.mate-plugin-category{padding-bottom:1em;}
+
+
+
+    .mate-plugin-item {margin-right:20px!important;}
+
+
+@media screen and (min-width: 480px) {
+    .mate-plugin-item {max-width:300px; min-width:300px; flex: 1 0 20%;}
+    .mate-plugin-list {
+        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap:wrap;
+    }
+}
 </style>
 
 <div class="wrap">
@@ -42,28 +63,59 @@ function recommended_plugins_page_contents() {
     $pathpluginurl = WP_PLUGIN_DIR . '/'.$Pfolder.'/'.$pFile.'';
     $isinstalled = file_exists( $pathpluginurl );
     $pathslug = $Pfolder.'/'.$pFile;
-    echo '<div class="mate-plugin-item"><strong>'.$Pname.':</strong>';
-        if( is_plugin_active( $pathslug ) ) {//is active?>
-           <span class="green"><?php _e( 'Installed and active', 'mate' ); ?></span><br />
-        <?php }
-        elseif( $isinstalled) {?>
-            <span class="yellow"><?php _e( 'Installed but inactive', 'mate' ); ?></span> - 
-            <a target="_blank" href="
+
+    //  notice-error notice-info notice-success
+    if( is_plugin_active( $pathslug ) ) {
+        $notice_class = "notice-success";
+        $notice_color = "green";
+        $notice_text = _( 'Installed and Active', 'mate' );
+    }elseif( $isinstalled) {
+        $notice_class = "notice-info";
+        $notice_color = "blue";
+        $notice_text = _( 'Installed but Inactive', 'mate' );
+        $activate_link = wp_nonce_url(admin_url('plugins.php?action=activate&plugin='.$pathslug), 'activate-plugin_'.$pathslug);
+
+    }else{
+        $notice_class = "notice-error";
+        $notice_color = "red";
+        $notice_text = _( 'Not Installed', 'mate' );
+        $install_link = wp_nonce_url(add_query_arg(array('action' => 'install-plugin','plugin' => $Pfolder),admin_url( 'update.php' )),'install-plugin'.'_'.$Pfolder);
+    }?>
+
+
+    <div class="mate-plugin-item inline notice <?php echo $notice_class;?>">
+        <strong><?php echo $Pname;?><?php if ($pOffsite){?>&nbsp;-&nbsp;<span class="yellow"><?php _e( 'Premium plugin', 'mate' ); ?></span><?php }?></strong><br />
+        
+
+        <div class="<?php echo $notice_color;?>"><?php echo $notice_text;?></div>
+
             <?php
-            $link = wp_nonce_url(admin_url('plugins.php?action=activate&plugin='.$pathslug), 'activate-plugin_'.$pathslug); echo $link;
-            ?>"><?php _e( 'Activate it!', 'mate' ); ?></a><br />
+            /* INSTALLED AND ACTIVE */
+            if( is_plugin_active( $pathslug ) ) {}
+
+            /* INSTALLED BUT INACTIVE */
+            elseif( $isinstalled ) {?>
+            <a target="_blank" href="<?php echo $activate_link;?>"><?php _e( 'Activate it!', 'mate' ); ?></a>&nbsp;-&nbsp;
+
             <?php
-        }else{
-            $link = wp_nonce_url(add_query_arg(array('action' => 'install-plugin','plugin' => $Pfolder),admin_url( 'update.php' )),'install-plugin'.'_'.$Pfolder);?>
-            <span class="red"><?php _e( 'Not Installed', 'mate' ); ?></span> - 
-            <?php if ($pOffsite){?>
-                <?php _e( 'Visit official web site to download this plugin', 'mate' ); ?><br />
-            <?php }else{?>
-                <a target="_blank" href="<?php echo $link;?>"><?php _e( 'Install', 'mate' ); ?></a> - 
-            <?php }
-        }?>
-        <?php if ($pOffsite){$more_info = $pOffsite;}else{$more_info = 'plugin-install.php?tab=plugin-information&plugin='.$Pfolder;} ?>
-            <a target="_blank" href="<?php echo $more_info;?>"><?php _e( 'More Info', 'mate' ); ?></a></div>
+            /* NOT INSTALLED */
+            }else {
+                if ($pOffsite){?>
+                    <?php _e( 'Visit the official web site to download this plugin', 'mate' ); ?><br />
+                    <?php }else{?>
+                    <a target="_blank" href="<?php echo $install_link;?>"><?php _e( 'Install', 'mate' ); ?></a>&nbsp;-&nbsp;
+                    <?php }?>
+            <?php }?>
+
+        <?php if ($pOffsite){
+            $more_info = $pOffsite;
+            }else{$more_info = 'plugin-install.php?tab=plugin-information&plugin='.$Pfolder;} ?>
+
+           <a target="_blank" href="<?php echo $more_info;?>"><?php _e( 'More Info', 'mate' ); ?></a>
+
+    </div>
+
+
         <?php
     }/* END OF FUNCTION */
 ?>

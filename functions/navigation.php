@@ -72,7 +72,7 @@ if ( ! function_exists( 'mate_add_class_to_items_link' ) ) {
 if ( ! function_exists( 'mate_nav_scripts_styles' ) ) {
     function mate_nav_scripts_styles() {
             wp_register_style('mate_navigation_css',get_theme_file_uri( '/assets/css/navigation.css' ), array(), wp_get_theme( 'mate' )->get( 'Version' ) );
-            wp_register_script('mate_navigation_js', get_theme_file_uri('/assets/js/responsive-nav.min.js'), array(), wp_get_theme( 'mate' )->get( 'Version' ), true );
+            wp_register_script('mate_navigation_js', get_theme_file_uri('/assets/js/responsive-nav.min.js'), array(), wp_get_theme( 'mate' )->get( 'Version' ), false );
             wp_enqueue_script('mate_navigation_js');
             wp_enqueue_style('mate_navigation_css');
     }

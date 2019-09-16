@@ -1,4 +1,9 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+?>
+<?php
 /**
  * MAIN FUNCTIONS CONFIGURATION FILE
  * How to use it: Copy this file inside /config/ in your child theme and change the options if you want.
@@ -15,6 +20,7 @@ global $use_menus;
 global $use_sidebars;
 global $use_comments;
 global $use_comments_in_pages;
+global $disable_gutenberg_frontpage;
 global $disabe_emojis;
 global $disabe_wpembed;
 global $ie_support;
@@ -37,7 +43,6 @@ $google_fonts = TRUE;
 $responsive_navigation = TRUE; /* Load javascript and css for navigation */
 $fixed_navigation = FALSE; /* This will stick navigation on scrolling */
 
-
 /* == USE SIDEBARS == */
 $use_sidebars = TRUE; /* FALSE if you don't need sidebars and widgets */
 
@@ -56,10 +61,13 @@ $wp_cleanup = TRUE; /* I recommend to let this TRUE. If you need to change somet
 /* == USE WP CLEANUP == */
 $recommended_plugins = TRUE; /* Add a submenu in wp-admin > plugins with some plugin recommendations. The list can be modified in functions/recommended-plugins/plugin-list.php */
 
-
-
 /* == MINIMAL SUPPORT FOR IE11? == CSS Variables won't work in IE without this */
 $ie_support = TRUE;
+
+
+/* == DISABLE GUTENBERG ON FRONTPAGE ==*/
+$disable_gutenberg_frontpage = TRUE; // TRUE if you're not using Gutenberg Blocks on front-page. Site will load faster.
+
 
 /* == DISABLE EMOJIS == */
 $disabe_emojis = TRUE; /* If TRUE, this will make your site load faster. If FALSE, you can use WP emojis on your posts and pages. */

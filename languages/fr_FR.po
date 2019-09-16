@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mate \n"
-"POT-Creation-Date: 2019-09-02 21:58+0000\n"
-"PO-Revision-Date: 2019-09-02 21:59+0000\n"
+"POT-Creation-Date: 2019-09-03 02:09+0000\n"
+"PO-Revision-Date: 2019-09-03 02:10+0000\n"
 "Last-Translator: bruz <brunomargenats@gmail.com>\n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
@@ -14,15 +14,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Loco-Version: 2.3.0; wp-5.2.2"
 
-#: comments.php:22 template-parts/content/post/comment-count.php:10
+#: comments.php:22 template-parts/content/post/comment-count.php:14
 msgid "<span>No</span> Comments"
 msgstr "<span>Aucun</span> commentaire"
 
-#: comments.php:22 template-parts/content/post/comment-count.php:10
+#: comments.php:22 template-parts/content/post/comment-count.php:14
 msgid "<span>One</span> Comment"
 msgstr "<span>Un</span> commentaire"
 
-#: comments.php:22 template-parts/content/post/comment-count.php:10
+#: comments.php:22 template-parts/content/post/comment-count.php:14
 msgid "<span>%</span> Comments"
 msgstr "<span>%</span> commentaires"
 
@@ -101,74 +101,106 @@ msgstr "Formulaire de contact"
 msgid "Page with sidebar"
 msgstr "Page avec barre latérale"
 
-#: functions/recommended-plugins/plugins-list.php:1
+#: functions/recommended-plugins/plugins-list.php:6
+msgid "FORMS"
+msgstr "FORMULAIRES"
+
+#: functions/recommended-plugins/plugins-list.php:15
+msgid "SEO"
+msgstr "SEO"
+
+#: functions/recommended-plugins/plugins-list.php:22
 msgid "CONTENT"
 msgstr "CONTENU"
 
-#: functions/recommended-plugins/plugins-list.php:7
+#: functions/recommended-plugins/plugins-list.php:34
+msgid "IMAGE"
+msgstr "IMAGE"
+
+#: functions/recommended-plugins/plugins-list.php:42
 msgid "SECURITY"
 msgstr "SÉCURITÉ"
 
-#: functions/recommended-plugins/plugins-list.php:13
+#: functions/recommended-plugins/plugins-list.php:52
 msgid "MULTILINGUAL"
 msgstr "MULTILINGUE"
 
-#: functions/recommended-plugins/plugins-list.php:19
+#: functions/recommended-plugins/plugins-list.php:60
 msgid "PERFORMANCE"
 msgstr "PERFORMANCE"
+
+#: functions/recommended-plugins/plugins-list.php:69
+msgid "BACKUPS"
+msgstr "SAUVEGARDES"
+
+#: functions/recommended-plugins/plugins-list.php:76
+msgid "MAINTENANCE"
+msgstr "MAINTENANCE"
+
+#: functions/recommended-plugins/plugins-list.php:83
+msgid "EMAIL"
+msgstr "COURRIEL"
+
+#: functions/recommended-plugins/plugins-list.php:90
+msgid "E-COMMERCE"
+msgstr "COMMERCE ÉLECTRONIQUE"
+
+#: functions/recommended-plugins/plugins-list.php:97
+msgid "REDIRECTIONS"
+msgstr "RÉDIRECTIONS"
 
 #: functions/recommended-plugins/recommended-plugins.php:13
 msgid "Recommended"
 msgstr "Recommandées"
 
-#: functions/recommended-plugins/recommended-plugins.php:32
+#: functions/recommended-plugins/recommended-plugins.php:33
 msgid "Recommended Plugins"
 msgstr "Extensions recommandées"
 
-#: functions/recommended-plugins/recommended-plugins.php:46
+#: functions/recommended-plugins/recommended-plugins.php:47
 msgid "Installed and active"
 msgstr "Installée et activée"
 
-#: functions/recommended-plugins/recommended-plugins.php:49
+#: functions/recommended-plugins/recommended-plugins.php:50
 msgid "Installed but inactive"
 msgstr "Installée mais désactivée"
 
-#: functions/recommended-plugins/recommended-plugins.php:53
+#: functions/recommended-plugins/recommended-plugins.php:54
 msgid "Activate it!"
 msgstr "Activer!"
 
-#: functions/recommended-plugins/recommended-plugins.php:57
+#: functions/recommended-plugins/recommended-plugins.php:58
 msgid "Not Installed"
 msgstr "Non installée"
 
-#: functions/recommended-plugins/recommended-plugins.php:59
+#: functions/recommended-plugins/recommended-plugins.php:60
 msgid "Visit official web site to download this plugin"
 msgstr "Visitez le site web officiel pour télécharger cette extension"
 
-#: functions/recommended-plugins/recommended-plugins.php:61
+#: functions/recommended-plugins/recommended-plugins.php:62
 msgid "Install"
 msgstr "Installer"
 
-#: functions/recommended-plugins/recommended-plugins.php:65
+#: functions/recommended-plugins/recommended-plugins.php:66
 msgid "More Info"
 msgstr "En savoir plus"
 
-#: template-parts/content/content-none.php:17
+#: template-parts/content/content-none.php:21
 msgid "Sorry, that page can&rsquo;t be found."
 msgstr "D&eacute;sol&eacute;, cette page est introuvable."
 
-#: template-parts/content/content-none.php:21
+#: template-parts/content/content-none.php:25
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "Apparemment, rien n’a été trouvé à cette adresse. Essayez avec une "
 "recherche ?"
 
-#: template-parts/content/content-page.php:26
-#: template-parts/content/content-single.php:33
+#: template-parts/content/content-page.php:30
+#: template-parts/content/content-single.php:38
 msgid "Pages:"
 msgstr "Pages :"
 
-#: template-parts/content/content-search.php:13
+#: template-parts/content/content-search.php:18
 msgid "Search results for:"
 msgstr "Résultats de recherche pour :"
 
@@ -180,20 +212,20 @@ msgstr "Menu"
 msgid "The Main Menu"
 msgstr "Le menu principal"
 
-#: template-parts/content/category/category-tags.php:8
+#: template-parts/content/category/category-tags.php:13
 msgid "Tags:"
 msgstr "&Eacute;tiquettes :"
 
-#: template-parts/content/post/header-title.php:10
+#: template-parts/content/post/header-title.php:15
 msgid "Posts Categorized:"
 msgstr "Articles cat&eacute;goris&eacute;s :"
 
-#: template-parts/content/post/header-title.php:32
+#: template-parts/content/post/header-title.php:37
 msgid "404"
 msgstr "404"
 
 #. %s: post author
-#: template-parts/content/post/postmeta.php:14
+#: template-parts/content/post/postmeta.php:18
 #, php-format
 msgid "By %s"
 msgstr "Par %s"

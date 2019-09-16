@@ -4,7 +4,7 @@
  * @link https://developer.wordpress.org/themes/functionality/sidebars/
  */
 ?>
-<aside id="sidebar" class="sidebar" role="complementary">
+<aside id="sidebar" class="sidebar col-12 col-sm-4">
 
     <div class="inner-sidebar wrap">
 

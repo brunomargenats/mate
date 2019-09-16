@@ -10,7 +10,7 @@ get_header(); ?>
 
 <div id="content">
     <div id="inner-content" class="wrap">
-        <main id="main" class="main" role="main">
+        <main id="main" >
             <div class="wrapper">
                 <div class="grid">
                     <div class="col-sm-8">

@@ -35,10 +35,10 @@ function mate_scripts_styles_header() {
 
 
 		/* ENQUEUE ALL CSS*/
+			wp_enqueue_style( 'mate_grid');
 			wp_enqueue_style( 'mate_variables');
 			wp_enqueue_style( 'mate_reset');
 			wp_enqueue_style( 'mate_base');
-			wp_enqueue_style( 'mate_grid');
 			wp_enqueue_style( 'mate_typography');
 
 	}
@@ -51,10 +51,11 @@ function mate_scripts_styles_header() {
 if ( ! function_exists( 'mate_scripts_styles_footer' ) ) {
 
 	function mate_scripts_styles_footer() {
-		wp_register_style('mate_forms',get_theme_file_uri( '/assets/css/forms.css' ), array(), wp_get_theme( 'mate' )->get( 'Version' ) );
-		wp_enqueue_style( 'mate_forms');
+		wp_enqueue_style( 'mate_grid');
 		wp_register_style('site_style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
 		wp_enqueue_style( 'site_style');
+		wp_register_style('mate_forms',get_theme_file_uri( '/assets/css/forms.css' ), array(), wp_get_theme( 'mate' )->get( 'Version' ) );
+		wp_enqueue_style( 'mate_forms');
 	}
 	add_action( 'get_footer', 'mate_scripts_styles_footer', 80 );
 

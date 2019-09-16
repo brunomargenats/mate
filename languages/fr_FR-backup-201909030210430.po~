@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mate \n"
-"POT-Creation-Date: 2019-09-02 21:54+0000\n"
-"PO-Revision-Date: 2019-09-02 21:58+0000\n"
+"POT-Creation-Date: 2019-09-02 21:58+0000\n"
+"PO-Revision-Date: 2019-09-02 21:59+0000\n"
 "Last-Translator: bruz <brunomargenats@gmail.com>\n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
@@ -142,16 +142,16 @@ msgid "Not Installed"
 msgstr "Non installée"
 
 #: functions/recommended-plugins/recommended-plugins.php:59
-msgid "Visit Website to download this plugin"
-msgstr ""
+msgid "Visit official web site to download this plugin"
+msgstr "Visitez le site web officiel pour télécharger cette extension"
 
 #: functions/recommended-plugins/recommended-plugins.php:61
 msgid "Install"
-msgstr ""
+msgstr "Installer"
 
 #: functions/recommended-plugins/recommended-plugins.php:65
 msgid "More Info"
-msgstr ""
+msgstr "En savoir plus"
 
 #: template-parts/content/content-none.php:17
 msgid "Sorry, that page can&rsquo;t be found."

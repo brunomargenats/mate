@@ -25,6 +25,27 @@ Source: https://fonts.google.com/specimen/Open+Sans
 
 
 == Changelog ==
+Version 0.6.3
+-------------------------
+- Added: --font-fallback CSS variable.
+- Added: Function that let you disable gutenberg extra css on front-page if you're not using Gutenberg blocks
+- Added: if ( ! defined( 'ABSPATH' ) ) in template parts for extra protection.
+- Added: scroll-behavior: smooth; (this will work only on firefox and chrome)
+- Added: img {font-size: 0} in reset.css. This wil hide alt text when images are loading. This is a little controversial, but after all this file is a reset. Also, this will help with the classic image extra gap.
+- Added: Remove "type=" markup from javascript and css using adding a function in cleanup.php.
+- Enhanced: responsive-nav.min.js and navigation.css are now load on header for better caching.
+- Enhanced: "#logo a" display on base.css changed from "block" to "inline-block". The last one is more friendly for future children sites.
+- Enhanced: Some markup changed for pass validation on https://validator.w3.org/
+- Enhanced: Recommended plugins. New ui.
+- Fixed: go to anchor JS is now working on ie.
+- Fixed: Gap after images on img,embed,object,video. Fixed using vertical-align: inherit; Line 98 of reset.css
+- Fixed: Hyphens removed for h1,h2,h3,h4,h5,h6 on reset.css
+- Fixed: Underline borders on links are removed (too much conflict with images). Now we use text-decoration:underline.
+- Fixed: .container .grid had too much padding. Fixed on grid.css.
+- Moved: Some code of header.php is now in template-parts/header/inner-header-content.php. This way we can change the container type and be able to make full size divs.
+- Changed: --color-text: var(--color-on-background); AND --color-text-heading: var(--color-on-background); in variables.css is now using color on background instead of some random gray.
+- Removed: class="main" from <main id="main" class="main"> all over the theme
+- Removed: 404.php, archive.php, front-page.php, home.php, page.php, search.php and single.php. We use index.php only and a new function to load template-parts.
 
 Version 0.6.2
 -------------------------
@@ -40,7 +61,6 @@ Version 0.6.2
 - Updated: French translation.
 - Updated: functions/comments.php : get_option( 'home' ) was found in the file comments.php. Use home_url() instead.
 - Enhanced: readme.txt is now more readable
-
 
 Version 0.6.1
 -------------------------

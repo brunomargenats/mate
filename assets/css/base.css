@@ -36,15 +36,12 @@
   position: relative;
 }
 
-#header a {
-  border-bottom: 0;
-}
 
 /*Remove border on header links */
 
 
 #logo a {
-  display: block
+  display: inline-block;
 }
 
 #logo img {
@@ -66,7 +63,7 @@ li.current-menu-item a {
 
 /* === ARTICLES === */
 header.article-header .entry-title a {
-  border-bottom: 0;
+  text-decoration:none;
 }
 
 header.article-header .post-meta {
@@ -81,12 +78,15 @@ header.article-header .post-meta,
 header.article-header .post-meta a {
   font-size: 0.8rem;
   color: var(--color-gray-6);
-  border-bottom: 0;
+  text-decoration:none;
   text-transform: uppercase
 }
 
 header.article-header .post-meta .post-meta-categories a {
   color: var(--color-primary)
+}
+header.article-header .post-meta .post-meta-categories a:hover {
+color: var(--color-primary-dark);
 }
 
 .entry-content,

@@ -6,7 +6,7 @@ html {
     text-rendering: optimizeLegibility;
     line-height: 1.5;
     font-size: 15px;
-    font-family: var(--font-text), sans-serif;
+    font-family: var(--font-text), var(--font-fallback);
 }
 
 body {
@@ -19,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-display), sans-serif;
+    font-family: var(--font-display), var(--font-fallback);
     font-weight: 700;
     line-height: 1;
 }
@@ -142,13 +142,11 @@ h6 {
 a,
 a:visited {
     color: var(--color-link);
-    border-bottom: 2px solid var(--color-link);
 }
 
 a:hover,
 a:active {
     color: var(--color-link-hover);
-    border-bottom: 2px solid var(--color-link-hover);
 }
 
 

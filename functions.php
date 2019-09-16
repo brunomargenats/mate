@@ -54,6 +54,14 @@ if ($use_menus){
 	get_template_part('functions/menus');
 }
 
+
+/* DISABLE GUTENBERG ON FRONTPAGE
+------------------------------------------------ */
+if ($disable_gutenberg_frontpage){
+	get_template_part('functions/disable-gutenberg-frontpage');
+}
+
+
 /* CONTACT FORM 7 STYLES FUNCTION
 ------------------------------------------------ */
 if ($cf7_styles){
@@ -115,6 +123,10 @@ get_template_part('functions/custom-excerpt');
 ------------------------------------------------ */
 get_template_part('functions/custom-styles-scripts'); /* LOAD NEW SCRIPTS AND STYLES FOR THIS THEME */
 
+
+/* MATE CONTENT TYPES
+------------------------------------------------ */
+get_template_part('functions/content-types'); /* Define what type of template use for each type of content */
 
 /* ADD WP CLEANUP
 ------------------------------------------------ */

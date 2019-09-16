@@ -5,11 +5,15 @@
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
  */
 ?>
-
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 
     <header class="article-header">
 
@@ -17,7 +21,7 @@
 
     </header> <?php // end article header ?>
 
-    <section class="entry-content">
+    <div class="entry-content">
 
         <?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
         <?php the_content();
@@ -32,7 +36,7 @@
 					?>
 
 
-    </section> <?php // end article section ?>
+    </div> <?php // end article ?>
 
     <footer class="article-footer">
     </footer>

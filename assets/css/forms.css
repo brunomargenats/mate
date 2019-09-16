@@ -38,7 +38,7 @@ input,
 textarea,
 select,
 button {
-    font-family: var(--font-text);
+    font-family: var(--font-text), var(--font-fallback);
     color: var(--color-on-background)
 }
 
