@@ -135,13 +135,6 @@ get_template_part('functions/cleanup'); /* Clean up WordPress Header mess */
 }
 
 
-/* RECOMMENDED PLUGINS
------------------------------------------------- */
-if ($recommended_plugins){
-	get_template_part('functions/recommended-plugins/recommended-plugins');
-}
-
-
 
 /* THEME SETUP (Basic WP configurations)
 ------------------------------------------------ */

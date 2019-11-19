@@ -25,6 +25,15 @@ Source: https://fonts.google.com/specimen/Open+Sans
 
 
 == Changelog ==
+
+Version 0.6.4
+-------------------------
+- Added: global $has_sidebar; in index.php.
+- Added: wrapper {padding: 0 var(--grid-spacing-h);} on grid.css to fix mobile padding bug with grids.
+- Removed: Recommended plugins function is now an standalone plugin.
+- Changed: Google Fonts are no longuer activated by default. 
+- Fixed: HTML5 Markup error - Sidebar must be outside <main> tag
+
 Version 0.6.3
 -------------------------
 - Added: --font-fallback CSS variable.

@@ -7,7 +7,7 @@
  */
 
 get_header();
-
+global $has_sidebar;
 ?>
 
     <div id="content">

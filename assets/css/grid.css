@@ -45,6 +45,7 @@ col-xlg-
 .wrapper {
   margin:0 auto;
   max-width: var(--wrapper-max-width);
+  padding: 0 var(--grid-spacing-h);
 }
 
 

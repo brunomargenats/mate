@@ -12,7 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* DON'T TOUCH THIS */
 global $wp_cleanup;
-global $recommended_plugins;
 global $google_fonts;
 global $responsive_navigation;
 global $fixed_navigation;
@@ -37,7 +36,7 @@ Use TRUE/FALSE or the options provided in the comments.
 */
 
 /* == GOOGLE FONTS == */
-$google_fonts = TRUE;
+$google_fonts = FALSE;
 
 /* == RESPONSIVE NAVIGATION == */
 $responsive_navigation = TRUE; /* Load javascript and css for navigation */
@@ -58,8 +57,6 @@ $use_comments = TRUE; /* FALSE if you don't need comments. I recommend to also i
 /* == USE WP CLEANUP == */
 $wp_cleanup = TRUE; /* I recommend to let this TRUE. If you need to change something, copy functions/cleanup.php to your child theme.*/
 
-/* == USE WP CLEANUP == */
-$recommended_plugins = TRUE; /* Add a submenu in wp-admin > plugins with some plugin recommendations. The list can be modified in functions/recommended-plugins/plugin-list.php */
 
 /* == MINIMAL SUPPORT FOR IE11? == CSS Variables won't work in IE without this */
 $ie_support = TRUE;
