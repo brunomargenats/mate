@@ -26,7 +26,7 @@ function mate_scripts_styles_header() {
 		wp_register_style('mate_base',get_theme_file_uri( '/assets/css/base.css' ), array(), wp_get_theme()->get( 'Version' ) );
 		wp_register_style('mate_grid',get_theme_file_uri( '/assets/css/grid.css' ), array(), wp_get_theme()->get( 'Version' ) );
 		wp_register_style('mate_typography',get_theme_file_uri( '/assets/css/typography.css' ), array(), wp_get_theme()->get( 'Version' ) );
-
+		wp_register_style('site_style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
 
 		/*   REGISTER ALL JS FOR THIS SITE
 		wp_register_script( 'mate_name', get_theme_file_uri( '/assets/js/file.js' ), array(), wp_get_theme()->get( 'Version' ), true );
@@ -40,6 +40,7 @@ function mate_scripts_styles_header() {
 			wp_enqueue_style( 'mate_reset');
 			wp_enqueue_style( 'mate_base');
 			wp_enqueue_style( 'mate_typography');
+			wp_enqueue_style( 'site_style');
 
 	}
 	add_action( 'wp_enqueue_scripts', 'mate_scripts_styles_header', 80 );
@@ -51,11 +52,15 @@ function mate_scripts_styles_header() {
 if ( ! function_exists( 'mate_scripts_styles_footer' ) ) {
 
 	function mate_scripts_styles_footer() {
-		wp_enqueue_style( 'mate_grid');
-		wp_register_style('site_style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
-		wp_enqueue_style( 'site_style');
 		wp_register_style('mate_forms',get_theme_file_uri( '/assets/css/forms.css' ), array(), wp_get_theme( 'mate' )->get( 'Version' ) );
 		wp_enqueue_style( 'mate_forms');
+
+		global $use_utility_classes;
+		if ($use_utility_classes){
+			wp_register_style('mate_utility_classes',get_theme_file_uri( '/assets/css/utility-classes.css' ), array(), wp_get_theme( 'mate' )->get( 'Version' ) );
+			wp_enqueue_style( 'mate_utility_classes');
+		}
+
 	}
 	add_action( 'get_footer', 'mate_scripts_styles_footer', 80 );
 

@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
         <?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
 
-        <?php the_excerpt(); ?>
+        <?php the_excerpt(); echo mate_excerpt_more_link(); ?>
 
     </div>
 

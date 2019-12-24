@@ -16,6 +16,7 @@ global $google_fonts;
 global $responsive_navigation;
 global $fixed_navigation;
 global $use_menus;
+global $use_utility_classes;
 global $use_sidebars;
 global $use_comments;
 global $use_comments_in_pages;
@@ -40,13 +41,17 @@ $google_fonts = FALSE;
 
 /* == RESPONSIVE NAVIGATION == */
 $responsive_navigation = TRUE; /* Load javascript and css for navigation */
-$fixed_navigation = FALSE; /* This will stick navigation on scrolling */
+$fixed_navigation = FALSE; /* This will stick navigation on scrolling. Responsive navigation must be TRUE */
 
 /* == USE SIDEBARS == */
-$use_sidebars = TRUE; /* FALSE if you don't need sidebars and widgets */
+$use_sidebars = FALSE; /* FALSE if you don't need sidebars and widgets */
 
 /* == USE MENUS == */
 $use_menus = TRUE; /* FALSE if you don't need any WordPress menu (navigation).*/
+
+/* == USE UTILITY CLASSES == */
+$use_utility_classes = TRUE; /* FALSE if you don't what to load the utility classes. This are common classes that can help you to avoid writing new CSS.*/
+
 
 /* == USE COMMENTS == */
 $use_comments = TRUE; /* FALSE if you don't need comments. I recommend to also install "Disable Comments" plugin.*/
@@ -74,7 +79,7 @@ $disabe_wpembed = TRUE;  /* TRUE if you don't want other sites embed your posts 
 For a more advanced configuration use the WP plugin DISABLE EMBEDS*/
 
 /*===== START CONTACT FORM 7 PLUGIN SUPPORT =====*/
-$use_cf7 = TRUE; /* Support CF7? Stop editing the following options if not. */
+$use_cf7 = FALSE; /* Support CF7? Stop editing the following options if not. */
 
     if ($use_cf7){
 
@@ -86,6 +91,7 @@ $use_cf7 = TRUE; /* Support CF7? Stop editing the following options if not. */
         if ($cf7_templates_only){
             $cf7_templates = array(
                 'layouts/contact.php',
+                'layouts/contact-with-sidebar.php',
                 'layouts/contact-form.php'
             ); /* CF7 scripts and styles will load only in pages with those page templates. You can rename them or add more */
         }

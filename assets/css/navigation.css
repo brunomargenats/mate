@@ -23,7 +23,6 @@
   position: absolute;
   display: block;
   overflow: hidden;
-  zoom: 1;
 }
 
 .nav-collapse.opened,
@@ -50,10 +49,6 @@
 --------------------------------------------- */
 
 .nav-collapse {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
   user-select: none;
 }
 
@@ -138,11 +133,8 @@ button.nav-toggle::after {
   top: 50%;
   left: 50%;
   background: currentColor;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  transition: -webkit-transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }
 
 button.nav-toggle:hover {
@@ -154,12 +146,10 @@ button.nav-toggle.active {
 }
 
 button.nav-toggle.active::before {
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
 button.nav-toggle.active::after {
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
@@ -280,13 +270,10 @@ button.nav-toggle.active::after {
     border-width: 0 2px 2px 0;
     padding: 2px;
     transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
   }
 
   .dropdown ul .dropdown-toggle::after {
-
     transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
   }
 
   .nav-collapse a:hover {

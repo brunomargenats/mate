@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mate \n"
-"POT-Creation-Date: 2019-09-02 21:58+0000\n"
-"PO-Revision-Date: 2019-09-02 21:59+0000\n"
+"POT-Creation-Date: 2019-12-24 05:30+0000\n"
+"PO-Revision-Date: 2019-12-24 05:30+0000\n"
 "Last-Translator: bruz <brunomargenats@gmail.com>\n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
@@ -12,17 +12,17 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "Report-Msgid-Bugs-To: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Loco-Version: 2.3.0; wp-5.2.2"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
 
-#: comments.php:22 template-parts/content/post/comment-count.php:10
+#: comments.php:22 template-parts/content/post/comment-count.php:14
 msgid "<span>No</span> Comments"
 msgstr "<span>Aucun</span> commentaire"
 
-#: comments.php:22 template-parts/content/post/comment-count.php:10
+#: comments.php:22 template-parts/content/post/comment-count.php:14
 msgid "<span>One</span> Comment"
 msgstr "<span>Un</span> commentaire"
 
-#: comments.php:22 template-parts/content/post/comment-count.php:10
+#: comments.php:22 template-parts/content/post/comment-count.php:14
 msgid "<span>%</span> Comments"
 msgstr "<span>%</span> commentaires"
 
@@ -41,14 +41,6 @@ msgstr "Plus de commentaires &rarr;"
 #: comments.php:58
 msgid "Comments are closed."
 msgstr "Les commentaires sont ferm&eacute;s."
-
-#: header.php:29
-msgid "Skip to the content"
-msgstr "Sauter au contenu"
-
-#: header.php:30
-msgid "Skip to the main menu"
-msgstr "Sauter au menu principal"
 
 #: functions/comments.php:52
 #, php-format
@@ -75,7 +67,7 @@ msgstr "Avatar par d&eacute;faut"
 msgid "Read More <span>&rarr;</span>"
 msgstr "En savoir plus <span>&rarr;</span>"
 
-#: functions/menus.php:12 template-parts/header/inner-header-content.php:36
+#: functions/menus.php:12 template-parts/header/inner-header-content.php:43
 msgid "Primary Menu"
 msgstr "Menu principal"
 
@@ -94,6 +86,10 @@ msgid "The sidebar."
 msgstr "La barre latérale"
 
 #. Name of the template
+msgid "Contact form with sidebar"
+msgstr "Formulaire de contact avec barre laterale"
+
+#. Name of the template
 msgid "Contact form"
 msgstr "Formulaire de contact"
 
@@ -101,99 +97,55 @@ msgstr "Formulaire de contact"
 msgid "Page with sidebar"
 msgstr "Page avec barre latérale"
 
-#: functions/recommended-plugins/plugins-list.php:1
-msgid "CONTENT"
-msgstr "CONTENU"
-
-#: functions/recommended-plugins/plugins-list.php:7
-msgid "SECURITY"
-msgstr "SÉCURITÉ"
-
-#: functions/recommended-plugins/plugins-list.php:13
-msgid "MULTILINGUAL"
-msgstr "MULTILINGUE"
-
-#: functions/recommended-plugins/plugins-list.php:19
-msgid "PERFORMANCE"
-msgstr "PERFORMANCE"
-
-#: functions/recommended-plugins/recommended-plugins.php:13
-msgid "Recommended"
-msgstr "Recommandées"
-
-#: functions/recommended-plugins/recommended-plugins.php:32
-msgid "Recommended Plugins"
-msgstr "Extensions recommandées"
-
-#: functions/recommended-plugins/recommended-plugins.php:46
-msgid "Installed and active"
-msgstr "Installée et activée"
-
-#: functions/recommended-plugins/recommended-plugins.php:49
-msgid "Installed but inactive"
-msgstr "Installée mais désactivée"
-
-#: functions/recommended-plugins/recommended-plugins.php:53
-msgid "Activate it!"
-msgstr "Activer!"
-
-#: functions/recommended-plugins/recommended-plugins.php:57
-msgid "Not Installed"
-msgstr "Non installée"
-
-#: functions/recommended-plugins/recommended-plugins.php:59
-msgid "Visit official web site to download this plugin"
-msgstr "Visitez le site web officiel pour télécharger cette extension"
-
-#: functions/recommended-plugins/recommended-plugins.php:61
-msgid "Install"
-msgstr "Installer"
-
-#: functions/recommended-plugins/recommended-plugins.php:65
-msgid "More Info"
-msgstr "En savoir plus"
-
-#: template-parts/content/content-none.php:17
+#: template-parts/content/content-none.php:21
 msgid "Sorry, that page can&rsquo;t be found."
 msgstr "D&eacute;sol&eacute;, cette page est introuvable."
 
-#: template-parts/content/content-none.php:21
+#: template-parts/content/content-none.php:25
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "Apparemment, rien n’a été trouvé à cette adresse. Essayez avec une "
 "recherche ?"
 
-#: template-parts/content/content-page.php:26
-#: template-parts/content/content-single.php:33
+#: template-parts/content/content-page.php:30
+#: template-parts/content/content-single.php:35
 msgid "Pages:"
 msgstr "Pages :"
 
-#: template-parts/content/content-search.php:13
+#: template-parts/content/content-search.php:18
 msgid "Search results for:"
 msgstr "Résultats de recherche pour :"
 
-#: template-parts/header/inner-header-content.php:28
+#: template-parts/header/inner-header-content.php:8
+msgid "Skip to the content"
+msgstr "Sauter au contenu"
+
+#: template-parts/header/inner-header-content.php:9
+msgid "Skip to the main menu"
+msgstr "Sauter au menu principal"
+
+#: template-parts/header/inner-header-content.php:35
 msgid "Menu"
 msgstr "Menu"
 
-#: template-parts/header/inner-header-content.php:37
+#: template-parts/header/inner-header-content.php:44
 msgid "The Main Menu"
 msgstr "Le menu principal"
 
-#: template-parts/content/category/category-tags.php:8
+#: template-parts/content/category/category-tags.php:13
 msgid "Tags:"
 msgstr "&Eacute;tiquettes :"
 
-#: template-parts/content/post/header-title.php:10
+#: template-parts/content/post/header-title.php:15
 msgid "Posts Categorized:"
 msgstr "Articles cat&eacute;goris&eacute;s :"
 
-#: template-parts/content/post/header-title.php:32
+#: template-parts/content/post/header-title.php:37
 msgid "404"
 msgstr "404"
 
 #. %s: post author
-#: template-parts/content/post/postmeta.php:14
+#: template-parts/content/post/postmeta.php:18
 #, php-format
 msgid "By %s"
 msgstr "Par %s"

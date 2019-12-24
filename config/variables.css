@@ -22,7 +22,7 @@
     /*	TYPHOGRAPHY */
     --font-display: 'Barlow';
     --font-text: 'Open Sans';
-    --font-fallback: 'sans-serif'; /*sans-serif OR serif*/
+    --font-fallback: sans-serif; /*sans-serif OR serif*/
     --color-text: var(--color-on-background);
     --color-text-heading: var(--color-on-background);
     --color-text-subtle: var(--color-gray-6);

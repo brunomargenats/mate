@@ -1,7 +1,7 @@
 === Mate ===
 Contributors: Bruno Margenats
 Requires at least: 5.2
-Tested up to: 5.2.2
+Tested up to: 5.3.2
 Stable tag: trunk
 License: Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
 License URI: https://creativecommons.org/licenses/by-nc-nd/4.0/
@@ -25,6 +25,26 @@ Source: https://fonts.google.com/specimen/Open+Sans
 
 
 == Changelog ==
+
+Version 0.6.5
+-------------------------
+- Fixed: --font-fallback bug.
+- Removed: All "*properties" (hack IE7) in grid.css.
+- Removed: "zoom: 1" in grid.css and navigation.css;
+- Removed: Unnecessary CSS for responsive embeds.
+- Removed: Unnecessary old prefixes found in grid.css and across all CSS files.
+- Removed: text-decoration: underline; from "a img{}"
+- Fixed: wp_enqueue_style( 'mate_grid'); was called twice.
+- Fixed: site_style is now loading in header.
+- Fixed: Now pages aren't using sidebar on default template.
+- Changed: Sidebars are now disabled by default.
+- Changed: Some minors changes in forms.css and cf7-styles.css
+- Added: Gutenberg buttons are now using default theme colors.
+- Added: New template contact-with-sidebar.php
+- Added: add_theme_support( 'responsive-embeds' );
+- Added: utility classes!
+- Updated: French translation
+
 
 Version 0.6.4
 -------------------------

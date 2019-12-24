@@ -1,0 +1,40 @@
+/* === Utility classes === */
+/* Copy this file on your child theme for use only what you need.
+Here we use a simple system:
+Breakpoint\:status\:attribute\:value. For exemple:
+.xs\:hover\:background-color\:primary{}
+
+*/
+
+/* For a responsive modifier, you can format classes like this:
+    @media (min-width: 576px) {
+        .xs\:position\:absolute {position: absolute;}
+    }
+*/
+
+
+.position\:absolute {position: absolute}
+
+.display\:block{display:block}
+.display\:none{display:none}
+
+.padding\:0{padding:0}
+.padding-top\:0{padding-top:0}
+.padding-right\:0{padding-right:0}
+.padding-bottom\:0{padding-bottom:0}
+.padding-left\:0{padding-left:0}
+
+.padding\:grid{padding:var(--grid-spacing)}
+.padding-top\:grid{padding-top:var(--grid-spacing)}
+.padding-right\:grid{padding-right:var(--grid-spacing)}
+.padding-bottom\:grid{padding-bottom:var(--grid-spacing)}
+.padding-left\:grid{padding-left:var(--grid-spacing)}
+
+
+.margin\:0{margin:0}
+.margin\:grid{margin:var(--grid-spacing)}
+
+.font\:display{font-family: var(--font-display);}
+.font\:text{font-family: var(--font-text);}
+
+.background-color\:primary {background-color: var(--color-primary)}

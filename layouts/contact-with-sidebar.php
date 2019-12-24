@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Page with sidebar
- * Description: Template for pages with a sidebar.
+ * Template Name: Contact form with sidebar
+ * Description: Template for pages using a contact form and sidebar.
  */
 get_header();
 ?>

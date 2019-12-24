@@ -15,13 +15,22 @@ if ( ! function_exists( 'mate_custom_excerpt_length' ) ) {
 }
 
 // add more link to excerpt
-if ( ! function_exists( 'mate_custom_excerpt_more' ) ) {
-    function mate_custom_excerpt_more($more) {
+if ( ! function_exists( 'mate_excerpt_more_link' ) ) {
+    function mate_excerpt_more_link() {
         global $post;
         return '<div><a class="read-more" href="'. get_permalink( $post->ID ) . '">'. __('Read More <span>&rarr;</span>', 'mate') .'</a></div>';
     }
-    add_filter('excerpt_more', 'mate_custom_excerpt_more');
-    add_filter( 'the_content_more_link', 'mate_custom_excerpt_more' );
+    add_filter( 'the_content_more_link', 'mate_excerpt_more_link' );
+}
+
+/**
+ * Change the excerpt more string
+ */
+if ( ! function_exists( 'mate_custom_excerpt_more' ) ) {
+    function mate_custom_excerpt_more($more) {
+        return '&hellip;';
+    }
+    add_filter( 'excerpt_more', 'mate_custom_excerpt_more' );
 }
 
 

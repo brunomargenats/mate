@@ -37,7 +37,8 @@ label,
 input,
 textarea,
 select,
-button {
+button,
+.wp-block-button__link {
     font-family: var(--font-text), var(--font-fallback);
     color: var(--color-on-background)
 }
@@ -61,17 +62,19 @@ button {
     line-height: 1.2rem;
     max-width: 100%;
     outline: 0;
-    padding: .20rem .4rem;
+    padding: .2rem .4rem;
     position: relative;
     transition: background .2s, border .2s, box-shadow .2s, color .2s;
 }
+
+button {padding: 0.35rem 0.7rem;}
+
+.wp-block-button__link, .wp-block-button__link:hover {border-radius:0; transition: background .2s, border .2s, box-shadow .2s, color .2s;}
 
 input:focus,
 textarea:focus,
 select:focus {
     border-color: var(--form-element-border-focus);
-    -moz-box-shadow: 0 0 0.2rem var(--form-element-border-focus);
-    -webkit-box-shadow: 0 0 0.2rem var(--form-element-border-focus);
     box-shadow: 0 0 0.2rem var(--form-element-border-focus);
 }
 
@@ -147,23 +150,25 @@ input[type="date"] {
 ligth to dark */
 
 button,
-input[type="submit"] {
+input[type="submit"],
+.wp-block-button__link {
     background: var(--btn-primary-bg);
     color: var(--btn-primary-label);
 }
 
 button:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+.wp-block-button__link:hover {
     background: var(--btn-primary-hover);
 }
 
 button:active,
 input[type="submit"]:active,
+.wp-block-button__link:active,
 button:focus,
-input[type="submit"]:focus {
+input[type="submit"]:focus,
+.wp-block-button__link:focus {
     background: var(--btn-primary-active);
-    -moz-box-shadow: 0 0 0.2rem var(--btn-primary-hover);
-    -webkit-box-shadow: 0 0 0.2rem var(--btn-primary-hover);
     box-shadow: 0 0 0.2rem var(--btn-primary-hover);
 }
 

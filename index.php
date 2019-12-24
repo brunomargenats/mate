@@ -13,7 +13,7 @@ global $has_sidebar;
     <div id="content">
         <div id="inner-content" class="wrapper">
         <?php
-         if($has_sidebar) {
+         if(!is_page() && $has_sidebar) {
                 echo'<div class="grid">
                 <main id="main" class="col-12 col-sm-8">';
                 get_template_part( 'template-parts/content/content',mate_content_type());

@@ -36,6 +36,7 @@ if ($use_sidebars){
 	add_filter( 'theme_page_templates', 'child_theme_remove_page_template', 20, 3);
 	function child_theme_remove_page_template( $page_templates ) {
 	unset( $page_templates['layouts/page-with-sidebar.php'] );
+	unset( $page_templates['layouts/contact-with-sidebar.php'] );
 	return $page_templates;
 	}
 }
@@ -163,6 +164,9 @@ if ( ! function_exists( 'mate_setup' ) ) {
 
 		// Enqueue editor styles.
 		add_editor_style( 'assets/css/style-editor.css' );
+
+		// Add responsiveness to embeds
+		add_theme_support( 'responsive-embeds' );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
