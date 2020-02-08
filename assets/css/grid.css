@@ -25,13 +25,6 @@ col-xlg-
     collapses below 1600px
 */
 
-
-:root {
---grid-spacing-n: calc(0px - var(--grid-spacing)); /* Space between columns, negative */
---grid-spacing-h: calc(var(--grid-spacing) / 2); /* Half of space between columns. */
---grid-spacing-hn: calc(0px - var(--grid-spacing-h)); /* Half of space between columns. */
-}
-
 .container.fluid {width: 100%; max-width: var(--container-max-width)!important}
 
 .container{width:100%;margin-right:auto;margin-left:auto;padding-right:var(--grid-spacing);padding-left:var(--grid-spacing)}

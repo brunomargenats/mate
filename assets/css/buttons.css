@@ -1,0 +1,39 @@
+/*Buttons styles*/
+#site button,
+#site input[type="submit"],
+.wp-block-button__link {
+    font-family: var(--font-text), var(--font-fallback);
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-label);
+    display: inline-block;
+    font-size: .8rem;
+    line-height: 1.2rem;
+    max-width: 100%;
+    outline: 0;
+    padding: 0.35rem 0.7rem;
+    position: relative;
+    transition: background .2s, border .2s, box-shadow .2s, color .2s;
+    cursor: pointer;
+}
+
+.wp-block-button__link{margin:var(--grid-spacing-h) 0}
+
+.is-style-outline .wp-block-button__link{border-color:var(--btn-primary-bg);border-width:2px}
+
+
+#site button:hover,
+#site input[type="submit"]:hover,
+.wp-block-button__link:hover {
+    background: var(--btn-primary-hover);
+    transition: background .2s, border .2s, box-shadow .2s, color .2s;
+}
+
+#site button:active,
+#site input[type="submit"]:active,
+.wp-block-button__link:active,
+#site button:focus,
+#site input[type="submit"]:focus,
+.wp-block-button__link:focus {
+    background: var(--btn-primary-active);
+    box-shadow: 0 0 0.2rem var(--btn-primary-hover);
+}

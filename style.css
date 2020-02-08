@@ -1,14 +1,31 @@
 /*---------------------------------------------------------------------------------
 
 	Theme Name: Mate
-	Theme URI: https://brunomargenats.com/themes/mate/
-  	Text Domain: mate
-	Version: 0.6.5
 	Description: Mate is my personal WordPress starter theme. Please ask me before using it.
-	Tags: blog, one-column, custom-menu, featured-images, threaded-comments, translation-ready
-	Author: Bruno Margenats
-  	Author URI: https://brunomargenats.com/
-	License: Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
-	License URI: https://creativecommons.org/licenses/by-nc-nd/4.0/
+	Text Domain: mate
+	Requires at least: WordPress 5.3
+	Version: 0.6.6
+	Tags: blog, one-column, two-columns, custom-menu, featured-images, threaded-comments, translation-ready
+
+    Author:      Bruno Margenats
+    Author URI:  https://brunomargenats.com
+    License:     GPLv3 or later
+    License URI: http://www.gnu.org/licenses/gpl-3.0.html
+
+    Mate WordPress Theme
+    Copyright (C) 2019-2020, Bruno Margenats - https://brunomargenats.com/
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ----------------------------------------------------------------------------------- */

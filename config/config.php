@@ -16,10 +16,10 @@ global $google_fonts;
 global $responsive_navigation;
 global $fixed_navigation;
 global $use_menus;
-global $use_utility_classes;
 global $use_sidebars;
 global $use_comments;
 global $use_comments_in_pages;
+global $gutenberg_default_config;
 global $disable_gutenberg_frontpage;
 global $disabe_emojis;
 global $disabe_wpembed;
@@ -39,18 +39,17 @@ Use TRUE/FALSE or the options provided in the comments.
 /* == GOOGLE FONTS == */
 $google_fonts = FALSE;
 
-/* == RESPONSIVE NAVIGATION == */
+/* == RESPONSIVE & FIXED NAVIGATION == */
 $responsive_navigation = TRUE; /* Load javascript and css for navigation */
-$fixed_navigation = FALSE; /* This will stick navigation on scrolling. Responsive navigation must be TRUE */
+    if ($responsive_navigation){
+        $fixed_navigation = FALSE; /* This will stick navigation on scrolling. Responsive navigation must be TRUE */
+    }
 
 /* == USE SIDEBARS == */
 $use_sidebars = FALSE; /* FALSE if you don't need sidebars and widgets */
 
 /* == USE MENUS == */
 $use_menus = TRUE; /* FALSE if you don't need any WordPress menu (navigation).*/
-
-/* == USE UTILITY CLASSES == */
-$use_utility_classes = TRUE; /* FALSE if you don't what to load the utility classes. This are common classes that can help you to avoid writing new CSS.*/
 
 
 /* == USE COMMENTS == */
@@ -66,6 +65,9 @@ $wp_cleanup = TRUE; /* I recommend to let this TRUE. If you need to change somet
 /* == MINIMAL SUPPORT FOR IE11? == CSS Variables won't work in IE without this */
 $ie_support = TRUE;
 
+
+/* == ADD GUTENBERG DEFAULT CONFIGURATION ==*/
+$gutenberg_default_config = TRUE; // TRUE if you want to change some Gutenberg default options like colors for buttons and others.
 
 /* == DISABLE GUTENBERG ON FRONTPAGE ==*/
 $disable_gutenberg_frontpage = TRUE; // TRUE if you're not using Gutenberg Blocks on front-page. Site will load faster.

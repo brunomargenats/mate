@@ -30,22 +30,20 @@
                     */?>
                     </div>
                     <?php global $responsive_navigation; if ($responsive_navigation){?>
-                    <div id="nav-button" class="col-bleed-y col-3">
-                        <div id="nav-button-container">
-                            <button type="button" id="nav-toggle" class="nav-toggle"><?php _e( 'Menu', 'mate' ); ?></button>
+                        <div id="nav-button" class="col-bleed-y col-3">
+                            <div id="nav-button-container">
+                                <button type="button" id="nav-toggle" class="nav-toggle"><?php _e( 'Menu', 'mate' ); ?></button>
+                            </div>
                         </div>
-                    </div>
                     <?php } ?>
                     <?php if ( has_nav_menu( 'primary-menu' ) ) : ?>
-                    <div class="container-menu col-bleed-y col-auto">
-
-                        <nav id="nav" class="nav-collapse header-nav primary-menu"
-                            aria-label="<?php _e( 'Primary Menu', 'mate' ); ?>">
-                            <?php wp_nav_menu( array( 'container' => 'ul', 'menu_class' => 'menu-items', 'menu' => __( 'The Main Menu', 'mate' ), 'theme_location' => 'primary-menu'  ) ); ?>
-                        </nav>
-                    </div>
+                        <div class="container-menu col-bleed-y col-auto">
+                            <nav id="nav" class="nav-collapse header-nav primary-menu"
+                                aria-label="<?php _e( 'Primary Menu', 'mate' ); ?>">
+                                <?php wp_nav_menu( array( 'container' => 'ul', 'menu_class' => 'menu-items', 'menu' => __( 'The Main Menu', 'mate' ), 'theme_location' => 'primary-menu'  ) ); ?>
+                            </nav>
+                        </div>
                     <?php endif; ?>
                 </div>
             </div>
-
         </header><!-- header -->

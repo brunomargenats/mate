@@ -10,7 +10,7 @@
  */
 
 /**
- * FUNCTIONS: ADD HEADER STYLES AND SCRIPTS (JJust those that are necessary to load first)
+ * FUNCTIONS: ADD HEADER STYLES AND SCRIPTS (Just those that are necessary to load first)
  */
 
 if ( ! function_exists( 'mate_scripts_styles_header' ) ) {
@@ -26,6 +26,7 @@ function mate_scripts_styles_header() {
 		wp_register_style('mate_base',get_theme_file_uri( '/assets/css/base.css' ), array(), wp_get_theme()->get( 'Version' ) );
 		wp_register_style('mate_grid',get_theme_file_uri( '/assets/css/grid.css' ), array(), wp_get_theme()->get( 'Version' ) );
 		wp_register_style('mate_typography',get_theme_file_uri( '/assets/css/typography.css' ), array(), wp_get_theme()->get( 'Version' ) );
+		wp_register_style('mate_print',get_theme_file_uri( '/assets/css/print.css' ), array(), wp_get_theme()->get( 'Version' ), 'print' );
 		wp_register_style('site_style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
 
 		/*   REGISTER ALL JS FOR THIS SITE
@@ -40,6 +41,7 @@ function mate_scripts_styles_header() {
 			wp_enqueue_style( 'mate_reset');
 			wp_enqueue_style( 'mate_base');
 			wp_enqueue_style( 'mate_typography');
+			wp_enqueue_style( 'mate_print');
 			wp_enqueue_style( 'site_style');
 
 	}
@@ -48,25 +50,20 @@ function mate_scripts_styles_header() {
 }
 
 
-
 if ( ! function_exists( 'mate_scripts_styles_footer' ) ) {
 
 	function mate_scripts_styles_footer() {
 		wp_register_style('mate_forms',get_theme_file_uri( '/assets/css/forms.css' ), array(), wp_get_theme( 'mate' )->get( 'Version' ) );
 		wp_enqueue_style( 'mate_forms');
-
-		global $use_utility_classes;
-		if ($use_utility_classes){
-			wp_register_style('mate_utility_classes',get_theme_file_uri( '/assets/css/utility-classes.css' ), array(), wp_get_theme( 'mate' )->get( 'Version' ) );
-			wp_enqueue_style( 'mate_utility_classes');
-		}
+		wp_register_style('mate_buttons',get_theme_file_uri( '/assets/css/buttons.css' ), array(), wp_get_theme( 'mate' )->get( 'Version' ) );
+		wp_enqueue_style( 'mate_buttons');
+		wp_register_style('mate_utility_classes',get_theme_file_uri( '/assets/css/utility-classes.css' ), array(), wp_get_theme( 'mate' )->get( 'Version' ) );
+		wp_enqueue_style( 'mate_utility_classes');
 
 	}
 	add_action( 'get_footer', 'mate_scripts_styles_footer', 80 );
 
 }
-
-
 
 	/**
 	 * Let's remove jquery migrate if not used
@@ -88,3 +85,38 @@ if ( ! function_exists( 'mate_remove_jquery_migrate' ) ) {
 
 	add_action('wp_default_scripts', 'mate_remove_jquery_migrate');
 }
+
+
+	/**
+	 * LOAD STYLES WE NEED IN TO SEE IN GUTENBERG
+	 */
+
+
+if ( ! function_exists( 'mate_admin_style_editor' ) ) {
+
+	// Add support for editor styles.
+	add_theme_support( 'editor-styles' );
+
+	/**
+	 * Registers our editor stylesheet.
+	 */
+	function mate_admin_style_editor() {
+		add_editor_style( 'assets/css/style-editor.css' );
+	}
+	add_action( 'after_setup_theme', 'mate_admin_style_editor' );
+}
+
+
+
+if ( ! function_exists( 'mate_admin_style_blocks' ) ) {
+
+	add_action( 'enqueue_block_editor_assets', 'mate_admin_style_blocks' );
+	function mate_admin_style_blocks(){
+		wp_enqueue_style('mate_variables',get_theme_file_uri( '/config/variables.css' ),array( 'wp-edit-blocks' ), wp_get_theme()->get( 'Version' ));
+		wp_enqueue_style('mate_buttons',get_theme_file_uri( '/assets/css/buttons.css' ),array( 'wp-edit-blocks' ), wp_get_theme()->get( 'Version' ));
+	}
+
+}
+
+
+

@@ -8,11 +8,9 @@ get_header();
 
     <div id="content">
         <div id="inner-content" class="wrapper">
-        <?php
-                echo '<main id="main">';
-                get_template_part( 'template-parts/content/content',mate_content_type());
-                echo '</main>';
-        ?>
+            <main id="main">
+                <?php get_template_part( 'template-parts/content/content',mate_content_type());?>
+            </main>
         </div>
     </div>
 

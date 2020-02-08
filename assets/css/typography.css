@@ -5,7 +5,7 @@
 html {
     text-rendering: optimizeLegibility;
     line-height: 1.5;
-    font-size: 15px;
+    font-size: 14px;
     font-family: var(--font-text), var(--font-fallback);
 }
 
@@ -13,129 +13,62 @@ body {
     color: var(--color-text);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,.h1,h2,h3,h4,h5,h6 {
     font-family: var(--font-display), var(--font-fallback);
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.1em;
+    margin: 0.7em 0;
 }
 
 @media (min-width: 576px) {
     html {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
 @media (min-width: 768px) {
     html {
-        font-size: 17px;
+        font-size: 15px;
     }
 }
 
 @media (min-width: 992px) {
     html {
-        font-size: 18px;
+        font-size: 17px;
     }
 }
 
 @media (min-width: 1200px) {
     html {
-        font-size: 19px;
+        font-size: 18px;
     }
 }
 
 @media (min-width: 1600px) {
     html {
-        font-size: 20px;
+        font-size: 19px;
     }
 }
 
-/*ratio: major third https://www.modularscale.com/?1&em&1.25 */
 
-@media (max-width: 767px) {
-    h1 {
-        font-size: 2.488rem;
-    }
+h1, .h1 {font-size: 2.488rem; }
+h2, .h2 {font-size: 2.074rem; }
+h3, .h3 {font-size: 1.728rem; }
+h4, .h4 {font-size: 1.44rem; }
+h5, .h5 {font-size: 1.2rem; }
+h6, .h6 {font-size: 1.0rem;}
+body {font-size: 1.1rem;}
 
-    h2 {
-        font-size: 2.074rem;
-    }
-
-    h3 {
-        font-size: 1.728rem;
-    }
-
-    h4 {
-        font-size: 1.44rem;
-    }
-
-    h5 {
-        font-size: 1.2rem;
-    }
-
-    h6,
-    small {
-        font-size: 1.0rem;
-    }
-
-    body {
-        font-size: 1.1rem;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin: .5rem 0 .5rem;
-    }
-}
-
-/*ratio: minor third https://www.modularscale.com/?1&em&1.2 */
 @media (min-width: 768px) {
-    h1 {
-        font-size: 3.052rem;
-    }
-
-    h2 {
-        font-size: 2.441rem;
-    }
-
-    h3 {
-        font-size: 1.953rem;
-    }
-
-    h4 {
-        font-size: 1.563rem;
-    }
-
-    h5 {
-        font-size: 1.25rem;
-    }
-
-    h6,
-    small {
-        font-size: 1.1rem;
-    }
-
-    body {
-        font-size: 1.1rem;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin: .7rem 0 .7rem;
-    }
+    h1, .h1 {font-size: 3.052rem; }
+    h2, .h2 {font-size: 2.441rem; }
+    h3, .h3 {font-size: 1.953rem; }
+    h4, .h4 {font-size: 1.563rem; }
+    h5, .h5 {font-size: 1.25rem; }
+    h6, .h6 {font-size: 1.1rem;}
+    body {font-size: 1.1rem;}
 }
+
 
 
 /*LINKS*/
@@ -157,9 +90,7 @@ a:active {
 }
 
 /*Formatting*/
-code,
-kbd,
-tt {
+code {
     background-color: var(--color-gray-2);
     padding: 1px
 }

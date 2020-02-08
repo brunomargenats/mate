@@ -12,11 +12,20 @@
     /*	SIZES */
     --container-max-width: 1200px; /* Website container max-width. MIN: 1200px. If you change this change also $content_width in functions.php*/
     --wrapper-max-width: 980px; /* Central content max-width (headear and footer not included. Can be 100% */
-    --grid-spacing: 20px;  /* Space between columns */
     --logo-width:40px;
     --logo-height:59px;
 
     /* -------------------------------------------------------------------------------- */
+
+
+    /* -------------------------------------------------------------------------------- */
+    /*	GRIDS */
+    --grid-spacing: 20px;  /* Space between columns */
+    --grid-spacing-n: calc(0px - var(--grid-spacing)); /* Space between columns, negative */
+    --grid-spacing-h: calc(var(--grid-spacing) / 2); /* Half of space between columns. */
+    --grid-spacing-hn: calc(0px - var(--grid-spacing-h)); /* Half of space between columns. */
+    /* -------------------------------------------------------------------------------- */
+
 
     /* -------------------------------------------------------------------------------- */
     /*	TYPHOGRAPHY */
@@ -31,6 +40,7 @@
     /* -------------------------------------------------------------------------------- */
 
 
+
     /* -------------------------------------------------------------------------------- */
     /*	COLORS
     /*  System inspiration:
@@ -39,15 +49,15 @@
     /* -------------------------------------------------------------------------------- */
 
         /* Color Shades Generators (15% recommended and 50% for BG) : http://scg.ar-ch.org/ or http://www.0to255.com/6200EE  */
-        --color-primary: #03DAC6;
-        --color-primary-light:#2dfce9;
-        --color-primary-dark:#028f81;
+        --color-primary: #16FFBD;
+        --color-primary-light:#62ffd3;
+        --color-primary-dark:#00c890;
         --color-primary-bg:#ddfffb;
         --color-on-primary:#000 ; /*contrast*/
 
-        --color-secondary: #6200EE;
-        --color-secondary-light: #8c3bff;
-        --color-secondary-dark: #4200a1;
+        --color-secondary: #FF2A67;
+        --color-secondary-light: #e76464;
+        --color-secondary-dark: #9b1818;
         --color-secondary-bg: #f5eeff;
         --color-on-secondary: #fff;  /*contrast*/
 
@@ -80,5 +90,27 @@
 
         /* default border */
         --color-border: var(--color-gray-4);
+
+
+
+    /* -------------------------------------------------------------------------------- */
+    /*	FORMS */
+        --form-element-border: var(--color-border);
+        --form-element-border-focus: var(--color-primary-light);
+        --form-element-border-error: var(--color-error);
+        --form-element-bg: var(--color-background);
+        --form-text-placeholder: var(--color-gray-7);
+
+        /* buttons */
+        --btn-primary-bg: var(--color-primary);
+        --btn-primary-hover: var(--color-primary-light);
+        --btn-primary-active: var(--color-primary-dark);
+        --btn-primary-label: var(--color-on-primary);
+
+        --btn-secondary-bg: var(--color-secondary);
+        --btn-secondary-hover: var(--color-secondary-light);
+        --btn-secondary-active: var(--color-secondary-dark);
+        --btn-secondary-label: var(--color-on-secondary);
+    /* -------------------------------------------------------------------------------- */
 
     } /* === END OF CSS VARIABLES === */

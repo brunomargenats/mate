@@ -17,11 +17,11 @@
 
 <body <?php body_class(); ?>>
     <?php
-    if ( function_exists( 'wp_body_open' ) ) {
-        wp_body_open();
-    } else {
-        do_action( 'wp_body_open' );
-    }
+        if ( function_exists( 'wp_body_open' ) ) {
+            wp_body_open();
+        } else {
+            do_action( 'wp_body_open' );
+        }
     ?>
 
     <?php get_template_part( 'template-parts/header/inner-header-content'); ?>

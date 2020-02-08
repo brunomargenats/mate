@@ -14,8 +14,10 @@ Breakpoint\:status\:attribute\:value. For exemple:
 
 
 .position\:absolute {position: absolute}
+.position\:relative {position: relative}
 
 .display\:block{display:block}
+.display\:inline-block{display:inline-block}
 .display\:none{display:none}
 
 .padding\:0{padding:0}
@@ -38,3 +40,12 @@ Breakpoint\:status\:attribute\:value. For exemple:
 .font\:text{font-family: var(--font-text);}
 
 .background-color\:primary {background-color: var(--color-primary)}
+
+.z-index\:1{z-index:1}
+.z-index\:2{z-index:2}
+.z-index\:3{z-index:3}
+.z-index\:4{z-index:4}
+.z-index\:5{z-index:5}
+.z-index\:6{z-index:6}
+
+.clear\:both{clear:both};

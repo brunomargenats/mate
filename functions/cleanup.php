@@ -31,9 +31,6 @@ if ( ! function_exists( 'mate_remove_head_links' ) ) {
 }
 
 
-
-
-
 // Pick out the version number from scripts and styles
 function mate_remove_version_from_style_js( $src ) {
     if ( strpos( $src, 'ver=' . get_bloginfo( 'version' ) ) )
@@ -42,9 +39,6 @@ function mate_remove_version_from_style_js( $src ) {
     }
     add_filter( 'style_loader_src', 'mate_remove_version_from_style_js');
     add_filter( 'script_loader_src', 'mate_remove_version_from_style_js');
-
-
-
 
 
 // Remove injected CSS on <head> from recent comments widget

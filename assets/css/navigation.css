@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------------- */
-/*	responsive-nav.js 1.0.40 STYLES
+/*	responsive-nav 1.0.40 STYLES
 /* -------------------------------------------------------------------------------- */
 
 .nav-collapse ul {
@@ -76,6 +76,16 @@
 }
 
 
+.js-nav-active #header {
+  z-index: 12;
+}
+
+.js-nav-active .header-nav,
+.js-nav-active #inner-header {
+  z-index: 13;
+  width: 100%;
+}
+
 /* ------------------------------------------
   NAV TOGGLE (HAMBURGER) STYLES
 --------------------------------------------- */
@@ -116,11 +126,16 @@ button.nav-toggle {
 
 button.nav-toggle:hover {
   cursor: pointer;
+  color: var(--color-link-hover);
 }
 
 button.nav-toggle:focus {
   box-shadow: none;
   outline: none;
+}
+
+button.nav-toggle.active {
+  border-color: transparent;
 }
 
 button.nav-toggle::before,
@@ -137,14 +152,6 @@ button.nav-toggle::after {
   transition: transform 0.25s ease-in-out;
 }
 
-button.nav-toggle:hover {
-  color: var(--color-link-hover);
-}
-
-button.nav-toggle.active {
-  border-color: transparent;
-}
-
 button.nav-toggle.active::before {
   transform: translate(-50%, -50%) rotate(45deg);
 }
@@ -159,7 +166,6 @@ button.nav-toggle.active::after {
 --------------------------------------------- */
 
 .dropdown ul ul {
-  border: 0;
   padding: 0;
 }
 
@@ -171,11 +177,9 @@ button.nav-toggle.active::after {
   padding-left: 3em;
 }
 
-
 .dropdown-toggle::after {
   content: "+";
   font-size: 1.5em;
-  /*line-height: 0.8;*/
   float: right;
 }
 
@@ -191,18 +195,6 @@ button.nav-toggle.active::after {
   }
 }
 
-.js-nav-active #header {
-  z-index: 12;
-}
-
-.js-nav-active .header-nav,
-.js-nav-active #inner-header {
-  z-index: 13;
-  width: 100%;
-}
-
-
-
 
 @media screen and (max-width: 767px) {
 
@@ -215,7 +207,6 @@ button.nav-toggle.active::after {
     content: "–";
   }
 
-  /*In horizontal-navigation this is limited for mobile only*/
   .container-menu {
     position: relative;
     top: var(--grid-spacing);
@@ -249,31 +240,25 @@ button.nav-toggle.active::after {
   .nav-collapse {
     width: auto;
     float: right;
+    position: relative !important;
+    /* This !important will fix nav position on resizing */
+  }
+
+  .nav-collapse,
+  .nav-collapse .dropdown ul {
+    max-height: none;
+    overflow: visible;
   }
 
   .nav-collapse li {
     width: auto;
   }
 
-  .js .nav-collapse,
-  .js .nav-collapse .dropdown ul {
-    max-height: none;
-    overflow: visible;
-  }
-
-  .dropdown-toggle::after {
-    content: "";
-    width: 0;
-    height: 0;
-    margin: 0.4em 0 0 0.5em;
-    border: solid var(--color-link);
-    border-width: 0 2px 2px 0;
-    padding: 2px;
-    transform: rotate(45deg);
-  }
-
-  .dropdown ul .dropdown-toggle::after {
-    transform: rotate(-45deg);
+  .nav-collapse a {
+    margin: 0;
+    padding: 0.6em 1em;
+    float: left;
+    text-align: center;
   }
 
   .nav-collapse a:hover {
@@ -290,13 +275,12 @@ button.nav-toggle.active::after {
 
   .nav-collapse .dropdown ul a {
     text-align: left;
-    border: 0;
   }
 
 
   /*START Hover and click navigation (for keybord compatibility).*/
-  .js .nav-collapse .dropdown:hover>ul,
-  .js .nav-collapse .dropdown.opened>ul {
+  .nav-collapse .dropdown:hover>ul,
+  .nav-collapse .dropdown.opened>ul {
     clip: auto;
     position: absolute;
     width: 11em;
@@ -305,45 +289,51 @@ button.nav-toggle.active::after {
     display: block !important;
   }
 
-  .js .nav-collapse .dropdown .dropdown:hover>ul,
-  .js .nav-collapse .dropdown .dropdown.opened>ul {
+  .nav-collapse .dropdown .dropdown:hover>ul,
+  .nav-collapse .dropdown .dropdown.opened>ul {
     top: 0;
     left: 11em;
   }
 
-  .js .nav-collapse .dropdown:last-child .dropdown:hover>ul,
-  .js .nav-collapse .dropdown:last-child .dropdown.opened>ul {
+  .nav-collapse .dropdown:last-child .dropdown:hover>ul,
+  .nav-collapse .dropdown:last-child .dropdown.opened>ul {
     right: 10em;
     left: auto;
   }
 
   /*END Hover and click navigation*/
 
-  .js .nav-collapse ul>.dropdown:last-child ul {
+  .nav-collapse ul>.dropdown:last-child ul {
     left: auto;
     right: 0;
   }
 
-  .nav-collapse a {
-    margin: 0;
-    padding: 0.6em 1em;
-    float: left;
-    text-align: center;
-  }
 
-  .js .nav-collapse {
-    position: relative !important;
-    /* This !important will fix nav position on resizing */
-  }
-
-  .js .nav-collapse.closed,
-  .js .nav-collapse.closed .dropdown ul {
+  .nav-collapse.closed,
+  .nav-collapse.closed .dropdown ul {
     max-height: none;
   }
 
   #nav-button {
     display: none;
   }
+
+
+  .dropdown-toggle::after {
+    content: "";
+    width: 0;
+    height: 0;
+    margin: 0.4em 0 0 0.5em;
+    border: solid var(--color-link);
+    border-width: 0 2px 2px 0;
+    padding: 2px;
+    transform: rotate(45deg);
+  }
+
+  .dropdown ul .dropdown-toggle::after {
+    transform: rotate(-45deg);
+  }
+
 }
 
 
@@ -366,8 +356,8 @@ button.nav-toggle.active::after {
 
 }
 
-.fade,
-.container-menu.fade,
+.nav-fade,
+.container-menu.nav-fade,
 .container-menu ul>li.opened>ul.sub-menu,
 .container-menu ul>li.opened>ul.sub-menu>li.opened>ul.sub-menu {
   opacity: 1;
@@ -380,11 +370,10 @@ button.nav-toggle.active::after {
 }
 
 
-.fade,
+.nav-fade,
 .container-menu,
 .container-menu ul.sub-menu,
-.container-menu .dropdown-active ul.sub-menu,
-.overlay {
+.container-menu .dropdown-active ul.sub-menu {
   transition: all 0.4s ease-in-out;
 }
 
@@ -403,8 +392,9 @@ button.nav-toggle.active::after {
   }
 }
 
-
-/*FIXED NAVIGATION*/
+/* ------------------------------------------
+  FIXED NAVIGATION
+--------------------------------------------- */
 .fixed-navigation #header {
   position: fixed;
   top: 0;
@@ -413,6 +403,23 @@ button.nav-toggle.active::after {
   background: #fff;
   padding: var(--grid-spacing);
 }
+
+.js-nav-active .fixed-navigation #header {
+  bottom: 0;
+}
+
+.fixed-navigation #header #inner-header {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.fixed-navigation #site {
+  padding-top: calc(var(--logo-height) + var(--grid-spacing) + var(--grid-spacing));
+}
+
+/* ------------------------------------------
+  Wordpress Admin Bar CSS
+--------------------------------------------- */
 
 .admin-bar.fixed-navigation #header {
   top: 46px;
@@ -428,17 +435,4 @@ button.nav-toggle.active::after {
   .admin-bar.fixed-navigation #header {
     top: 32px;
   }
-}
-
-.fixed-navigation #header #inner-header {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-}
-
-.js-nav-active .fixed-navigation #header {
-  bottom: 0;
-}
-
-.fixed-navigation #site {
-  padding-top: calc(var(--logo-height) + var(--grid-spacing) + var(--grid-spacing));
 }

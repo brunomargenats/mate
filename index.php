@@ -9,23 +9,20 @@
 get_header();
 global $has_sidebar;
 ?>
-
     <div id="content">
         <div id="inner-content" class="wrapper">
-        <?php
-         if(!is_page() && $has_sidebar) {
-                echo'<div class="grid">
-                <main id="main" class="col-12 col-sm-8">';
-                get_template_part( 'template-parts/content/content',mate_content_type());
-                echo'</main>';
-                get_sidebar();
-                echo'</div>';
-            }else{
-                echo '<main id="main">';
-                get_template_part( 'template-parts/content/content',mate_content_type());
-                echo '</main>';
-            }
-        ?>
+            <?php if(!is_page() && $has_sidebar) { ?>
+                    <div class="grid">
+                        <main id="main" class="col-12 col-sm-8">
+                            <?php get_template_part( 'template-parts/content/content',mate_content_type());?>
+                        </main>
+                        <?php get_sidebar();?>
+                    </div>
+            <?php }else{ ?>
+                    <main id="main">
+                        <?php get_template_part( 'template-parts/content/content',mate_content_type());?>
+                    </main>
+            <?php } ?>
         </div>
     </div>
 

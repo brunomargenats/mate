@@ -10,50 +10,22 @@ https://picturepan2.github.io/spectre/elements/forms.html
 */
 
 
-:root {
-
-    --form-element-border: var(--color-border);
-    --form-element-border-focus: var(--color-primary-light);
-    --form-element-border-error: var(--color-error);
-    --form-element-bg: var(--color-background);
-    --form-text-placeholder: var(--color-gray-5);
-
-    /* buttons */
-    --btn-primary-bg: var(--color-primary-light);
-    --btn-primary-hover: var(--color-primary);
-    --btn-primary-active: var(--color-primary-dark);
-    --btn-primary-label: var(--color-on-primary);
-
-    --btn-secondary-bg: var(--color-secondary);
-    --btn-secondary-hover: var(--color-secondary-light);
-    --btn-secondary-active: var(--color-secondary-dark);
-    --btn-secondary-label: var(--color-on-secondary);
-}
-
-
 
 /*Basic styles*/
 label,
 input,
 textarea,
-select,
-button,
-.wp-block-button__link {
+select
+{
     font-family: var(--font-text), var(--font-fallback);
-    color: var(--color-on-background)
+    color: var(--color-on-background);
 }
 
-button,
-input[type="submit"],
-input[type="checkbox"],
-input[type="radio"] {
-    cursor: pointer;
-}
 
 input,
 textarea,
-select,
-button {
+select
+{
     background-color: var(--form-element-bg);
     background-image: none;
     border: .05rem solid var(--form-element-border);
@@ -62,14 +34,37 @@ button {
     line-height: 1.2rem;
     max-width: 100%;
     outline: 0;
-    padding: .2rem .4rem;
+    padding: 0.325rem 0.7rem;
     position: relative;
     transition: background .2s, border .2s, box-shadow .2s, color .2s;
 }
 
-button {padding: 0.35rem 0.7rem;}
 
-.wp-block-button__link, .wp-block-button__link:hover {border-radius:0; transition: background .2s, border .2s, box-shadow .2s, color .2s;}
+/*Reset styles for some input fields and textarea*/
+button {
+    border: 0;
+}
+
+textarea,
+input[type="checkbox"],
+input[type="radio"] {
+    height: auto;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="submit"] {
+    width: auto;
+}
+
+textarea {
+    /* Move the label to the top */
+    vertical-align: top;
+    /* Turn off scroll bars in IE unless needed */
+    overflow: auto;
+}
+
+/*Focus*/
 
 input:focus,
 textarea:focus,
@@ -100,33 +95,6 @@ textarea::placeholder {
 }
 
 
-/*Reset styles for some input fields and textarea*/
-button {
-    border: 0;
-}
-
-textarea,
-input[type="checkbox"],
-input[type="radio"] {
-    height: auto;
-}
-
-input[type="checkbox"],
-input[type="radio"],
-input[type="submit"] {
-    width: auto;
-}
-
-
-
-textarea {
-    /* Move the label to the top */
-    vertical-align: top;
-    /* Turn off scroll bars in IE unless needed */
-    overflow: auto;
-}
-
-
 
 /* Select only styles */
 select {
@@ -145,36 +113,10 @@ input[type="date"] {
 }
 
 
-/*Buttons styles*/
-/* One type with bran colors, an other with blanc and white
-ligth to dark */
-
-button,
-input[type="submit"],
-.wp-block-button__link {
-    background: var(--btn-primary-bg);
-    color: var(--btn-primary-label);
-}
-
-button:hover,
-input[type="submit"]:hover,
-.wp-block-button__link:hover {
-    background: var(--btn-primary-hover);
-}
-
-button:active,
-input[type="submit"]:active,
-.wp-block-button__link:active,
-button:focus,
-input[type="submit"]:focus,
-.wp-block-button__link:focus {
-    background: var(--btn-primary-active);
-    box-shadow: 0 0 0.2rem var(--btn-primary-hover);
-}
-
 /*RADIO BUTTONS AND CHECKBOXES*/
 input[type="checkbox"],
 input[type="radio"] {
     /*float:left*/
     margin: .46rem 0.4rem .46rem 0;
+    cursor: pointer;
 }

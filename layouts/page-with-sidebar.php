@@ -8,14 +8,12 @@ get_header();
 
     <div id="content">
         <div id="inner-content" class="wrapper">
-        <?php
-                echo'<div class="grid">
-                <main id="main" class="col-12 col-sm-8">';
-                get_template_part( 'template-parts/content/content',mate_content_type());
-                echo'</main>';
-                get_sidebar();
-                echo'</div>';
-        ?>
+            <div class="grid">
+                <main id="main" class="col-12 col-sm-8">
+                    <?php get_template_part( 'template-parts/content/content',mate_content_type());?>
+                </main>
+                <?php get_sidebar();?>
+            </div>
         </div>
     </div>
 

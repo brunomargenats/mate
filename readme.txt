@@ -2,16 +2,18 @@
 Contributors: Bruno Margenats
 Requires at least: 5.2
 Tested up to: 5.3.2
-Stable tag: trunk
-License: Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
-License URI: https://creativecommons.org/licenses/by-nc-nd/4.0/
+Stable tag: Version 0.6.5
+License: GPLv3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 
 == Installation ==
 
-1. Upload the theme
-2. Activate the theme
-3. Enjoy
+1. Upload this theme
+2. Upload child theme (mate-child)
+3. Copy everything that you want to change
+4. Activate child theme
+5. Enjoy
 
 == Licenses ==
 
@@ -26,6 +28,27 @@ Source: https://fonts.google.com/specimen/Open+Sans
 
 == Changelog ==
 
+Version 0.6.6
+-------------------------
+- Moved: CSS variables for grids and forms are now in variables.CSS
+- Changed: Utility classes are now mandatory (we will need them to create new components).
+- Changed: Theme license.
+- Changed: Default primary and secondary colors (in variables.css)
+- Commented: Some code that seems unnecessary. May delete on net version.
+- Fixed: Some typos in the changelog.
+- Fixed: Custom editor style wasn't working
+- Added: Floating images in articles are now 100% with under 479px screen resolution.
+- Added: Some Gutenberg CSS fixes.
+- Added: Some other CSS fixes.
+- Added: New gutenberg-default-config function. This will disable useless things and be a boilerplate for further configurations.
+- Added: Buttons.css (some CSS moved from forms.css)
+- Added: Default buttons colors based on primary colors.
+- Added: New functions in styles-scripts.php for better control of what CSS is loading in Gutenberg Editor.
+- Added: Temporal JavaScript to fix 100vw scroll bug in CSS. (Used in .alignfull)
+- Enhanced: Some HTML code is now outside <?php ?> tags for better understanding.
+- Enhanced: forms.css
+- Updated: smooth-scroll script from v16.1.0 to v16.1.2
+
 Version 0.6.5
 -------------------------
 - Fixed: --font-fallback bug.
@@ -38,20 +61,20 @@ Version 0.6.5
 - Fixed: site_style is now loading in header.
 - Fixed: Now pages aren't using sidebar on default template.
 - Changed: Sidebars are now disabled by default.
-- Changed: Some minors changes in forms.css and cf7-styles.css
+- Changed: Some minor changes in forms.css and cf7-styles.css
 - Added: Gutenberg buttons are now using default theme colors.
 - Added: New template contact-with-sidebar.php
 - Added: add_theme_support( 'responsive-embeds' );
 - Added: utility classes!
-- Updated: French translation
+- Updated: French translation.
 
 
 Version 0.6.4
 -------------------------
 - Added: global $has_sidebar; in index.php.
 - Added: wrapper {padding: 0 var(--grid-spacing-h);} on grid.css to fix mobile padding bug with grids.
-- Removed: Recommended plugins function is now an standalone plugin.
-- Changed: Google Fonts are no longuer activated by default. 
+- Removed: Recommended plugins function is now a standalone plugin.
+- Changed: Google Fonts are no longer activated by default.
 - Fixed: HTML5 Markup error - Sidebar must be outside <main> tag
 
 Version 0.6.3
@@ -59,19 +82,19 @@ Version 0.6.3
 - Added: --font-fallback CSS variable.
 - Added: Function that let you disable gutenberg extra css on front-page if you're not using Gutenberg blocks
 - Added: if ( ! defined( 'ABSPATH' ) ) in template parts for extra protection.
-- Added: scroll-behavior: smooth; (this will work only on firefox and chrome)
-- Added: img {font-size: 0} in reset.css. This wil hide alt text when images are loading. This is a little controversial, but after all this file is a reset. Also, this will help with the classic image extra gap.
-- Added: Remove "type=" markup from javascript and css using adding a function in cleanup.php.
-- Enhanced: responsive-nav.min.js and navigation.css are now load on header for better caching.
+- Added: scroll-behavior: smooth; (this will work only on Firefox and Chrome.)
+- Added: img {font-size: 0} in reset.css. This will hide alt text when images are loading. This is a little controversial, but after all this file is a reset. Also, this will help with the classic image extra gap.
+- Added: Remove "type=" markup from JavaScript and css using adding a function in cleanup.php.
+- Enhanced: responsive-nav.min.js and navigation.css are now loaded on the header for better caching.
 - Enhanced: "#logo a" display on base.css changed from "block" to "inline-block". The last one is more friendly for future children sites.
 - Enhanced: Some markup changed for pass validation on https://validator.w3.org/
-- Enhanced: Recommended plugins. New ui.
-- Fixed: go to anchor JS is now working on ie.
+- Enhanced: Recommended plugins. New UI.
+- Fixed: go to anchor JS is now working on IE.
 - Fixed: Gap after images on img,embed,object,video. Fixed using vertical-align: inherit; Line 98 of reset.css
 - Fixed: Hyphens removed for h1,h2,h3,h4,h5,h6 on reset.css
 - Fixed: Underline borders on links are removed (too much conflict with images). Now we use text-decoration:underline.
 - Fixed: .container .grid had too much padding. Fixed on grid.css.
-- Moved: Some code of header.php is now in template-parts/header/inner-header-content.php. This way we can change the container type and be able to make full size divs.
+- Moved: Some code of header.php is now in template-parts/header/inner-header-content.php. This way we can change the container type and be able to make full-size divs.
 - Changed: --color-text: var(--color-on-background); AND --color-text-heading: var(--color-on-background); in variables.css is now using color on background instead of some random gray.
 - Removed: class="main" from <main id="main" class="main"> all over the theme
 - Removed: 404.php, archive.php, front-page.php, home.php, page.php, search.php and single.php. We use index.php only and a new function to load template-parts.
@@ -79,7 +102,7 @@ Version 0.6.3
 Version 0.6.2
 -------------------------
 - Fixed: Structure data tests are now passing: https://search.google.com/structured-data/testing-tool/u/0/ But, we will let plugins handle this.
-- Fixed: Front page is now showing the blog if static page is not defined.
+- Fixed: Front page is now showing the blog if a static page is not defined.
 - Fixed: Comments count was showing even when comments were disabled. Conditional added.
 - Fixed: Some custom excerpt errors
 - Fixed: Navigation arrows position in IE are now fixed (ie.css updated)
@@ -93,8 +116,8 @@ Version 0.6.2
 
 Version 0.6.1
 -------------------------
-- Added: wp_body_open after <body>. This is a very usefull new WP function.
-- Added: Simple javascript for smooth Go To anchor effect.
+- Added: wp_body_open after <body>. This is a very useful new WP function.
+- Added: Simple JavaScript for smooth Go To anchor effect.
 - Fixed: 1px bug in drop-down menus (desktop). In navigation.css file : line 319
 - Fixed: pseudo-elements :after and :before are now using :: across all the CSS files. Ref: https://bricss.net/post/10768584657/know-your-lingo-pseudo-class-vs-pseudo-element 
 - Enhanced: custom-styles-scripts.php second function is now easier to understand.
@@ -105,20 +128,20 @@ Version 0.6
 - Enhanced: Grid replaced (Reflex grid)
 - Enhanced: Ponyfill now loading ONLY on IE
 - Enhanced: Header.php is now more standard. Custom scripts and custom content are now in head-inline-scripts.php and inner-header-content.php
-- Enhanced: Template parts are now categorisez in "header", "content" and "footer"
-- Enhanced: Wide aligment and Full aligment are now supported
+- Enhanced: Template parts are now categorized in "header", "content" and "footer"
+- Enhanced: Wide alignment and Full alignment are now supported
 - Enhanced: Child theme
 - Enhanced: WP menus are now in a function file (easier to add new menus)
 - Enhanced: Small functions are now in new files
 - Enhanced: Theme setup is now in config.php
 - Enhanced: Global sidebar detection.
-- Enhanced: Comments.css and comment-reply.js not longer loading when not needed
+- Enhanced: Comments.css and comment-reply.js no longer loading when not needed
 - Enhanced: Contact form 7 "only in templates" option is now full compatible with custom CF7 styles.
 - Enhanced: $is_sidebar became $has_sidebar
-- Enhanced: Embedded videos are now responsives (Only CSS)
+- Enhanced: Embedded videos are now responsive (Only CSS)
 - Enhanced: Google Fonts function changed. Now we use an easy one with dns-prefetch, pre-connect and swap.
-- Enhanced: Render blocking javascript optimized. Some script are still in header only for compatibility.
-- Enhanced: Theme code formated.
+- Enhanced: Render blocking JavaScript optimized. Some scripts are still in the header only for compatibility.
+- Enhanced: Theme code formatted.
 - Removed: Loop.php
 - Removed: Full navigation (burger icon in every resolution)
 - Removed: Gutenberg custom css and functions are no longer available. Make a mu-plugin instead.
@@ -126,13 +149,13 @@ Version 0.6
 - Added: Automatic scrollbar on fixed navigation (mobile only).
 - Added: Custom class in body when using sidebars
 - Added: Contact Form 7 support (custom css and cool functions)
-- Added: Commented links to WP documentation accros multiple files.
+- Added: Commented links to WP documentation across multiple files.
 - Added: Multiple "if function_exists" on functions.
 - Added: French translations!
 - Added: Disable oembed option in config.php!
 - Added: Somme cleaning actions.
 - Added: CF7 custom default styles.
-- Added: Function to remove jquery migrate.
+- Added: Function to remove jQuery migrate.
 - Added: Basic print CSS.
 - Added: .fluid class (.container.fluid) for fluid responsiveness
 - Fixed: <main> in IE.
@@ -143,7 +166,7 @@ Version 0.6
 - Fixed: Some logo issues.
 - Fixed: Hamburger weird bug related with css translate (blur pixel)
 - Restored: Forms.css (still in beta)
-- Compatibility tested: Plugin WP Fastest Cache works fine with this theme. More test to do.
+- Compatibility tested: Plugin WP Fastest Cache works fine with this theme. More tests to do.
 
 Version 0.5.2
 -------------------------

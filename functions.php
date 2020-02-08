@@ -56,6 +56,13 @@ if ($use_menus){
 }
 
 
+/* ADD GUTENBERG DEFAULT CONFIGURATION
+------------------------------------------------ */
+if ($gutenberg_default_config){
+	get_template_part('functions/gutenberg-default-config');
+}
+
+
 /* DISABLE GUTENBERG ON FRONTPAGE
 ------------------------------------------------ */
 if ($disable_gutenberg_frontpage){
@@ -129,6 +136,7 @@ get_template_part('functions/custom-styles-scripts'); /* LOAD NEW SCRIPTS AND ST
 ------------------------------------------------ */
 get_template_part('functions/content-types'); /* Define what type of template use for each type of content */
 
+
 /* ADD WP CLEANUP
 ------------------------------------------------ */
 if ($wp_cleanup){
@@ -158,12 +166,6 @@ if ( ! function_exists( 'mate_setup' ) ) {
 
 		// Title tag
 		add_theme_support( 'title-tag' );
-
-		// Add support for editor styles.
-		add_theme_support( 'editor-styles' );
-
-		// Enqueue editor styles.
-		add_editor_style( 'assets/css/style-editor.css' );
 
 		// Add responsiveness to embeds
 		add_theme_support( 'responsive-embeds' );
