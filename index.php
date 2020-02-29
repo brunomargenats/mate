@@ -7,11 +7,12 @@
  */
 
 get_header();
-global $has_sidebar;
+global $mate_has_sidebar;
+
 ?>
     <div id="content">
         <div id="inner-content" class="wrapper">
-            <?php if(!is_page() && $has_sidebar) { ?>
+            <?php if(!is_page() && $mate_has_sidebar) { ?>
                     <div class="grid">
                         <main id="main" class="col-12 col-sm-8">
                             <?php get_template_part( 'template-parts/content/content',mate_content_type());?>

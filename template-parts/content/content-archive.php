@@ -5,11 +5,6 @@
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
  */
 ?>
-<?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
-?>
 
 <?php if (have_posts()) :?>
 <header class="page-header">

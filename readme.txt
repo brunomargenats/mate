@@ -28,6 +28,33 @@ Source: https://fonts.google.com/specimen/Open+Sans
 
 == Changelog ==
 
+
+Version 0.6.7
+-------------------------
+- Added: Debug mode!
+- Fixed: .alignfull and .alignwide (100vw CSS scrollbar bug)
+--- Added: var(--scroll-width) on variables.css. Also, this is calculate via javascript in scripts.js
+- Fixed: Bug in hamburger icon
+--- Added: !important to button.nav-toggle {font-size: 0;}.
+- Added: vertical-align: top; for td and th on tables.
+- Added: Some espaces (&nsbp;) on french translation. Specially for sentences with ! or ?. Also, accents are now in HTML format like: &eacute;
+- Added: "script" and "style" to the HTML5 theme support.
+- Added: Conditional $mate_use_comments; to comment-count.php
+- Added: Validation of some functions if ( ! function_exists( '' ) ) {
+- Changed: Some global variables renamed
+- Enhanced: styles-scrits.php now use a global variable $mate_version;
+- Enhanced: global variables (other than WP's ones) are now using a $mate_ prefix.
+- Enhanced: some code and comments
+- Enhanced: smooth-scroll is now in a new file and uses a ponyfill version. Also, it loads only on some browsers that don't support scroll-behavior: smooth;
+- Enhanced: scroll-behavior: smooth; is now deactivated for some people that use "prefers-reduced-motion: reduce"
+- Enhanced: template-part content-search.php shows how many posts we found if any.
+- Enhanced: functions/content-types.php has a better loading for template-parts.
+- New feature: Gutenberg demo block
+- Removed: if ( ! defined( 'ABSPATH' ) ) {exit;} is not necessary on themes, only on plugins.
+- Removed: Extra ";" in utility-classes css.
+- Moved: Some CSS from typography.css to reset.css
+- Updated: css-vars-ponyfill
+
 Version 0.6.6
 -------------------------
 - Moved: CSS variables for grids and forms are now in variables.CSS

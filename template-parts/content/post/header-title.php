@@ -5,10 +5,6 @@
  */
 ?>
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
-
 
 if ( function_exists('is_tag') && is_tag() || is_category() || is_tax() ) { ?>
 

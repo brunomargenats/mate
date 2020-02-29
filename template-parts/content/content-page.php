@@ -5,12 +5,6 @@
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
  */
 ?>
-<?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
-?>
-
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
@@ -41,8 +35,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <footer class="article-footer">
     </footer>
     <?php
-		global $use_comments_in_pages;
-			if( $use_comments_in_pages && post_type_supports( get_post_type(), 'comments' ) ) {
+		global $mate_use_comments_in_pages;
+			if( $mate_use_comments_in_pages && post_type_supports( get_post_type(), 'comments' ) ) {
 				if( comments_open() ) {
 					comments_template();
 				}

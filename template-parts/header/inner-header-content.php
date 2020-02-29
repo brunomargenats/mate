@@ -29,7 +29,7 @@
                     </div>
                     */?>
                     </div>
-                    <?php global $responsive_navigation; if ($responsive_navigation){?>
+                    <?php global $mate_responsive_navigation; if ($mate_responsive_navigation){?>
                         <div id="nav-button" class="col-bleed-y col-3">
                             <div id="nav-button-container">
                                 <button type="button" id="nav-toggle" class="nav-toggle"><?php _e( 'Menu', 'mate' ); ?></button>

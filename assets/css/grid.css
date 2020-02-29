@@ -27,13 +27,16 @@ col-xlg-
 
 .container.fluid {width: 100%; max-width: var(--container-max-width)!important}
 
-.container{width:100%;margin-right:auto;margin-left:auto;padding-right:var(--grid-spacing);padding-left:var(--grid-spacing)}
+@media screen and (min-width: 320px) {
+    .container{width:100%;margin-right:auto;margin-left:auto;padding-right:var(--grid-spacing);padding-left:var(--grid-spacing)}
+}
+
 .container .grid{margin-right:var(--grid-spacing-hn);margin-left:var(--grid-spacing-hn)}
-@media (min-width: 576px){.container{max-width:576px}}
-@media (min-width: 768px){.container{max-width:768px}}
-@media (min-width: 992px){.container{max-width:992px}}
-@media (min-width: 1200px){.container{max-width:1200px}}
-@media (min-width: 1600px){.container{max-width:var(--container-max-width)}}
+@media (min-width: 576px){.container, .alignwide{max-width:576px}}
+@media (min-width: 768px){.container, .alignwide{max-width:768px}}
+@media (min-width: 992px){.container, .alignwide{max-width:992px}}
+@media (min-width: 1200px){.container, .alignwide{max-width:1200px}}
+@media (min-width: 1600px){.container, .alignwide{max-width:var(--container-max-width)}}
 
 .wrapper {
   margin:0 auto;

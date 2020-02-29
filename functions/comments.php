@@ -4,9 +4,9 @@
  * Description: This controls all functions for comments and when we use them.
  */
 
-global $use_comments_in_pages;
+global $mate_use_comments_in_pages;
 /* REMOVE COMMENTS SUPPORT IN PAGES */
-if ( ! function_exists( 'mate_remove_comment_support' ) && (!$use_comments_in_pages) ) {
+if ( ! function_exists( 'mate_remove_comment_support' ) && (!$mate_use_comments_in_pages) ) {
 	add_action('init', 'mate_remove_comment_support', 100);
 	function mate_remove_comment_support() {
 		remove_post_type_support( 'page', 'comments' );
@@ -18,8 +18,8 @@ if ( ! function_exists( 'mate_remove_comment_support' ) && (!$use_comments_in_pa
 
 if ( ! function_exists( 'mate_comments_scripts' ) ) {
     function mate_comments_scripts() {
-		global $use_comments_in_pages;
-		if (is_page() && (!$use_comments_in_pages)){}else{
+		global $mate_use_comments_in_pages;
+		if (is_page() && (!$mate_use_comments_in_pages)){}else{
 			if ( ! is_admin() ) {
 				if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 									wp_register_style('mate_comments',get_theme_file_uri( '/assets/css/comments.css', array(), wp_get_theme()->get( 'Version' )));
@@ -35,28 +35,27 @@ if ( ! function_exists( 'mate_comments_scripts' ) ) {
 
 // Comment Layout
 if ( ! function_exists( 'mate_comments' ) ) {
-function mate_comments( $comment, $args, $depth ) { $GLOBALS['comment'] = $comment; ?>
-<div id="comment-<?php comment_ID(); ?>" <?php comment_class('comment-wrap'); ?>>
-    <article class="article-comment">
-        <header class="comment-author vcard">
-            <?php // custom gravatar call ?>
-            <?php
-					// create variable
-						$bgauthemail = get_comment_author_email();
-						$altavatar = 'avatar-'.get_comment_ID();
-					?>
-            <?php echo get_avatar( $bgauthemail, '256', '', $altavatar);?>
-            <!--<img data-gravatar="//www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=256" class="load-gravatar avatar avatar-48 photo" height="64" width="64" src="//www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=256" />-->
-            <?php // end custom gravatar call ?>
-            <div class="comment-meta">
-                <?php printf(__('<cite class="fn">%s</cite>', 'mate'), get_comment_author_link()); ?>
-                <time datetime="<?php echo comment_time('Y-m-j'); ?>">
-                    <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'mate' )); ?>
-                    </a>
-                </time>
-                <?php edit_comment_link(__('(Edit)', 'mate'), '', ''); ?>
-            </div>
-        </header>
+	function mate_comments( $comment, $args, $depth ) { $GLOBALS['comment'] = $comment; ?>
+		<div id="comment-<?php comment_ID(); ?>" <?php comment_class('comment-wrap'); ?>>
+    		<article class="article-comment">
+			<header class="comment-author vcard">
+				<?php // custom gravatar call ?>
+				<?php
+				// create variable
+					$bgauthemail = get_comment_author_email();
+					$altavatar = 'avatar-'.get_comment_ID();
+				?>
+				<?php echo get_avatar( $bgauthemail, '256', '', $altavatar);?>
+				<?php // end custom gravatar call ?>
+				<div class="comment-meta">
+					<?php printf(__('<cite class="fn">%s</cite>', 'mate'), get_comment_author_link()); ?>
+					<time datetime="<?php echo comment_time('Y-m-j'); ?>">
+						<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'mate' )); ?>
+						</a>
+					</time>
+					<?php edit_comment_link(__('(Edit)', 'mate'), '', ''); ?>
+				</div>
+        	</header>
 
         <?php if ( $comment->comment_approved == '0' ) : ?>
         <div class="alert alert-info">
@@ -87,12 +86,12 @@ function mate_comments( $comment, $args, $depth ) { $GLOBALS['comment'] = $comme
 
 /* CUSTOM DEFAULT GRAVATARS. If you don't want to use gravatars at all you can deactivate them in yoursite.com/wp-admin/options-discussion.php */
 if ( ! function_exists( 'mate_new_gravatar' ) ) {
-	add_filter( 'avatar_defaults', 'mate_new_gravatar' );
 	function mate_new_gravatar ($avatar_defaults) {
 		$myavatar = get_theme_file_uri('/assets/images/default-avatar.png');
 			$avatar_defaults[$myavatar] = __('Default Avatar', 'mate');
 		return $avatar_defaults;
 	}
+	add_filter( 'avatar_defaults', 'mate_new_gravatar' );
 }
 
 /* DISABLE SELF PINGBACK

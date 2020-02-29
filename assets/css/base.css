@@ -2,12 +2,6 @@
 /*	THEME BASE CSS
 /* -------------------------------------------------------------------------------- */
 
-/* === DEBUGGING TOOLS === */
-/*
- *{outline:1px solid indigo!important}
- *{ background-color: rgba(0,0,0,0.1) }
-*/
-
 /* === TEXT SELECTION === */
 
 ::-moz-selection {

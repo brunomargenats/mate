@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mate \n"
-"POT-Creation-Date: 2019-12-24 05:30+0000\n"
-"PO-Revision-Date: 2019-12-24 05:31+0000\n"
+"POT-Creation-Date: 2020-02-28 20:06+0000\n"
+"PO-Revision-Date: 2020-02-28 20:10+0000\n"
 "Last-Translator: bruz <brunomargenats@gmail.com>\n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
@@ -12,17 +12,17 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "Report-Msgid-Bugs-To: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Loco-Version: 2.3.1; wp-5.3.2"
+"X-Loco-Version: 2.3.1; wp-5.4-beta3-47388"
 
-#: comments.php:22 template-parts/content/post/comment-count.php:14
+#: comments.php:22 template-parts/content/post/comment-count.php:15
 msgid "<span>No</span> Comments"
 msgstr "<span>Aucun</span> commentaire"
 
-#: comments.php:22 template-parts/content/post/comment-count.php:14
+#: comments.php:22 template-parts/content/post/comment-count.php:15
 msgid "<span>One</span> Comment"
 msgstr "<span>Un</span> commentaire"
 
-#: comments.php:22 template-parts/content/post/comment-count.php:14
+#: comments.php:22 template-parts/content/post/comment-count.php:15
 msgid "<span>%</span> Comments"
 msgstr "<span>%</span> commentaires"
 
@@ -36,38 +36,38 @@ msgstr "&larr; Commentaires pr&eacute;c&eacute;dents"
 
 #: comments.php:50
 msgid "More Comments &rarr;"
-msgstr "Plus de commentaires &rarr;"
+msgstr "Plus de commentaires&nbsp;&rarr;"
 
 #: comments.php:58
 msgid "Comments are closed."
 msgstr "Les commentaires sont ferm&eacute;s."
 
-#: functions/comments.php:52
+#: functions/comments.php:51
 #, php-format
 msgid "<cite class=\"fn\">%s</cite>"
 msgstr "<cite class=\"fn\">%s</cite>"
 
-#: functions/comments.php:54
+#: functions/comments.php:53
 msgid "F jS, Y"
 msgstr "j F Y"
 
-#: functions/comments.php:57
+#: functions/comments.php:56
 msgid "(Edit)"
 msgstr "(&Eacute;diter)"
 
-#: functions/comments.php:63
+#: functions/comments.php:62
 msgid "Your comment is awaiting moderation."
-msgstr "Votre commentaire est en attente de modération."
+msgstr "Votre commentaire est en attente de mod&eacute;ration."
 
-#: functions/comments.php:93
+#: functions/comments.php:91
 msgid "Default Avatar"
 msgstr "Avatar par d&eacute;faut"
 
 #: functions/custom-excerpt.php:21
 msgid "Read More <span>&rarr;</span>"
-msgstr "En savoir plus <span>&rarr;</span>"
+msgstr "En savoir plus&nbsp;<span>&rarr;</span>"
 
-#: functions/menus.php:12 template-parts/header/inner-header-content.php:43
+#: functions/menus.php:12 template-parts/header/inner-header-content.php:42
 msgid "Primary Menu"
 msgstr "Menu principal"
 
@@ -79,11 +79,11 @@ msgstr "<span class=\"screen-reader-text\">Publi&eacute; sur</span> %s"
 
 #: functions/sidebars.php:16
 msgid "Sidebar"
-msgstr "Barre latérale"
+msgstr "Barre lat&eacute;rale"
 
 #: functions/sidebars.php:17
 msgid "The sidebar."
-msgstr "La barre latérale"
+msgstr "La barre lat&eacute;rale"
 
 #. Name of the template
 msgid "Contact form with sidebar"
@@ -95,26 +95,43 @@ msgstr "Formulaire de contact"
 
 #. Name of the template
 msgid "Page with sidebar"
-msgstr "Page avec barre latérale"
+msgstr "Page avec barre lat&eacute;rale"
 
-#: template-parts/content/content-none.php:21
+#: template-parts/content/content-none.php:15
 msgid "Sorry, that page can&rsquo;t be found."
 msgstr "D&eacute;sol&eacute;, cette page est introuvable."
 
-#: template-parts/content/content-none.php:25
+#: template-parts/content/content-none.php:19
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
-"Apparemment, rien n’a été trouvé à cette adresse. Essayez avec une "
-"recherche ?"
+"Apparemment, rien n&apos;a &eacute;t&eacute; trouv&eacute; &agrave; cette "
+"adresse. Essayez avec une recherche&nbsp;?"
 
-#: template-parts/content/content-page.php:30
-#: template-parts/content/content-single.php:35
+#: template-parts/content/content-page.php:24
+#: template-parts/content/content-single.php:28
 msgid "Pages:"
-msgstr "Pages :"
+msgstr "Pages&nbsp;:"
 
-#: template-parts/content/content-search.php:18
+#: template-parts/content/content-search.php:11
 msgid "Search results for:"
-msgstr "Résultats de recherche pour :"
+msgstr "R&eacute;sultats de recherche pour&nbsp;:"
+
+#. %s: Number of search results.
+#: template-parts/content/content-search.php:19
+#, php-format
+msgid "We found %s result for your search."
+msgid_plural "We found %s results for your search."
+msgstr[0] "Nous avons trouv&eacute; %s r&eacute;sultat pour votre recherche."
+msgstr[1] "Nous avons trouv&eacute; %s r&eacute;sultats pour votre recherche."
+
+#: template-parts/content/content-search.php:29
+msgid ""
+"We could not find any results for your search. You can give it another try "
+"through the search form below."
+msgstr ""
+"Nous n&apos;avons trouv&eacute; aucun r&eacute;sultat &agrave; votre "
+"requ&ecirc;te. Vous pouvez tenter une autre recherche avec le formulaire ci-"
+"dessous."
 
 #: template-parts/header/inner-header-content.php:8
 msgid "Skip to the content"
@@ -128,24 +145,24 @@ msgstr "Sauter au menu principal"
 msgid "Menu"
 msgstr "Menu"
 
-#: template-parts/header/inner-header-content.php:44
+#: template-parts/header/inner-header-content.php:43
 msgid "The Main Menu"
 msgstr "Le menu principal"
 
-#: template-parts/content/category/category-tags.php:13
+#: template-parts/content/category/category-tags.php:9
 msgid "Tags:"
-msgstr "&Eacute;tiquettes :"
+msgstr "&Eacute;tiquettes&nbsp;:"
 
-#: template-parts/content/post/header-title.php:15
+#: template-parts/content/post/header-title.php:11
 msgid "Posts Categorized:"
-msgstr "Articles cat&eacute;goris&eacute;s :"
+msgstr "Articles cat&eacute;goris&eacute;s&nbsp;:"
 
-#: template-parts/content/post/header-title.php:37
+#: template-parts/content/post/header-title.php:33
 msgid "404"
 msgstr "404"
 
 #. %s: post author
-#: template-parts/content/post/postmeta.php:18
+#: template-parts/content/post/postmeta.php:14
 #, php-format
 msgid "By %s"
 msgstr "Par %s"
@@ -158,17 +175,13 @@ msgstr "Mate"
 msgid ""
 "Mate is my personal WordPress starter theme. Please ask me before using it."
 msgstr ""
-"Mate est mon theme personnel pour démarrer mes projets WordPress. Veuillez "
-"me demander avant de l'utiliser."
-
-#. URI of the theme
-msgid "https://brunomargenats.com/themes/mate/"
-msgstr "https://brunomargenats.com/themes/mate/"
+"Mate est mon theme personnel pour d&eacute;marrer mes projets WordPress. "
+"Veuillez me demander avant de l&apos;utiliser."
 
 #. Author of the theme
 msgid "Bruno Margenats"
 msgstr "Bruno Margenats"
 
 #. Author URI of the theme
-msgid "https://brunomargenats.com/"
-msgstr "https://brunomargenats.com/"
+msgid "https://brunomargenats.com"
+msgstr "https://brunomargenats.com"

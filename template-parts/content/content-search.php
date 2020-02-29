@@ -5,22 +5,38 @@
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
  */
 ?>
-<?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
-?>
-
-<?php if (have_posts()) : ?>
 
 <header class="page-header">
     <h1 class="page-title">
-        <?php _e( 'Search results for:', 'mate' ); ?>
+        <?php _e( 'Search results for:', 'mate' ); ?> <?php echo get_search_query(); ?>
     </h1>
-    <div class="page-description"><?php echo get_search_query(); ?></div>
+    <div class="page-description">
+    <?php
+    global $wp_query;
+    if ( $wp_query->found_posts ) {
+            $archive_subtitle = sprintf(
+                /* translators: %s: Number of search results. */
+                _n(
+                    'We found %s result for your search.',
+                    'We found %s results for your search.',
+                    $wp_query->found_posts,
+                    'mate'
+                ),
+                number_format_i18n( $wp_query->found_posts )
+            );
+            echo $archive_subtitle;
+        } else {
+            $archive_subtitle = __( 'We could not find any results for your search. You can give it another try through the search form below.', 'mate' );
+            echo '<div class="entry-content"><p>'.$archive_subtitle.'</p>';
+            get_search_form().'</div>';
+        }
+
+    ?>
+</div>
+
 </header><!-- .page-header -->
 
-<?php while (have_posts()) : the_post(); ?>
+<?php  if (have_posts()) :  while (have_posts()) : the_post(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 
@@ -55,8 +71,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php get_template_part( 'template-parts/content/post/post-navigation'); ?>
 
-<?php else : ?>
+<?php  ?>
 
-<?php get_template_part( 'template-parts/content/content','none'); ?>
+<?php //get_template_part( 'template-parts/content/content','none'); ?>
 
 <?php endif;

@@ -4,11 +4,7 @@
  * Description: Code for postmeta using functions from WP Twenty Seventeen theme.
  */
 ?>
-<?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
-?>
+
 <div class="post-meta">
 
     <?php // Get the author name; wrap it in a link.

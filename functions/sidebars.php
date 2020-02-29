@@ -36,7 +36,7 @@ if ( ! function_exists( 'mate_sidebar_body_class' ) ) {
 
     function mate_sidebar_body_class( $classes ) {
 
-    global $has_sidebar; /* We store $has_sidebar variable for use it in templates */
+    global $mate_has_sidebar; /* We store $mate_has_sidebar variable for use it in templates */
     /* If "Page with sidebar" is set in blog page, all archive is using sidebars */
     /* We get the ID of the Blog page */
     $page_for_posts = get_option( 'page_for_posts' );
@@ -45,12 +45,12 @@ if ( ! function_exists( 'mate_sidebar_body_class' ) ) {
 
     /* We check if we need a sidebar */
     if ($page_for_blog_template == 'layouts/page-with-sidebar.php'){
-        $has_sidebar = TRUE;
+        $mate_has_sidebar = TRUE;
     }else{
-        $has_sidebar = FALSE;
+        $mate_has_sidebar = FALSE;
     }
 
-        if (!is_page() && $has_sidebar){ /* Add more conditions if you don't want to show the sidebar in some post_types or type of content. */
+        if (!is_page() && $mate_has_sidebar){ /* Add more conditions if you don't want to show the sidebar in some post_types or type of content. */
             $classes[] = 'page-template-page-with-sidebar';
         }
         return $classes;

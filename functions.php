@@ -5,9 +5,20 @@
 get_template_part('config/config');
 /*
 
+
+
+/* DEBUG MODE
+------------------------------------------------ */
+if ($mate_debug_mode){
+	get_template_part('functions/debug-mode');
+}
+
+
+
+
 /* GOOGLE FONTS
 ------------------------------------------------ */
-if ($google_fonts){
+if ($mate_google_fonts){
 	get_template_part('functions/gfonts');
 }
 
@@ -22,14 +33,14 @@ get_template_part('functions/styles-scripts');
 
 /* JS RESPONSIVE NAVIGATION
 ------------------------------------------------ */
-if ($responsive_navigation){
+if ($mate_responsive_navigation){
 	get_template_part('functions/navigation');
 }
 
 
 /* REGISTER SIDEBAR AND PAGE-WITH-SIDEBAR
 ------------------------------------------------ */
-if ($use_sidebars){
+if ($mate_use_sidebars){
 	get_template_part('functions/sidebars');
 }else{
 	/* Remove template "page-with-sidebar" if sidebars are unset */
@@ -44,41 +55,49 @@ if ($use_sidebars){
 
 /* COMMENTS FUNCTION
 ------------------------------------------------ */
-if ($use_comments){
+if ($mate_use_comments){
 	get_template_part('functions/comments');
 }
 
 
 /* MENUS FUNCTION
 ------------------------------------------------ */
-if ($use_menus){
+if ($mate_use_menus){
 	get_template_part('functions/menus');
 }
 
 
 /* ADD GUTENBERG DEFAULT CONFIGURATION
 ------------------------------------------------ */
-if ($gutenberg_default_config){
+if ($mate_gutenberg_default_config){
 	get_template_part('functions/gutenberg-default-config');
 }
 
 
+/* ADD GUTENBERG CUSTOM BLOCKS
+------------------------------------------------ */
+if ($mate_gutenberg_custom_blocks){
+	get_template_part('template-parts/blocks/blocks-config');
+}
+
+
+
 /* DISABLE GUTENBERG ON FRONTPAGE
 ------------------------------------------------ */
-if ($disable_gutenberg_frontpage){
+if ($mate_disable_gutenberg_frontpage){
 	get_template_part('functions/disable-gutenberg-frontpage');
 }
 
 
 /* CONTACT FORM 7 STYLES FUNCTION
 ------------------------------------------------ */
-if ($cf7_styles){
+if ($mate_custom_cf7_styles){
 	get_template_part('functions/cf7-styles');
 }
 
 /* CONTACT FORM 7 TEMPLATES ONLY
 ------------------------------------------------ */
-if ($cf7_templates_only){
+if ($mate_custom_cf7_templates_only){
 	get_template_part('functions/cf7-templates-only');
 }
 
@@ -89,8 +108,21 @@ if ($cf7_templates_only){
 if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE ||
 strpos($_SERVER['HTTP_USER_AGENT'], 'Trident') !== FALSE) {
 	/* LOAD SUPPORT ONLY FOR INTERNET EXPLORER */
-	if ($ie_support){
+	if ($mate_ie_support){
 		get_template_part('functions/ie-support');
+	}
+}
+
+
+/* ADD SMOOTH-SCROLL JAVASCRIPT ONLY FOR BROWSERS THAN NOT SUPPORT CSSOM Scroll-behavior
+@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent
+------------------------------------------------ */
+if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') === FALSE &&
+strpos($_SERVER['HTTP_USER_AGENT'], 'Chromium') === FALSE &&
+strpos($_SERVER['HTTP_USER_AGENT'], 'Firefox') === FALSE)
+{
+	if ($mate_smooth_scroll_script){
+		get_template_part('functions/smooth-scroll-script');
 	}
 }
 
@@ -99,14 +131,14 @@ strpos($_SERVER['HTTP_USER_AGENT'], 'Trident') !== FALSE) {
 
 /* DISABLE EMOJIS
 ------------------------------------------------ */
-if ($disabe_emojis){
+if ($mate_disabe_emojis){
 	get_template_part('functions/disable-emojis');
 }
 
 
 /* DISABLE EMBED YOUR POSTS IN OTHERS WEB SITES
 ------------------------------------------------ */
-if ($disabe_wpembed){
+if ($mate_disabe_wpembed){
 	get_template_part('functions/disable-wp-embed');
 }
 
@@ -139,7 +171,7 @@ get_template_part('functions/content-types'); /* Define what type of template us
 
 /* ADD WP CLEANUP
 ------------------------------------------------ */
-if ($wp_cleanup){
+if ($mate_wp_cleanup){
 get_template_part('functions/cleanup'); /* Clean up WordPress Header mess */
 }
 
@@ -182,6 +214,8 @@ if ( ! function_exists( 'mate_setup' ) ) {
 				'comment-list',
 				'gallery',
 				'caption',
+				'script',
+				'style',
 			)
 		);
 

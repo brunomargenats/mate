@@ -117,7 +117,7 @@ button.nav-toggle {
   border-top: 4px solid;
   border-bottom: 4px solid;
   color: var(--color-link);
-  font-size: 0;
+  font-size: 0!important;
   transition: all 0.25s ease-in-out;
   overflow: visible;
   z-index: 13;

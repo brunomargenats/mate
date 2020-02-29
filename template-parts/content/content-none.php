@@ -5,12 +5,6 @@
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
  */
 ?>
-<?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
-?>
-
 <?php // get post count so we can use everywhere.
 $count = $GLOBALS['wp_query']->post_count;
 ?>

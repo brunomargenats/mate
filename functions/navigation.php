@@ -9,10 +9,10 @@ if ( ! function_exists( 'mate_body_classes' ) ) {
     add_filter( 'body_class','mate_body_classes' );
     function mate_body_classes( $classes ) {
 
-        global $fixed_navigation;
+        global $mate_fixed_navigation;
 
     /* fixed-navigation = Navigation always fixed on top */
-    if ($fixed_navigation){
+    if ($mate_fixed_navigation){
         $navigation_mode = 'fixed-navigation';
     }
     else

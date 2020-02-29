@@ -4,8 +4,8 @@
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/comment-template/
  */
 
-global $use_comments;
-if($use_comments){ /* START USE COMMENTS */
+global $mate_use_comments;
+if($mate_use_comments){ /* START USE COMMENTS */
 
 // don't load it if you can't comment
 if ( post_password_required() ) {

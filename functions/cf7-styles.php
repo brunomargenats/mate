@@ -17,12 +17,12 @@ if ( ! function_exists( 'mate_custom_CF7_styles_register' ) ) {
 if ( ! function_exists( 'mate_custom_CF7_styles_enqueue' ) ) {
         function mate_custom_CF7_styles_enqueue() {
 
-            global $cf7_templates_only; 
+            global $mate_custom_cf7_templates_only; 
 
-            if ($cf7_templates_only){ //We need to check if we will load this only in some templates.
-                global $cf7_templates;
+            if ($mate_custom_cf7_templates_only){ //We need to check if we will load this only in some templates.
+                global $mate_custom_cf7_templates;
                 $current_template = get_page_template_slug( get_the_ID() );
-                    if (in_array($current_template, $cf7_templates, true)) {
+                    if (in_array($current_template, $mate_custom_cf7_templates, true)) {
                         wp_enqueue_style('mate_cf7_css');
                     }
             }else {//if not, we will just load in footer

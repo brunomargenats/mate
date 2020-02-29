@@ -6,10 +6,12 @@
  */
 ?>
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+
+global $mate_use_comments;
+if ($mate_use_comments){
 ?>
+
 <p class="footer-comment-count">
     <?php comments_number( __( '<span>No</span> Comments', 'mate' ), __( '<span>One</span> Comment', 'mate' ), __( '<span>%</span> Comments', 'mate' ) );?>
 </p>
+<?php }?>
