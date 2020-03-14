@@ -37,7 +37,7 @@ if ( ! function_exists( 'mate_comments_scripts' ) ) {
 if ( ! function_exists( 'mate_comments' ) ) {
 	function mate_comments( $comment, $args, $depth ) { $GLOBALS['comment'] = $comment; ?>
 		<div id="comment-<?php comment_ID(); ?>" <?php comment_class('comment-wrap'); ?>>
-    		<article class="article-comment">
+    		<article class="article-comment padding:grid margin-bottom:grid">
 			<header class="comment-author vcard">
 				<?php // custom gravatar call ?>
 				<?php
@@ -48,9 +48,9 @@ if ( ! function_exists( 'mate_comments' ) ) {
 				<?php echo get_avatar( $bgauthemail, '256', '', $altavatar);?>
 				<?php // end custom gravatar call ?>
 				<div class="comment-meta">
-					<?php printf(__('<cite class="fn">%s</cite>', 'mate'), get_comment_author_link()); ?>
+					<?php printf(__('<cite class="fn margin-right:grid">%s</cite>', 'mate'), get_comment_author_link()); ?>
 					<time datetime="<?php echo comment_time('Y-m-j'); ?>">
-						<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'mate' )); ?>
+						<a class="text-decoration:none" href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'mate' )); ?>
 						</a>
 					</time>
 					<?php edit_comment_link(__('(Edit)', 'mate'), '', ''); ?>

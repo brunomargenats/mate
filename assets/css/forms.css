@@ -2,30 +2,19 @@
 /*	FORMS CSS
 /* -------------------------------------------------------------------------------- */
 
-/*
-Some inspiration:
-https://www.w3schools.com/html/html_form_input_types.asp
-https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms
-https://picturepan2.github.io/spectre/elements/forms.html
-*/
-
-
 
 /*Basic styles*/
 label,
 input,
 textarea,
-select
-{
+select {
     font-family: var(--font-text), var(--font-fallback);
     color: var(--color-on-background);
 }
 
-
 input,
 textarea,
-select
-{
+select {
     background-color: var(--form-element-bg);
     background-image: none;
     border: .05rem solid var(--form-element-border);
@@ -65,13 +54,13 @@ textarea {
 }
 
 /*Focus*/
-
 input:focus,
 textarea:focus,
 select:focus {
     border-color: var(--form-element-border-focus);
     box-shadow: 0 0 0.2rem var(--form-element-border-focus);
 }
+
 
 /*Placeholders*/
 input::-webkit-input-placeholder,
@@ -93,7 +82,6 @@ input::placeholder,
 textarea::placeholder {
     color: var(--form-text-placeholder);
 }
-
 
 
 /* Select only styles */

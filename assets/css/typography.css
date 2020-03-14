@@ -88,3 +88,8 @@ a:hover,
 a:active {
     transition: color 0.3s ease, border 0.3s ease;
 }
+
+/* Active item link color in WP navigation menu */
+li.current-menu-item a {
+    color: var(--color-primary-dark);
+  }

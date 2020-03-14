@@ -15,7 +15,7 @@
 
     </header> <?php // end article header ?>
 
-    <div class="entry-content">
+    <div class="entry-content margin-bottom:grid">
 
         <?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
         <?php the_content();
@@ -32,7 +32,7 @@
 
     </div> <?php // end article ?>
 
-    <footer class="article-footer">
+    <footer class="article-footer margin-bottom:grid">
     </footer>
     <?php
 		global $mate_use_comments_in_pages;

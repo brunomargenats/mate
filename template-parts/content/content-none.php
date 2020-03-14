@@ -15,11 +15,11 @@ $count = $GLOBALS['wp_query']->post_count;
             <?php echo _e( 'Sorry, that page can&rsquo;t be found.', 'mate' ); ?>
         </h1>
     </header>
-    <div class="entry-content">
+    <div class="entry-content margin-bottom:grid">
         <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'mate' ); ?></p>
         <?php get_search_form(); ?>
     </div>
-    <footer class="article-footer">
+    <footer class="article-footer margin-bottom:grid">
 
     </footer>
 </article>

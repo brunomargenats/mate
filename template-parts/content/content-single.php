@@ -12,14 +12,16 @@
 
     <header class="article-header entry-header">
 
-        <h1 class="entry-title single-title" rel="bookmark"><?php the_title(); ?></h1>
+        <h1 class="entry-title single-title" rel="bookmark">
+            <?php the_title(); ?>
+        </h1>
 
         <?php // Delete or comment out if you don't need this on your page or post. Edit in /template-parts/postmeta.php ?>
         <?php get_template_part( 'template-parts/content/post/postmeta'); ?>
 
     </header> <?php // end article header ?>
 
-    <div class="entry-content">
+    <div class="entry-content margin-bottom:grid">
         <?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
 
         <?php the_content();
@@ -36,7 +38,7 @@
 
     </div> <?php // end article ?>
 
-    <footer class="article-footer">
+    <footer class="article-footer margin-bottom:grid">
 
         <?php get_template_part( 'template-parts/content/category/category-tags'); ?>
 

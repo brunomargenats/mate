@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mate \n"
-"POT-Creation-Date: 2020-02-28 20:06+0000\n"
-"PO-Revision-Date: 2020-02-28 20:10+0000\n"
+"POT-Creation-Date: 2020-03-05 20:25+0000\n"
+"PO-Revision-Date: 2020-03-05 20:26+0000\n"
 "Last-Translator: bruz <brunomargenats@gmail.com>\n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "Report-Msgid-Bugs-To: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Loco-Version: 2.3.1; wp-5.4-beta3-47388"
+"X-Loco-Version: 2.3.1; wp-5.4-beta3-47407"
 
 #: comments.php:22 template-parts/content/post/comment-count.php:15
 msgid "<span>No</span> Comments"
@@ -178,10 +178,14 @@ msgstr ""
 "Mate est mon theme personnel pour d&eacute;marrer mes projets WordPress. "
 "Veuillez me demander avant de l&apos;utiliser."
 
+#. URI of the theme
+msgid "https://github.com/brunomargenats/mate"
+msgstr "https://github.com/brunomargenats/mate"
+
 #. Author of the theme
 msgid "Bruno Margenats"
 msgstr "Bruno Margenats"
 
 #. Author URI of the theme
 msgid "https://brunomargenats.com"
-msgstr ""
+msgstr "https://brunomargenats.com"

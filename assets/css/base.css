@@ -24,15 +24,6 @@
 
 /* === SITE HEADER === */
 
-#header {
-  padding: var(--grid-spacing) 0;
-  z-index: 11;
-  position: relative;
-}
-
-#logo a {
-  display: inline-block;
-}
 
 #logo img {
   width: var(--logo-width);
@@ -45,47 +36,29 @@
   }
 }
 
-/* Active item link color in WP navigation menu */
-li.current-menu-item a {
-  color: var(--color-primary-dark);
-}
-
 
 /* === ARTICLES === */
-header.article-header .entry-title a {
-  text-decoration:none;
-}
-
-header.article-header .post-meta {
-  margin-bottom: 1.5em
-}
-
-header.article-header .post-meta span {
-  margin-right: 1em;
-}
 
 header.article-header .post-meta,
 header.article-header .post-meta a {
   font-size: 0.8rem;
   color: var(--color-gray-6);
-  text-decoration:none;
+  text-decoration: none;
   text-transform: uppercase
 }
 
 header.article-header .post-meta .post-meta-categories a {
   color: var(--color-primary)
 }
+
 header.article-header .post-meta .post-meta-categories a:hover {
-color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
 }
 
-.entry-content,
-.article-footer {
-  margin-bottom: 1rem;
-}
 
-.entry-content ul, .entry-content ol {
-  padding-bottom:1rem;
+.entry-content ul,
+.entry-content ol {
+  padding-bottom: 1rem;
 }
 
 /*Page navigation*/
@@ -94,6 +67,7 @@ ul.page-numbers {
   padding: 0;
 }
 
+#logo a,
 ul.page-numbers li {
   display: inline-block;
 }

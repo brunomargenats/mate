@@ -7,13 +7,17 @@
 
 
 @media screen and (max-width: 767px) {
-.nav-collapse li {margin-bottom:3px!important;}
-.nav-collapse li .dropdown-toggle {line-height: 0.8em!important;}
-.nav-collapse li .dropdown-toggle::after {font-size: 0.7em!important;}
+    .nav-collapse li {
+        margin-bottom: 3px !important;
+    }
+
+    .nav-collapse li .dropdown-toggle {
+        line-height: 0.8em !important;
+    }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
     .dropdown-toggle:after {
-        margin: 0.3em 0 0 0.5em!important;
+        margin: 0.3em 0 0 0.5em !important;
     }
 }

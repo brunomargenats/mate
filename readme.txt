@@ -1,21 +1,21 @@
 === Mate ===
 Contributors: Bruno Margenats
 Requires at least: 5.2
-Tested up to: 5.3.2
-Stable tag: Version 0.6.5
+Tested up to: 5.4 RC2
+Stable tag: Version 0.6.8
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 
-== Installation ==
+=== Installation ===
 
 1. Upload this theme
-2. Upload child theme (mate-child)
-3. Copy everything that you want to change
+2. Upload child theme (mate-child) and read the installation instructions in readme.txt
+3. Copy everything that you want to change like configs, assets, etc.
 4. Activate child theme
 5. Enjoy
 
-== Licenses ==
+=== Licenses ===
 
 Barlow
 License: Open Font License
@@ -25,8 +25,66 @@ Open Sans
 License: Open Font License
 Source: https://fonts.google.com/specimen/Open+Sans
 
+Responsive nav
+License: MIT License
+Source: https://github.com/samikeijonen/responsive-nav.js/tree/dropdowns
 
-== Changelog ==
+Reflex Grid (modified on this theme)
+License: MIT License
+Source: https://github.com/leejordan/reflex/
+
+Smooth Scroll
+License: MIT License
+Source: https://github.com/cferdinandi/smooth-scroll/
+
+CSS Vars Ponyfill
+License: MIT License
+Source: https://jhildenbiddle.github.io/css-vars-ponyfill/
+
+
+
+=== Changelog ===
+
+Version 0.6.8
+-------------------------
+= Enhanced =
+- Gutenberg Custom blocks are now ordered differently, so they are easier to understand.
+- Options in config/config.php are now categorized
+- Better comments for Utility Classes.
+- Scrollbar fix Javascript is now a standalone optional function.
+- Some changes in navigation.css
+- In archives pages and blog pages now we show the_content or the_excerpt based on RSS options (full text or summary)
+- Some PHP comments added/changed
+- Utility Classes are now used everywhere when possible (so, some CSS was removed)
+- Some changes in navigation padding when the navigation is fixed.
+
+= Changed =
+- $mate_gutenberg_custom_blocks FALSE by default (in config/config.php)
+- $mate_disable_gutenberg_frontpage FALSE by default (in config/config.php)
+
+= Added =
+- Plugins functions : A new folder named /plugins/ in now used for all functions that interact with WP plugins. So, all CF7 functions were moved here.
+- Default SVG favicon.
+- Some licenses on this file.
+
+= Removed =
+- width="40" and height="59" removed from the logo in inner-header-content.php. This way, we don't need to copy the file to our child theme only to change the logo size HTML.
+- Some useless classes in postmeta.php and category-tags.php
+
+= Renamed =
+- functions/gfonts.php renamed to google-fonts.php.
+- assets/js/responsive-nav.min.js renamed to navigation.js
+- template-parts/blocks/blocks-config.php renamed to config.php
+
+= Moved =
+- Utility classes are now loaded before base.css and style.css. This way we can overwrite them if needed.
+- Navigation function now loads before styles-scripts function. Also, navigation.css loads in header and navigation.js in footer. Loading navigation.css first let us make some changes directly in our style.css file on child theme without copy all the file.
+
+= Updated =
+- French translation
+- Some CSS code on ie.css
+- Installation instructions on this file
+- Some visual changes on this file
 
 
 Version 0.6.7
@@ -55,6 +113,7 @@ Version 0.6.7
 - Moved: Some CSS from typography.css to reset.css
 - Updated: css-vars-ponyfill
 
+
 Version 0.6.6
 -------------------------
 - Moved: CSS variables for grids and forms are now in variables.CSS
@@ -75,6 +134,7 @@ Version 0.6.6
 - Enhanced: Some HTML code is now outside <?php ?> tags for better understanding.
 - Enhanced: forms.css
 - Updated: smooth-scroll script from v16.1.0 to v16.1.2
+
 
 Version 0.6.5
 -------------------------
@@ -104,6 +164,7 @@ Version 0.6.4
 - Changed: Google Fonts are no longer activated by default.
 - Fixed: HTML5 Markup error - Sidebar must be outside <main> tag
 
+
 Version 0.6.3
 -------------------------
 - Added: --font-fallback CSS variable.
@@ -126,6 +187,7 @@ Version 0.6.3
 - Removed: class="main" from <main id="main" class="main"> all over the theme
 - Removed: 404.php, archive.php, front-page.php, home.php, page.php, search.php and single.php. We use index.php only and a new function to load template-parts.
 
+
 Version 0.6.2
 -------------------------
 - Fixed: Structure data tests are now passing: https://search.google.com/structured-data/testing-tool/u/0/ But, we will let plugins handle this.
@@ -141,6 +203,7 @@ Version 0.6.2
 - Updated: functions/comments.php : get_option( 'home' ) was found in the file comments.php. Use home_url() instead.
 - Enhanced: readme.txt is now more readable
 
+
 Version 0.6.1
 -------------------------
 - Added: wp_body_open after <body>. This is a very useful new WP function.
@@ -148,6 +211,7 @@ Version 0.6.1
 - Fixed: 1px bug in drop-down menus (desktop). In navigation.css file : line 319
 - Fixed: pseudo-elements :after and :before are now using :: across all the CSS files. Ref: https://bricss.net/post/10768584657/know-your-lingo-pseudo-class-vs-pseudo-element 
 - Enhanced: custom-styles-scripts.php second function is now easier to understand.
+
 
 Version 0.6
 -------------------------
@@ -195,12 +259,14 @@ Version 0.6
 - Restored: Forms.css (still in beta)
 - Compatibility tested: Plugin WP Fastest Cache works fine with this theme. More tests to do.
 
+
 Version 0.5.2
 -------------------------
 - Theme config files
 - Comments avatars fixed
 - Styles enqueues enhanced
 - New default typography
+
 
 Version 0.5.1
 -------------------------
@@ -211,17 +277,21 @@ Version 0.5.1
 - Wrapper added
 - Comments depths fixed
 
+
 Version 0.5
 -------------------------
 - Layouts and tiny grid system.
+
 
 Version 0.4
 -------------------------
 - Some bugs fixed
 
+
 Version 0.3
 -------------------------
 - Navigation
+
 
 Version 0.2
 -------------------------

@@ -15,13 +15,18 @@ if ($mate_debug_mode){
 
 
 
-
 /* GOOGLE FONTS
 ------------------------------------------------ */
 if ($mate_google_fonts){
-	get_template_part('functions/gfonts');
+	get_template_part('functions/google-fonts');
 }
 
+
+/* JS RESPONSIVE NAVIGATION
+------------------------------------------------ */
+if ($mate_responsive_navigation){
+	get_template_part('functions/navigation');
+}
 
 /* ENQUEUE DEFAULT STYLES
 ------------------------------------------------ */
@@ -31,11 +36,7 @@ Grids, typography, etc.
 get_template_part('functions/styles-scripts');
 
 
-/* JS RESPONSIVE NAVIGATION
------------------------------------------------- */
-if ($mate_responsive_navigation){
-	get_template_part('functions/navigation');
-}
+
 
 
 /* REGISTER SIDEBAR AND PAGE-WITH-SIDEBAR
@@ -46,8 +47,8 @@ if ($mate_use_sidebars){
 	/* Remove template "page-with-sidebar" if sidebars are unset */
 	add_filter( 'theme_page_templates', 'child_theme_remove_page_template', 20, 3);
 	function child_theme_remove_page_template( $page_templates ) {
-	unset( $page_templates['layouts/page-with-sidebar.php'] );
-	unset( $page_templates['layouts/contact-with-sidebar.php'] );
+		unset( $page_templates['layouts/page-with-sidebar.php'] );
+		unset( $page_templates['layouts/contact-with-sidebar.php'] );
 	return $page_templates;
 	}
 }
@@ -77,9 +78,8 @@ if ($mate_gutenberg_default_config){
 /* ADD GUTENBERG CUSTOM BLOCKS
 ------------------------------------------------ */
 if ($mate_gutenberg_custom_blocks){
-	get_template_part('template-parts/blocks/blocks-config');
+	get_template_part('template-parts/blocks/config');
 }
-
 
 
 /* DISABLE GUTENBERG ON FRONTPAGE
@@ -89,17 +89,19 @@ if ($mate_disable_gutenberg_frontpage){
 }
 
 
-/* CONTACT FORM 7 STYLES FUNCTION
+/* ADD FIX TO SCROLLBAR BUG WHEN USING ALIGNFULL AND ALIGNWIDE
 ------------------------------------------------ */
-if ($mate_custom_cf7_styles){
-	get_template_part('functions/cf7-styles');
+if ($mate_scrollbar_fix){
+	get_template_part('functions/mate-scrollbar-fix');
 }
 
-/* CONTACT FORM 7 TEMPLATES ONLY
+
+/* ADD PLUGINS FUNCTIONS
 ------------------------------------------------ */
-if ($mate_custom_cf7_templates_only){
-	get_template_part('functions/cf7-templates-only');
+if ($mate_custom_plugins){
+	get_template_part('plugins/config');
 }
+
 
 
 
@@ -114,18 +116,13 @@ strpos($_SERVER['HTTP_USER_AGENT'], 'Trident') !== FALSE) {
 }
 
 
-/* ADD SMOOTH-SCROLL JAVASCRIPT ONLY FOR BROWSERS THAN NOT SUPPORT CSSOM Scroll-behavior
-@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent
+/* ADD SMOOTH-SCROLL JAVASCRIPT 
+
 ------------------------------------------------ */
-if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') === FALSE &&
-strpos($_SERVER['HTTP_USER_AGENT'], 'Chromium') === FALSE &&
-strpos($_SERVER['HTTP_USER_AGENT'], 'Firefox') === FALSE)
-{
+
 	if ($mate_smooth_scroll_script){
 		get_template_part('functions/smooth-scroll-script');
 	}
-}
-
 
 
 
@@ -174,7 +171,6 @@ get_template_part('functions/content-types'); /* Define what type of template us
 if ($mate_wp_cleanup){
 get_template_part('functions/cleanup'); /* Clean up WordPress Header mess */
 }
-
 
 
 /* THEME SETUP (Basic WP configurations)

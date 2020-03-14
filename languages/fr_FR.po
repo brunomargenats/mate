@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mate \n"
-"POT-Creation-Date: 2020-02-28 20:06+0000\n"
-"PO-Revision-Date: 2020-02-28 20:10+0000\n"
+"POT-Creation-Date: 2020-03-14 14:51+0000\n"
+"PO-Revision-Date: 2020-03-14 14:53+0000\n"
 "Last-Translator: bruz <brunomargenats@gmail.com>\n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "Report-Msgid-Bugs-To: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Loco-Version: 2.3.1; wp-5.4-beta3-47388"
+"X-Loco-Version: 2.3.1; wp-5.4-RC2-47447"
 
 #: comments.php:22 template-parts/content/post/comment-count.php:15
 msgid "<span>No</span> Comments"
@@ -44,8 +44,8 @@ msgstr "Les commentaires sont ferm&eacute;s."
 
 #: functions/comments.php:51
 #, php-format
-msgid "<cite class=\"fn\">%s</cite>"
-msgstr "<cite class=\"fn\">%s</cite>"
+msgid "<cite class=\"fn margin-right:grid\">%s</cite>"
+msgstr "<cite class=\"fn margin-right:grid\">%s</cite>"
 
 #: functions/comments.php:53
 msgid "F jS, Y"
@@ -67,7 +67,7 @@ msgstr "Avatar par d&eacute;faut"
 msgid "Read More <span>&rarr;</span>"
 msgstr "En savoir plus&nbsp;<span>&rarr;</span>"
 
-#: functions/menus.php:12 template-parts/header/inner-header-content.php:42
+#: functions/menus.php:12 template-parts/header/inner-header-content.php:41
 msgid "Primary Menu"
 msgstr "Menu principal"
 
@@ -108,7 +108,7 @@ msgstr ""
 "adresse. Essayez avec une recherche&nbsp;?"
 
 #: template-parts/content/content-page.php:24
-#: template-parts/content/content-single.php:28
+#: template-parts/content/content-single.php:30
 msgid "Pages:"
 msgstr "Pages&nbsp;:"
 
@@ -141,13 +141,21 @@ msgstr "Sauter au contenu"
 msgid "Skip to the main menu"
 msgstr "Sauter au menu principal"
 
-#: template-parts/header/inner-header-content.php:35
+#: template-parts/header/inner-header-content.php:34
 msgid "Menu"
 msgstr "Menu"
 
-#: template-parts/header/inner-header-content.php:43
+#: template-parts/header/inner-header-content.php:42
 msgid "The Main Menu"
 msgstr "Le menu principal"
+
+#: template-parts/blocks/demoblock/demoblock.php:25
+msgid "Demo block"
+msgstr "Bloc démo"
+
+#: template-parts/blocks/demoblock/demoblock.php:26
+msgid "A custom demo block."
+msgstr "Un bloc de démonstration personnalisé."
 
 #: template-parts/content/category/category-tags.php:9
 msgid "Tags:"
@@ -157,7 +165,7 @@ msgstr "&Eacute;tiquettes&nbsp;:"
 msgid "Posts Categorized:"
 msgstr "Articles cat&eacute;goris&eacute;s&nbsp;:"
 
-#: template-parts/content/post/header-title.php:33
+#: template-parts/content/post/header-title.php:38
 msgid "404"
 msgstr "404"
 
@@ -177,6 +185,10 @@ msgid ""
 msgstr ""
 "Mate est mon theme personnel pour d&eacute;marrer mes projets WordPress. "
 "Veuillez me demander avant de l&apos;utiliser."
+
+#. URI of the theme
+msgid "https://github.com/brunomargenats/mate"
+msgstr "https://github.com/brunomargenats/mate"
 
 #. Author of the theme
 msgid "Bruno Margenats"

@@ -18,23 +18,29 @@
     <header class="entry-header article-header">
 
         <h3 class="h2 entry-title">
-            <a href="<?php the_permalink() ?>" rel="bookmark"
-                title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+            <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="text-decoration:none">
+                <?php the_title(); ?>
+            </a>
         </h3>
 
         <?php get_template_part( 'template-parts/content/post/postmeta'); ?>
 
     </header>
 
-    <div class="entry-content">
+    <div class="entry-content margin-bottom:grid">
 
         <?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
 
-        <?php the_excerpt(); echo mate_excerpt_more_link(); ?>
+        <?php
+        if(get_option( 'rss_use_excerpt' )){
+            the_excerpt(); echo mate_excerpt_more_link();
+        }else{
+            the_content();
+        } ?>
 
     </div>
 
-    <footer class="article-footer">
+    <footer class="article-footer margin-bottom:grid">
 
         <?php get_template_part( 'template-parts/content/category/category-tags'); ?>
 

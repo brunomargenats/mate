@@ -9,15 +9,14 @@
 <a class="skip-link screen-reader-text" href="#nav"><?php _e( 'Skip to the main menu', 'mate' ); ?></a>
     <div id="site" class="container"><?php /* Fluid Container: <div id="site" class="container fluid"> */?>
 
-        <header class="header" id="header">
+        <header class="header z-index:2 position:relative padding-top:grid padding-bottom:grid" id="header">
 
             <div id="inner-header" class="clearfix">
                 <div class="grid align-center">
                     <div id="siteinfo" class="col-bleed-y col-9 col-sm-auto">
                         <div id="logo">
                             <a href="<?php echo home_url(); ?>" rel="nofollow" title="<?php bloginfo('name'); ?>">
-                                <img width="40" height="59"
-                                    src="<?php echo get_theme_file_uri(). '/assets/images/logo.svg' ?>"
+                                <img src="<?php echo get_theme_file_uri(). '/assets/images/logo.svg'?>"
                                     alt="<?php bloginfo('name'); ?> logo" />
                             </a>
                         </div>

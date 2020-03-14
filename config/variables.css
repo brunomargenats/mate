@@ -113,4 +113,7 @@
         --btn-secondary-label: var(--color-on-secondary);
     /* -------------------------------------------------------------------------------- */
 
+    /* FIXES */
+    --scroll-width: '12px;' /*This variable will be overwrited via JS*/
+
     } /* === END OF CSS VARIABLES === */

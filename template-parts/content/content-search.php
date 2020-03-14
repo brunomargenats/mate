@@ -24,10 +24,10 @@
                 ),
                 number_format_i18n( $wp_query->found_posts )
             );
-            echo $archive_subtitle;
+            echo '<p>'.$archive_subtitle.'</p>';
         } else {
             $archive_subtitle = __( 'We could not find any results for your search. You can give it another try through the search form below.', 'mate' );
-            echo '<div class="entry-content"><p>'.$archive_subtitle.'</p>';
+            echo '<div class="entry-content margin-bottom:grid"><p>'.$archive_subtitle.'</p>';
             get_search_form().'</div>';
         }
 
@@ -48,16 +48,21 @@
 
     </header>
 
-    <div class="entry-content">
+    <div class="entry-content margin-bottom:grid">
 
 
         <?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
 
-        <?php the_excerpt(); echo mate_excerpt_more_link(); ?>
+        <?php
+        if(get_option( 'rss_use_excerpt' )){
+            the_excerpt(); echo mate_excerpt_more_link();
+        }else{
+            the_content();
+        } ?>
 
     </div>
 
-    <footer class="article-footer">
+    <footer class="article-footer margin-bottom:grid">
 
         <?php get_template_part( 'template-parts/content/category/category-tags'); ?>
 

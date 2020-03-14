@@ -1,4 +1,8 @@
-/*Buttons styles*/
+/* -------------------------------------------------------------------------------- */
+/*	BUTTONS CSS
+/* -------------------------------------------------------------------------------- */
+
+
 #site button,
 #site input[type="submit"],
 .wp-block-button__link {
@@ -16,17 +20,23 @@
     cursor: pointer;
 }
 
-.wp-block-button__link{margin:var(--grid-spacing-h) 0}
-
-.is-style-outline .wp-block-button__link{border-color:var(--btn-primary-bg);border-width:2px}
-
-
 #site button:hover,
 #site input[type="submit"]:hover,
 .wp-block-button__link:hover {
     background: var(--btn-primary-hover);
     transition: background .2s, border .2s, box-shadow .2s, color .2s;
 }
+
+.wp-block-button__link {
+    margin: var(--grid-spacing-h) 0
+}
+
+.is-style-outline .wp-block-button__link {
+    border-color: var(--btn-primary-bg);
+    border-width: 2px
+}
+
+
 
 #site button:active,
 #site input[type="submit"]:active,
