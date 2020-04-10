@@ -1,8 +1,8 @@
 === Mate ===
 Contributors: Bruno Margenats
 Requires at least: 5.2
-Tested up to: 5.4 RC2
-Stable tag: Version 0.6.8
+Tested up to: 5.4
+Stable tag: Version 0.6.9
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -44,6 +44,20 @@ Source: https://jhildenbiddle.github.io/css-vars-ponyfill/
 
 
 === Changelog ===
+
+Version 0.6.9
+-------------------------
+= Added =
+- mate.pot file to /languages/
+- Spanish translation
+
+= Fixed =
+- A bug on this theme caused a bug in child theme when a new variable is added. On conditional functions, now we check if variables exist before check if there are TRUE or FALSE. We use !empty for this: if (!empty($mate_debug_mode)){
+- + and - on mobile menu weren't aligned.
+
+= Changed =
+- Disable custom gradients and Disable gradients updated for WP 5.4
+
 
 Version 0.6.8
 -------------------------

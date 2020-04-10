@@ -17,7 +17,7 @@ global $mate_gravity_forms;
 
 /* ============ ACTIVATE/DEACTIVATE PLUGINS ============ */
 
-$mate_contact_form_7 = TRUE;
+$mate_contact_form_7 = FALSE;
 
 $mate_gravity_forms = FALSE;
 
@@ -25,6 +25,5 @@ $mate_gravity_forms = FALSE;
 
 
 /* ============ LOAD PLUGINS FILES ============ */
-
-if($mate_contact_form_7){get_template_part('plugins/contact-form-7/contact-form-7');}
-if($mate_gravity_forms){get_template_part('plugins/gravity-forms/gravity-forms');}
+if (!empty($mate_contact_form_7)){get_template_part('plugins/contact-form-7/contact-form-7');}
+if (!empty($mate_gravity_forms)){get_template_part('plugins/gravity-forms/gravity-forms');}

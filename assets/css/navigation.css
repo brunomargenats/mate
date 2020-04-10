@@ -215,6 +215,8 @@ button.nav-toggle.active::after {
 
   .dropdown.opened>.dropdown-toggle::after {
     content: "–";
+    left: -1px;
+    position: relative;
   }
 
   .container-menu {

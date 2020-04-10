@@ -1,0 +1,197 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-23 20:36+0000\n"
+"PO-Revision-Date: 2020-03-23 20:55+0000\n"
+"Last-Translator: bruz <brunomargenats@gmail.com>\n"
+"Language-Team: Spanish (Spain)\n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.4-RC3-47477"
+
+#: comments.php:49
+msgid "&larr; Previous Comments"
+msgstr "&larr; Comentarios anteriores"
+
+#: functions/comments.php:56
+msgid "(Edit)"
+msgstr "(Editar)"
+
+#: template-parts/content/post/header-title.php:38
+msgid "404"
+msgstr "404"
+
+#: functions/comments.php:51
+#, php-format
+msgid "<cite class=\"fn margin-right:grid\">%s</cite>"
+msgstr "<cite class=\"fn margin-right:grid\">%s</cite>"
+
+#. %s: post date
+#: functions/post-time.php:31
+#, php-format
+msgid "<span class=\"screen-reader-text\">Posted on</span> %s"
+msgstr "<span class=\"screen-reader-text\">Publicado en</span> %s"
+
+#: comments.php:22 template-parts/content/post/comment-count.php:15
+msgid "<span>%</span> Comments"
+msgstr "<span>%</span> Comentarios"
+
+#: comments.php:22 template-parts/content/post/comment-count.php:15
+msgid "<span>No</span> Comments"
+msgstr "<span>Sin</span> comentarios"
+
+#: comments.php:22 template-parts/content/post/comment-count.php:15
+msgid "<span>One</span> Comment"
+msgstr "Un comentario"
+
+#: template-parts/blocks/demoblock/demoblock.php:26
+msgid "A custom demo block."
+msgstr "Un bloque demo personalizado"
+
+#. Author of the theme
+msgid "Bruno Margenats"
+msgstr "Bruno Margenats"
+
+#. %s: post author
+#: template-parts/content/post/postmeta.php:14
+#, php-format
+msgid "By %s"
+msgstr "Por %s"
+
+#: comments.php:58
+msgid "Comments are closed."
+msgstr "Comentarios cerrados."
+
+#. Name of the template
+msgid "Contact form"
+msgstr "Formulario de contacto"
+
+#. Name of the template
+msgid "Contact form with sidebar"
+msgstr "Formulario de contacto con barra lateral"
+
+#: functions/comments.php:91
+msgid "Default Avatar"
+msgstr "Avatar por defecto"
+
+#: template-parts/blocks/demoblock/demoblock.php:25
+msgid "Demo block"
+msgstr "Bloque demo"
+
+#: functions/comments.php:53
+msgid "F jS, Y"
+msgstr "j F Y"
+
+#. Author URI of the theme
+msgid "https://brunomargenats.com"
+msgstr "https://brunomargenats.com"
+
+#. URI of the theme
+msgid "https://github.com/brunomargenats/mate"
+msgstr "https://github.com/brunomargenats/mate"
+
+#: template-parts/content/content-none.php:19
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Parece que no hay nada en esta ubicación. ¿Quieres probar con una búsqueda?"
+
+#. Name of the theme
+msgid "Mate"
+msgstr "Mate"
+
+#. Description of the theme
+msgid ""
+"Mate is my personal WordPress starter theme. Please ask me before using it."
+msgstr ""
+"Mate es mi tema personal de WordPress que uso como starter theme. Por favor, "
+"pregúntame antes de usarlo."
+
+#: template-parts/header/inner-header-content.php:34
+msgid "Menu"
+msgstr "Menu"
+
+#: comments.php:50
+msgid "More Comments &rarr;"
+msgstr "Más comentarios &rarr;"
+
+#. Name of the template
+msgid "Page with sidebar"
+msgstr "Página con barra lateral"
+
+#: template-parts/content/content-page.php:24
+#: template-parts/content/content-single.php:30
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: template-parts/content/post/header-title.php:11
+msgid "Posts Categorized:"
+msgstr "Entradas categorizadas:"
+
+#: functions/menus.php:12 template-parts/header/inner-header-content.php:41
+msgid "Primary Menu"
+msgstr "Menu principal"
+
+#: functions/custom-excerpt.php:21
+msgid "Read More <span>&rarr;</span>"
+msgstr "Leer más <span>&rarr;</span>"
+
+#: comments.php:33
+msgid "Reply"
+msgstr "Respuesta"
+
+#: template-parts/content/content-search.php:11
+msgid "Search results for:"
+msgstr "Resultados de la búsqueda de:"
+
+#: functions/sidebars.php:16
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+#: template-parts/header/inner-header-content.php:8
+msgid "Skip to the content"
+msgstr "Ir al contenido"
+
+#: template-parts/header/inner-header-content.php:9
+msgid "Skip to the main menu"
+msgstr "Ir al menu principal"
+
+#: template-parts/content/content-none.php:15
+msgid "Sorry, that page can&rsquo;t be found."
+msgstr "Lo sentimos, esa página no fue encontrada."
+
+#: template-parts/content/category/category-tags.php:9
+msgid "Tags:"
+msgstr "Etiquetas:"
+
+#: template-parts/header/inner-header-content.php:42
+msgid "The Main Menu"
+msgstr "El menu principal"
+
+#: functions/sidebars.php:17
+msgid "The sidebar."
+msgstr "La barra lateral."
+
+#: template-parts/content/content-search.php:29
+msgid ""
+"We could not find any results for your search. You can give it another try "
+"through the search form below."
+msgstr ""
+"No encontramos ningun resultado que coincida con los términos de la búsqueda."
+" Inténtelo de nuevo con algunas palabras clave diferentes."
+
+#. %s: Number of search results.
+#: template-parts/content/content-search.php:19
+#, php-format
+msgid "We found %s result for your search."
+msgid_plural "We found %s results for your search."
+msgstr[0] "Encontramos %s resultado para su búsqueda."
+msgstr[1] "Encontramos %s resultados para su búsqueda."
+
+#: functions/comments.php:62
+msgid "Your comment is awaiting moderation."
+msgstr "Su comentario está pendiente de moderación."

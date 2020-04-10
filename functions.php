@@ -9,7 +9,7 @@ get_template_part('config/config');
 
 /* DEBUG MODE
 ------------------------------------------------ */
-if ($mate_debug_mode){
+if (!empty($mate_debug_mode)){
 	get_template_part('functions/debug-mode');
 }
 
@@ -17,14 +17,14 @@ if ($mate_debug_mode){
 
 /* GOOGLE FONTS
 ------------------------------------------------ */
-if ($mate_google_fonts){
+if (!empty($mate_google_fonts)){
 	get_template_part('functions/google-fonts');
 }
 
 
 /* JS RESPONSIVE NAVIGATION
 ------------------------------------------------ */
-if ($mate_responsive_navigation){
+if (!empty($mate_responsive_navigation)){
 	get_template_part('functions/navigation');
 }
 
@@ -41,7 +41,8 @@ get_template_part('functions/styles-scripts');
 
 /* REGISTER SIDEBAR AND PAGE-WITH-SIDEBAR
 ------------------------------------------------ */
-if ($mate_use_sidebars){
+
+if (!empty($mate_use_sidebars)){
 	get_template_part('functions/sidebars');
 }else{
 	/* Remove template "page-with-sidebar" if sidebars are unset */
@@ -56,49 +57,50 @@ if ($mate_use_sidebars){
 
 /* COMMENTS FUNCTION
 ------------------------------------------------ */
-if ($mate_use_comments){
+if (!empty($mate_use_comments)){
 	get_template_part('functions/comments');
 }
 
 
 /* MENUS FUNCTION
 ------------------------------------------------ */
-if ($mate_use_menus){
+
+if (!empty($mate_use_menus)){
 	get_template_part('functions/menus');
 }
 
 
 /* ADD GUTENBERG DEFAULT CONFIGURATION
 ------------------------------------------------ */
-if ($mate_gutenberg_default_config){
+if (!empty($mate_gutenberg_default_config)){
 	get_template_part('functions/gutenberg-default-config');
 }
 
 
 /* ADD GUTENBERG CUSTOM BLOCKS
 ------------------------------------------------ */
-if ($mate_gutenberg_custom_blocks){
+if (!empty($mate_gutenberg_custom_blocks)){
 	get_template_part('template-parts/blocks/config');
 }
 
 
 /* DISABLE GUTENBERG ON FRONTPAGE
 ------------------------------------------------ */
-if ($mate_disable_gutenberg_frontpage){
+if (!empty($mate_disable_gutenberg_frontpage)){
 	get_template_part('functions/disable-gutenberg-frontpage');
 }
 
 
 /* ADD FIX TO SCROLLBAR BUG WHEN USING ALIGNFULL AND ALIGNWIDE
 ------------------------------------------------ */
-if ($mate_scrollbar_fix){
+if (!empty($mate_scrollbar_fix)){
 	get_template_part('functions/mate-scrollbar-fix');
 }
 
 
 /* ADD PLUGINS FUNCTIONS
 ------------------------------------------------ */
-if ($mate_custom_plugins){
+if (!empty($mate_custom_plugins)){
 	get_template_part('plugins/config');
 }
 
@@ -110,32 +112,30 @@ if ($mate_custom_plugins){
 if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE ||
 strpos($_SERVER['HTTP_USER_AGENT'], 'Trident') !== FALSE) {
 	/* LOAD SUPPORT ONLY FOR INTERNET EXPLORER */
-	if ($mate_ie_support){
+	if (!empty($mate_ie_support)){
 		get_template_part('functions/ie-support');
 	}
 }
 
 
 /* ADD SMOOTH-SCROLL JAVASCRIPT 
-
 ------------------------------------------------ */
-
-	if ($mate_smooth_scroll_script){
-		get_template_part('functions/smooth-scroll-script');
-	}
+if (!empty($mate_smooth_scroll_script)){
+	get_template_part('functions/smooth-scroll-script');
+}
 
 
 
 /* DISABLE EMOJIS
 ------------------------------------------------ */
-if ($mate_disabe_emojis){
+if (!empty($mate_disabe_emojis)){
 	get_template_part('functions/disable-emojis');
 }
 
 
 /* DISABLE EMBED YOUR POSTS IN OTHERS WEB SITES
 ------------------------------------------------ */
-if ($mate_disabe_wpembed){
+if (!empty($mate_disabe_wpembed)){
 	get_template_part('functions/disable-wp-embed');
 }
 
@@ -168,8 +168,8 @@ get_template_part('functions/content-types'); /* Define what type of template us
 
 /* ADD WP CLEANUP
 ------------------------------------------------ */
-if ($mate_wp_cleanup){
-get_template_part('functions/cleanup'); /* Clean up WordPress Header mess */
+if (!empty($mate_wp_cleanup)){
+	get_template_part('functions/cleanup'); /* Clean up WordPress Header mess */
 }
 
 

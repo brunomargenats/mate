@@ -31,7 +31,7 @@ $mate_custom_cf7_templates_only = TRUE; /* Stop editing if FALSE */
      * FUNCTION: CONTACT FORM 7 CUSTOM CSS FUNCTION
      * Description: Add custom CSS file based on original CF7 plugin CSS. It will load on footer.
      */
-        if($mate_custom_cf7_styles){
+        if (!empty($mate_custom_cf7_styles)){
 
             add_filter( 'wpcf7_load_css', '__return_false' ); //Disable GF7 CSS
 
@@ -68,8 +68,7 @@ $mate_custom_cf7_templates_only = TRUE; /* Stop editing if FALSE */
      * FUNCTION: LOAD CONTACT FORM 7 ONLY IN SPECIFIC PAGES TEMPLATES
      * Description: CF7 scripts and styles will load only in pages with those page templates. You can rename them or add more.
      */
-
-    if($mate_custom_cf7_templates_only){
+    if (!empty($mate_custom_cf7_templates_only)){
 
         if ( ! function_exists( 'mate_cf7_templates_only' ) ) {
             function mate_cf7_templates_only() {

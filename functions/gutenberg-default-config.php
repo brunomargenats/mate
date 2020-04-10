@@ -22,10 +22,10 @@ function mate_default_config() {
 	add_theme_support( 'editor-font-sizes', array() );
 
 	// Disable custom gradients.
-	add_theme_support( '__experimental-disable-custom-gradients' );
+	add_theme_support( 'disable-custom-gradients' );
 
 	// Disable gradients
-	add_theme_support( '__experimental-editor-gradient-presets', array() );
+	add_theme_support( 'editor-gradient-presets', array() );
 
 }
 

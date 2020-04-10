@@ -83,7 +83,7 @@ $mate_gutenberg_default_config = TRUE; // TRUE if you want to change some Gutenb
 
 
 /* == CUSTOM PLUGINS FUNCTIONS == */
-$mate_custom_plugins = FALSE; /* TRUE if you want to add functions that affects specific plugins. */
+$mate_custom_plugins = FALSE; /* TRUE if you want to add functions that affects specific plugins. Go to plugins/config.php to configure. */
 
 
 /* ============ PERFORMANCE & SUPPORT ============ */
