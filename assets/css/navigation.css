@@ -176,7 +176,7 @@ button.nav-toggle.active::after {
 .dropdown-toggle::after {
   content: "+";
   float: right;
-
+  margin-right: -0.3rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -217,6 +217,7 @@ button.nav-toggle.active::after {
     content: "–";
     left: -1px;
     position: relative;
+    top:-1px;
   }
 
   .container-menu {

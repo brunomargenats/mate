@@ -2,8 +2,12 @@
 /*	CSS RESET
 /* -------------------------------------------------------------------------------- */
 
-body{
-  overflow-x: hidden;
+
+
+@media (min-width: 320px) {
+  body{
+    overflow-x: hidden;
+  }
 }
 
 html,
@@ -238,7 +242,6 @@ select {
   -moz-appearance: none;
   appearance: none;
 }
-
 
 /* =WordPress Core
 -------------------------------------------------------------- */

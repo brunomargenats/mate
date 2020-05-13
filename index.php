@@ -8,9 +8,8 @@
 
 get_header();
 global $mate_has_sidebar;
-
 ?>
-    <div id="content">
+    <div id="content" class="container">
         <div id="inner-content" class="wrapper">
             <?php if(!is_page() && $mate_has_sidebar) { ?>
                     <div class="grid">

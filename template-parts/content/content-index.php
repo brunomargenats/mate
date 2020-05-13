@@ -30,11 +30,11 @@
 
     <footer class="article-footer margin-bottom:grid">
         <?php get_template_part( 'template-parts/content/category/category-tags'); ?>
-        <?php
-				global $mate_use_comments;
-				if($mate_use_comments) {
-					get_template_part( 'template-parts/content/post/comment', 'count');
-				} ?>
+        <?php 
+        global $mate_use_comments;
+        if (!empty($mate_use_comments)){
+            get_template_part( 'template-parts/content/post/comment', 'count');
+        } ?>
     </footer>
 
 </article>

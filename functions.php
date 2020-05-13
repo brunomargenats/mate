@@ -109,8 +109,8 @@ if (!empty($mate_custom_plugins)){
 
 /* ADD SUPPORT FOR IE (CSS VARIABLES)
 ------------------------------------------------ */
-if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE ||
-strpos($_SERVER['HTTP_USER_AGENT'], 'Trident') !== FALSE) {
+if (strpos(!empty($_SERVER['HTTP_USER_AGENT']), 'MSIE') !== FALSE ||
+strpos(!empty($_SERVER['HTTP_USER_AGENT']), 'Trident') !== FALSE) {
 	/* LOAD SUPPORT ONLY FOR INTERNET EXPLORER */
 	if (!empty($mate_ie_support)){
 		get_template_part('functions/ie-support');

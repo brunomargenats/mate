@@ -39,13 +39,13 @@ if ( function_exists('is_tag') && is_tag() || is_category() || is_tax() ) { ?>
 
 <?php } elseif ( is_home() ) { ?>
 
-<h1 class="h2 entry-title">
+<h2 class="entry-title">
 
     <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="text-decoration:none">
         <?php the_title(); ?>
     </a>
 
-</h1>
+</h2>
 
 <?php } else { ?>
 

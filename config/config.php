@@ -40,7 +40,7 @@ Use TRUE/FALSE or the options provided in the comments.
 /* ============ DEVELOPMENT ============ */
 
 /* == DEBUG MODE == */
-$mate_debug_mode = FALSE; /* Always FALSE on live websites. */
+$mate_debug_mode = TRUE; /* Login as administrator and add ?debug=true to your URL to active this: https://yoursite.com/?debug=true */
 
 
 /* ============ OPTIONS ============ */
@@ -57,7 +57,7 @@ $mate_responsive_navigation = TRUE; /* Load javascript and css for navigation */
 
 
 /* == USE SIDEBARS == */
-$mate_use_sidebars = FALSE; /* FALSE if you don't need sidebars and widgets */
+$mate_use_sidebars = TRUE; /* FALSE if you don't need sidebars and widgets */
 
 
 /* == USE MENUS == */
@@ -110,7 +110,7 @@ $mate_disable_gutenberg_frontpage = FALSE; // TRUE if you're not using Gutenberg
 
 
 /* == FIX SCROLLBAR BUG WHEN USING ALIGNWIDE AND ALIGNFULL ==*/
-$mate_scrollbar_fix = TRUE; // False if you don't need this.
+$mate_scrollbar_fix = FALSE; // False if you don't need this.
 
 
 /* == DISABLE EMOJIS == */

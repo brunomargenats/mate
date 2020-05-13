@@ -49,15 +49,33 @@ Version 0.6.9
 -------------------------
 = Added =
 - mate.pot file to /languages/
-- Spanish translation
+- Spanish translation.
+- New optional utility classes.
+- .clearfix on footer (this will make visible the padding of the paragraph on the footer div).
+- We check if $mate_use_comments is true before load comments-count.php on some content template-parts.
+- global $mate_use_comments_in_pages; in template-parts/content/content-page.php
 
 = Fixed =
 - A bug on this theme caused a bug in child theme when a new variable is added. On conditional functions, now we check if variables exist before check if there are TRUE or FALSE. We use !empty for this: if (!empty($mate_debug_mode)){
 - + and - on mobile menu weren't aligned.
+- Mate scrollbar fix wasn't pointing to the right function file or the right javascript file.
+- Default variable --scroll-width value on variables.css wasn't right.
+- #site now contain all web site: header - #content - footer. Header & footer are now easier to style (like, a full bg with a center container)
+- The grid and the horizontal scroll under 320px now works right.
+- Bug when checking if we allow the use of comments in pages. PHP notice on template-parts/content/content-page.php
+
+= Enhanced =
+- Debug Mode: Now, this function will only load when the user is administrator and the URL has ?debug=true.
+- Debug Mode: This function will load only on the front end.
+- Debug Mode: Added overflow:auto!important to debug mode CSS (we can't debug scrollbars if we don't do this)
 
 = Changed =
 - Disable custom gradients and Disable gradients updated for WP 5.4
+- header-title.php uses h2 for posts instead of multiple h1.
+- Debug Mode is set TRUE by default.
 
+= Removed =
+- .wrapper padding.
 
 Version 0.6.8
 -------------------------

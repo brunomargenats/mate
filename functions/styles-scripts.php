@@ -40,8 +40,8 @@ function mate_scripts_styles_header() {
 
 
 		/* ENQUEUE ALL CSS*/
-			wp_enqueue_style( 'mate_grid');
 			wp_enqueue_style( 'mate_variables');
+			wp_enqueue_style( 'mate_grid');
 			wp_enqueue_style( 'mate_reset');
 			wp_enqueue_style( 'mate_utility_classes');
 			wp_enqueue_style( 'mate_base');

@@ -16,7 +16,7 @@ $mate_GF_fix_returns = TRUE; //This will fix a common CSV export error.
 
 
 /* == MERGE FIELDS == */
-$$mate_GF_merge_fields = FALSE; //This requires some configuration. FALSE by default
+$mate_GF_merge_fields = FALSE; //This requires some configuration. FALSE by default
 
 
 

@@ -35,12 +35,13 @@
     <footer class="article-footer margin-bottom:grid">
     </footer>
     <?php
-		global $mate_use_comments_in_pages;
+			global $mate_use_comments_in_pages;
 			if( $mate_use_comments_in_pages && post_type_supports( get_post_type(), 'comments' ) ) {
 				if( comments_open() ) {
 					comments_template();
 				}
-			} ?>
+			}
+	?>
 </article>
 
 <?php endwhile; ?>

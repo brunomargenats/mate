@@ -11,9 +11,9 @@
 
 //IF YOU WANT TO USE THIS JAVASCRIPT ONLY LIKE A PONYFILL FOT BROWSERS THAT DON'T SUPPORT scroll-behavior: smooth; YOU CAN DO IT LIKE THIS:
 
-if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') === FALSE &&
-strpos($_SERVER['HTTP_USER_AGENT'], 'Chromium') === FALSE &&
-strpos($_SERVER['HTTP_USER_AGENT'], 'Firefox') === FALSE)
+if (strpos(!empty($_SERVER['HTTP_USER_AGENT']), 'Chrome') === FALSE &&
+strpos(!empty($_SERVER['HTTP_USER_AGENT']), 'Chromium') === FALSE &&
+strpos(!empty($_SERVER['HTTP_USER_AGENT']), 'Firefox') === FALSE)
 {
 //THE mate_smooth_scroll FUNCTION GOES HERE
 }

@@ -5,7 +5,7 @@
  */
 ?>
 
-    <footer id="footer" class="footer">
+    <footer id="footer" class="footer clearfix">
         <?php get_template_part( 'template-parts/footer/inner-footer-content'); ?>
     </footer><!-- footer -->
 </div><!-- end of site -->

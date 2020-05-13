@@ -114,6 +114,6 @@
     /* -------------------------------------------------------------------------------- */
 
     /* FIXES */
-    --scroll-width: '12px;' /*This variable will be overwrited via JS*/
+    --scroll-width: 12px; /*This variable will be overwrited via JS*/
 
     } /* === END OF CSS VARIABLES === */

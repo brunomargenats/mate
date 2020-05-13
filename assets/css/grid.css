@@ -30,6 +30,11 @@ col-xlg-
     max-width: var(--container-max-width) !important
 }
 
+.container {
+    padding-right: var(--grid-spacing-h);
+    padding-left: var(--grid-spacing-h)
+}
+
 @media screen and (min-width: 320px) {
     .container {
         width: 100%;
@@ -48,7 +53,7 @@ col-xlg-
 .wrapper {
     margin: 0 auto;
     max-width: var(--wrapper-max-width);
-    padding: 0 var(--grid-spacing-h);
+    padding: 0;
 }
 
 @media (min-width: 576px) {

@@ -4,6 +4,7 @@
  * Description: Loop code for the archive.php template.
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
  */
+
 ?>
 
 <?php if (have_posts()) :?>
@@ -44,8 +45,11 @@
 
         <?php get_template_part( 'template-parts/content/category/category-tags'); ?>
 
-        <?php get_template_part( 'template-parts/content/post/comment', 'count'); ?>
-
+        <?php 
+        global $mate_use_comments;
+        if (!empty($mate_use_comments)){
+            get_template_part( 'template-parts/content/post/comment', 'count');
+        } ?>
     </footer>
 
 </article> <?php // end article ?>
