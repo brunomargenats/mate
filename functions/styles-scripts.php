@@ -9,9 +9,6 @@
  * @link https://www.wpbeginner.com/wp-tutorials/how-to-properly-add-javascripts-and-styles-in-wordpress/
  */
 
-global $mate_version;
-$mate_version = wp_get_theme()->get( 'Version' );
-
 
 /**
  * FUNCTIONS: ADD HEADER STYLES AND SCRIPTS (Just those that are necessary to load first)
@@ -20,18 +17,17 @@ $mate_version = wp_get_theme()->get( 'Version' );
 if ( ! function_exists( 'mate_scripts_styles_header' ) ) {
 
 function mate_scripts_styles_header() {
-		global $mate_version;
 		/*   REGISTER ALL CSS FOR THIS SITE
-				 wp_register_style( 'mate_name', get_theme_file_uri( '/assets/css/file.css' ), array(), $mate_version, $media );
+				 wp_register_style( 'mate_name', get_theme_file_uri( '/assets/css/file.css' ), array(), MATE_VERSION, $media );
 		*/
-		wp_register_style('mate_variables',get_theme_file_uri( '/config/variables.css' ), array(), $mate_version );
-		wp_register_style('mate_reset',get_theme_file_uri( '/assets/css/reset.css' ), array(), $mate_version );
-		wp_register_style('mate_utility_classes',get_theme_file_uri( '/assets/css/utility-classes.css' ), array(), $mate_version );
-		wp_register_style('mate_base',get_theme_file_uri( '/assets/css/base.css' ), array(), $mate_version );
-		wp_register_style('mate_grid',get_theme_file_uri( '/assets/css/grid.css' ), array(), $mate_version );
-		wp_register_style('mate_typography',get_theme_file_uri( '/assets/css/typography.css' ), array(), $mate_version );
-		wp_register_style('mate_print',get_theme_file_uri( '/assets/css/print.css' ), array(), $mate_version, 'print' );
-		wp_register_style('site_style', get_stylesheet_uri(), array(), $mate_version );
+		wp_register_style('mate_variables',get_theme_file_uri( '/config/variables.css' ), array(), MATE_VERSION );
+		wp_register_style('mate_reset',get_theme_file_uri( '/assets/css/reset.css' ), array(), MATE_VERSION );
+		wp_register_style('mate_utility_classes',get_theme_file_uri( '/assets/css/utility-classes.css' ), array(), MATE_VERSION );
+		wp_register_style('mate_base',get_theme_file_uri( '/assets/css/base.css' ), array(), MATE_VERSION );
+		wp_register_style('mate_grid',get_theme_file_uri( '/assets/css/grid.css' ), array(), MATE_VERSION );
+		wp_register_style('mate_typography',get_theme_file_uri( '/assets/css/typography.css' ), array(), MATE_VERSION );
+		wp_register_style('mate_print',get_theme_file_uri( '/assets/css/print.css' ), array(), MATE_VERSION, 'print' );
+		wp_register_style('site_style', get_stylesheet_uri(), array(), MATE_VERSION );
 
 		/*   REGISTER ALL JS FOR THIS SITE
 		wp_register_script( 'mate_name', get_theme_file_uri( '/assets/js/file.js' ), array(), $mate_version, true );
@@ -58,10 +54,9 @@ function mate_scripts_styles_header() {
 if ( ! function_exists( 'mate_scripts_styles_footer' ) ) {
 
 	function mate_scripts_styles_footer() {
-		global $mate_version;
-		wp_register_style('mate_forms',get_theme_file_uri( '/assets/css/forms.css' ), array(), $mate_version );
+		wp_register_style('mate_forms',get_theme_file_uri( '/assets/css/forms.css' ), array(), MATE_VERSION );
 		wp_enqueue_style( 'mate_forms');
-		wp_register_style('mate_buttons',get_theme_file_uri( '/assets/css/buttons.css' ), array(), $mate_version );
+		wp_register_style('mate_buttons',get_theme_file_uri( '/assets/css/buttons.css' ), array(), MATE_VERSION );
 		wp_enqueue_style( 'mate_buttons');
 	}
 	add_action( 'get_footer', 'mate_scripts_styles_footer', 80 );
@@ -115,9 +110,8 @@ if ( ! function_exists( 'mate_admin_style_blocks' ) ) {
 
 	add_action( 'enqueue_block_editor_assets', 'mate_admin_style_blocks' );
 	function mate_admin_style_blocks(){
-		global $mate_version;
-		wp_enqueue_style('mate_variables',get_theme_file_uri( '/config/variables.css' ),array( 'wp-edit-blocks' ), $mate_version);
-		wp_enqueue_style('mate_buttons',get_theme_file_uri( '/assets/css/buttons.css' ),array( 'wp-edit-blocks' ), $mate_version);
+		wp_enqueue_style('mate_variables',get_theme_file_uri( '/config/variables.css' ),array( 'wp-edit-blocks' ), MATE_VERSION);
+		wp_enqueue_style('mate_buttons',get_theme_file_uri( '/assets/css/buttons.css' ),array( 'wp-edit-blocks' ), MATE_VERSION);
 	}
 
 }

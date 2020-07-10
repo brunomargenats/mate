@@ -12,7 +12,7 @@
 
                 <div id="inner-header" class="container clearfix"><?php /* Fluid Container: <div id="site" class="container fluid"> */?>
                     <div class="grid align-center">
-                        <div id="siteinfo" class="col-bleed-y col-9 col-sm-auto">
+                        <div id="siteinfo" class="col-bleed col-9 col-sm-auto">
                             <div id="logo">
                                 <a href="<?php echo home_url(); ?>" rel="nofollow" title="<?php bloginfo('name'); ?>">
                                     <img src="<?php echo get_theme_file_uri(). '/assets/images/logo.svg'?>"
@@ -28,14 +28,14 @@
                         */?>
                         </div>
                         <?php global $mate_responsive_navigation; if ($mate_responsive_navigation){?>
-                            <div id="nav-button" class="col-bleed-y col-3">
+                            <div id="nav-button" class="col-bleed col-3">
                                 <div id="nav-button-container">
                                     <button type="button" id="nav-toggle" class="nav-toggle"><?php _e( 'Menu', 'mate' ); ?></button>
                                 </div>
                             </div>
                         <?php } ?>
                         <?php if ( has_nav_menu( 'primary-menu' ) ) : ?>
-                            <div class="container-menu col-bleed-y col-auto">
+                            <div class="container-menu col-bleed col-sm-auto">
                                 <nav id="nav" class="nav-collapse header-nav primary-menu"
                                     aria-label="<?php _e( 'Primary Menu', 'mate' ); ?>">
                                     <?php wp_nav_menu( array( 'container' => 'ul', 'menu_class' => 'menu-items', 'menu' => __( 'The Main Menu', 'mate' ), 'theme_location' => 'primary-menu'  ) ); ?>

@@ -44,11 +44,11 @@ col-xlg-
         padding-left: var(--grid-spacing)
     }
 }
-
+/*
 .container .grid {
     margin-right: var(--grid-spacing-hn);
     margin-left: var(--grid-spacing-hn)
-}
+}*/
 
 .wrapper {
     margin: 0 auto;

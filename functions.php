@@ -1,10 +1,16 @@
 <?php
 
+define ( 'MATE_VERSION', wp_get_theme()->get( 'Version' ) );
+
 /* MATE CONFIG: Edit this file in a child theme to change options
 ------------------------------------------------ */
 get_template_part('config/config');
 /*
 
+
+/* MATE PLUGINS CONFIG: Activate or deactivate functions that only affect some plugins
+------------------------------------------------ */
+get_template_part('config/plugins');
 
 
 /* DEBUG MODE
@@ -77,20 +83,6 @@ if (!empty($mate_gutenberg_default_config)){
 }
 
 
-/* ADD GUTENBERG CUSTOM BLOCKS
------------------------------------------------- */
-if (!empty($mate_gutenberg_custom_blocks)){
-	get_template_part('template-parts/blocks/config');
-}
-
-
-/* DISABLE GUTENBERG ON FRONTPAGE
------------------------------------------------- */
-if (!empty($mate_disable_gutenberg_frontpage)){
-	get_template_part('functions/disable-gutenberg-frontpage');
-}
-
-
 /* ADD FIX TO SCROLLBAR BUG WHEN USING ALIGNFULL AND ALIGNWIDE
 ------------------------------------------------ */
 if (!empty($mate_scrollbar_fix)){
@@ -105,38 +97,26 @@ if (!empty($mate_custom_plugins)){
 }
 
 
-
-
-/* ADD SUPPORT FOR IE (CSS VARIABLES)
+/* ADD SUPPORT FOR OLD BROWSERS (CSS VARIABLES)
 ------------------------------------------------ */
-if (strpos(!empty($_SERVER['HTTP_USER_AGENT']), 'MSIE') !== FALSE ||
-strpos(!empty($_SERVER['HTTP_USER_AGENT']), 'Trident') !== FALSE) {
-	/* LOAD SUPPORT ONLY FOR INTERNET EXPLORER */
-	if (!empty($mate_ie_support)){
-		get_template_part('functions/ie-support');
+if (!empty($mate_old_support) && !empty($_SERVER['HTTP_USER_AGENT'])){
+	if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE ||
+	strpos($_SERVER['HTTP_USER_AGENT'], 'Trident') !== FALSE ||
+	strpos($_SERVER['HTTP_USER_AGENT'], 'MQQBrowser') !== FALSE ||
+	strpos($_SERVER['HTTP_USER_AGENT'], 'QQBrowser') !== FALSE ||
+	strpos($_SERVER['HTTP_USER_AGENT'], 'bdbrowser') !== FALSE ||
+	strpos($_SERVER['HTTP_USER_AGENT'], 'baidubrowser') !== FALSE ||
+	strpos($_SERVER['HTTP_USER_AGENT'], 'Opera Mini') !== FALSE){
+		/* LOAD SUPPORT ONLY FOR INTERNET EXPLORER AND OLD BROWSERS */
+		get_template_part('functions/old-support');
 	}
 }
 
 
-/* ADD SMOOTH-SCROLL JAVASCRIPT 
+/* ADD SMOOTH-SCROLL JAVASCRIPT
 ------------------------------------------------ */
 if (!empty($mate_smooth_scroll_script)){
 	get_template_part('functions/smooth-scroll-script');
-}
-
-
-
-/* DISABLE EMOJIS
------------------------------------------------- */
-if (!empty($mate_disabe_emojis)){
-	get_template_part('functions/disable-emojis');
-}
-
-
-/* DISABLE EMBED YOUR POSTS IN OTHERS WEB SITES
------------------------------------------------- */
-if (!empty($mate_disabe_wpembed)){
-	get_template_part('functions/disable-wp-embed');
 }
 
 
@@ -164,13 +144,6 @@ get_template_part('functions/custom-styles-scripts'); /* LOAD NEW SCRIPTS AND ST
 /* MATE CONTENT TYPES
 ------------------------------------------------ */
 get_template_part('functions/content-types'); /* Define what type of template use for each type of content */
-
-
-/* ADD WP CLEANUP
------------------------------------------------- */
-if (!empty($mate_wp_cleanup)){
-	get_template_part('functions/cleanup'); /* Clean up WordPress Header mess */
-}
 
 
 /* THEME SETUP (Basic WP configurations)

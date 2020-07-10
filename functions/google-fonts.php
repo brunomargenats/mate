@@ -15,7 +15,7 @@ if ( (! function_exists( 'mate_google_fonts' ))) {
         <link rel="dns-prefetch" href="fonts.googleapis.com/">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link rel="preconnect" href="fonts.googleapis.com/" crossorigin>
-        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700,400italic&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
     <?php /* We use %7C instead of | on the URL for security reasons */
     }
 }

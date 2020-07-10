@@ -13,7 +13,8 @@
     --container-max-width: 1200px; /* Website container max-width. MIN: 1200px. If you change this change also $content_width in functions.php*/
     --wrapper-max-width: 980px; /* Central content max-width (headear and footer not included. Can be 100% */
     --logo-width:40px;
-    --logo-height:59px;
+    --logo-height:59px; /*Very useful for fixed navigation, because we need to add some padding.*/
+    --base-font-size:15px; /*Every breakpoint we add some pixels more between base and 21px.*/
 
     /* -------------------------------------------------------------------------------- */
 

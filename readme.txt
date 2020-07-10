@@ -45,6 +45,40 @@ Source: https://jhildenbiddle.github.io/css-vars-ponyfill/
 
 === Changelog ===
 
+Version 0.7.0
+-------------------------
+= Added =
+- config/plugins.php : Now we can activate and deactivate plugins functions on this file
+- color: var(--color-text-heading); to headings
+
+= Fixed =
+- I tried to fix a PHP WARNING of HTTP_USER_AGENT when adding support to Internet Explorer and i broke it. Now i really fixed.
+
+= Enhanced =
+- dropdown-toggle::after (padding is now 2px from 768px to 1200px. After that, 3px)
+- $mate_version is now defined on functions.php as MATE_VERSION globally.
+- IE support is now extended for other old browsers than don't support CSS variables
+
+= Changed =
+- #siteinfo and #nav-button class "col-bleed-y" changed for "col-bleed".
+- Plugins functions moved from /plugins/ to /functions/plugins/
+- ie-support file become old-support. Same for all related functions.
+- Some H styles on typography.css
+
+= Removed =
+- Style removed from grid.css: .container .grid{} (just commented for being sure befoer remove it)
+- plugins/config.php
+- functions/disable-gutenberg-frontpage.php (now on my plugin Speed Up WordPress)
+- functions/cleanup.php (now on my plugin Speed Up WordPress)
+- functions/disable-emojis.php (now on my plugin Speed Up WordPress)
+- functions/disable-wp-embed.php (now on my plugin Speed Up WordPress)
+- Padding on .fixed-navigation #header (we already use some utility classes)
+
+= Updated =
+- JavaScript file version: css-vars-ponifill.min.js 2.2.1 to 2.3.1
+- Google Font URL on functions/google-fonts.php
+
+
 Version 0.6.9
 -------------------------
 = Added =

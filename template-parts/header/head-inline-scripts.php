@@ -16,4 +16,4 @@
 // A default SVG favicon based on logo is added here. Please note that SVG favicons are not supported everywhere yet https://caniuse.com/#feat=link-icon-svg
 // Please replace the next line with your own realfavicongenerator code or erase it when using the plugin.
 ?>
-<link href="<?php echo get_theme_file_uri(). '/assets/images/logo.svg' ?>" rel="icon" type="image/svg" />
+<link href="<?php echo get_theme_file_uri(). '/assets/images/logo.svg' ?>" rel="icon" type="image/svg+xml" />

@@ -23,7 +23,6 @@ $mate_custom_cf7_styles = TRUE; /* Edit cf7-styles.css with your own styles */
 $mate_custom_cf7_templates_only = TRUE; /* Stop editing if FALSE */
 
 
-
 /* ============ CONFIGURE FUNCTIONS ============ */
 
 
@@ -37,7 +36,7 @@ $mate_custom_cf7_templates_only = TRUE; /* Stop editing if FALSE */
 
             if ( ! function_exists( 'mate_custom_CF7_styles_register' ) ) {
                 function mate_custom_CF7_styles_register() {
-                            wp_register_style('mate_cf7_css', get_theme_file_uri( '/plugins/contact-form-7/contact-form-7.css' ), array(), wp_get_theme( 'mate' )->get( 'Version' ));
+                            wp_register_style('mate_cf7_css', get_theme_file_uri( '/functions/plugins/contact-form-7/contact-form-7.css' ), array(), wp_get_theme( 'mate' )->get( 'Version' ));
                     }
                 add_action( 'wp_enqueue_scripts', 'mate_custom_CF7_styles_register');
             }

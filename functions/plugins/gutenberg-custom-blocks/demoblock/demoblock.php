@@ -24,14 +24,13 @@ class demoblock { // ***EDIT demoblock***
             'name'              => self::BLOCKNAME,
             'title'             => __('Demo block', 'mate'), // ***EDIT value***
             'description'       => __('A custom demo block.', 'mate'),  // ***EDIT value***
-            'render_template'   => 'template-parts/blocks/'.self::BLOCKNAME.'/template.php',
+            'render_template'   => 'functions/plugins/gutenberg-custom-blocks/'.self::BLOCKNAME.'/template.php',
             'category'          => 'formatting', // ***EDIT value***
             'icon'              => 'admin-comments',  // ***EDIT value***
             'keywords'          => array( 'testimonial', 'quote' ),  // ***EDIT values***
            /* 'enqueue_assets' => function(){
-                global $mate_version;
-                wp_enqueue_style( 'block-'.self::BLOCKNAME.'', get_theme_file_uri('/template-parts/blocks/'.self::BLOCKNAME.'/assets/'.self::BLOCKNAME.'.css' ), array(), $mate_version );
-                wp_enqueue_script( 'block-'.self::BLOCKNAME.'', get_theme_file_uri('/template-parts/blocks/'.self::BLOCKNAME.'/assets/'.self::BLOCKNAME.'.js'), array(), $mate_version, true );
+                wp_enqueue_style( 'block-'.self::BLOCKNAME.'', get_theme_file_uri('/functions/plugins/gutenberg-custom-blocks/'.self::BLOCKNAME.'/assets/'.self::BLOCKNAME.'.css' ), array(), MATE_VERSION );
+                wp_enqueue_script( 'block-'.self::BLOCKNAME.'', get_theme_file_uri('/functions/plugins/gutenberg-custom-blocks/'.self::BLOCKNAME.'/assets/'.self::BLOCKNAME.'.js'), array(), MATE_VERSION, true );
               },*///uncomment this if needed
         ));
     }
@@ -41,7 +40,7 @@ class demoblock { // ***EDIT demoblock***
     /* Save ACF fields in json */
     public static function mate_acf_json_save_point( $path ) {
         // update path
-        $path = get_stylesheet_directory() . '/template-parts/blocks/'.self::BLOCKNAME.'/acf-json';
+        $path = get_stylesheet_directory() . '/functions/plugins/gutenberg-custom-blocks/'.self::BLOCKNAME.'/acf-json';
         // return
         return $path;
     }

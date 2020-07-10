@@ -5,7 +5,7 @@
 html {
     text-rendering: optimizeLegibility;
     line-height: 1.5;
-    font-size: 14px;
+    font-size: var(--base-font-size);
     font-family: var(--font-text), var(--font-fallback);
 }
 
@@ -17,36 +17,37 @@ h1,.h1,h2,h3,h4,h5,h6 {
     font-family: var(--font-display), var(--font-fallback);
     font-weight: 700;
     line-height: 1.1em;
-    margin: 0.7em 0;
+    margin: 0.7rem 0;
+    color: var(--color-text-heading);
 }
 
 @media (min-width: 576px) {
     html {
-        font-size: 14px;
+        font-size:calc(var(--base-font-size) + 2px);
     }
 }
 
 @media (min-width: 768px) {
     html {
-        font-size: 15px;
+        font-size:calc(var(--base-font-size) + 3px);
     }
 }
 
 @media (min-width: 992px) {
     html {
-        font-size: 17px;
+        font-size:calc(var(--base-font-size) + 4px);
     }
 }
 
 @media (min-width: 1200px) {
     html {
-        font-size: 18px;
+        font-size:calc(var(--base-font-size) + 5px);
     }
 }
 
 @media (min-width: 1600px) {
     html {
-        font-size: 19px;
+        font-size:calc(var(--base-font-size) + 6px);
     }
 }
 
@@ -57,7 +58,6 @@ h3, .h3 {font-size: 1.728rem; }
 h4, .h4 {font-size: 1.44rem; }
 h5, .h5 {font-size: 1.2rem; }
 h6, .h6 {font-size: 1.0rem;}
-body {font-size: 1.1rem;}
 
 @media (min-width: 768px) {
     h1, .h1 {font-size: 3.052rem; }
@@ -66,7 +66,6 @@ body {font-size: 1.1rem;}
     h4, .h4 {font-size: 1.563rem; }
     h5, .h5 {font-size: 1.25rem; }
     h6, .h6 {font-size: 1.1rem;}
-    body {font-size: 1.1rem;}
 }
 
 
@@ -86,7 +85,7 @@ a:active {
 a,
 a:hover,
 a:active {
-    transition: color 0.3s ease, border 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 /* Active item link color in WP navigation menu */

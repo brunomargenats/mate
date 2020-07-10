@@ -339,7 +339,7 @@ button.nav-toggle.active::after {
     margin: 0.5em 0 0 0.5em;
     border: solid var(--color-link);
     border-width: 0 2px 2px 0;
-    padding: 3px;
+    padding: 2px;
     transform: rotate(45deg);
   }
 
@@ -347,6 +347,12 @@ button.nav-toggle.active::after {
     transform: rotate(-45deg);
   }
 
+}
+
+@media screen and (min-width: 1200px) {
+  .dropdown-toggle::after {
+    padding:2px;
+  }
 }
 
 
@@ -375,10 +381,6 @@ button.nav-toggle.active::after {
 .container-menu ul>li.opened>ul.sub-menu>li.opened>ul.sub-menu {
   opacity: 1;
   visibility: visible;
-}
-
-.container-menu ul>li.opened>ul.sub-menu,
-.container-menu ul>li.opened>ul.sub-menu>li.opened>ul.sub-menu {
   height: auto;
 }
 
@@ -387,7 +389,7 @@ button.nav-toggle.active::after {
 .container-menu,
 .container-menu ul.sub-menu,
 .container-menu .dropdown-active ul.sub-menu {
-  transition: all 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, height 0.4s ease-in-out;
 }
 
 @media screen and (min-width: 768px) {
@@ -414,17 +416,12 @@ button.nav-toggle.active::after {
   width: 100%;
   left: 0;
   background: #fff;
-  padding: var(--grid-spacing-h) var(--grid-spacing);
 }
 
 .js-nav-active .fixed-navigation #header {
   bottom: 0;
 }
 
-.fixed-navigation #header #inner-header {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-}
 
 .fixed-navigation #site {
   padding-top: calc(var(--logo-height) + var(--grid-spacing) + var(--grid-spacing));
