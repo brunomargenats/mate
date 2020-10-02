@@ -5,7 +5,7 @@
 	Description: Mate is my personal WordPress starter theme. Please ask me before using it.
 	Text Domain: mate
 	Requires at least: WordPress 5.3
-	Version: 0.7.0
+	Version: 0.7.1
 	Tags: gutenberg-ready, accessibility-ready, translation-ready, blog, one-column, two-columns, custom-menu, featured-images, threaded-comments, editor-style
     Author:      Bruno Margenats
     Author URI:  https://brunomargenats.com
@@ -29,3 +29,4 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ----------------------------------------------------------------------------------- */
+/* This file is here for theming purposes only. We don't load this on the production site. */

@@ -1,0 +1,31 @@
+=== Introduction ===
+These instructions will guide you to create a Gutenberg block using two plugins:
+- Advanced Custom Fields PRO
+- Advanced Custom Fields: Extended
+
+=== Instructions ===
+1. Go to ACF > Block Types and create a new block. For this example we will name it "demo".
+2. All fields have a description, so I will only explain the specifics:
+- Icon: We can use a dashicon by using their name, like "format-image", or use a svg element (just paste all the svg code).
+- Render template: Just add "blocks/demo/template.php" (replace "demo" with the name of your block)
+- Enqueue (only if you need styles or/and scripts): Add "blocks/demo/styles.min.css" and "blocks/demo/scripts.min.css" (replace "hero" with the name of your block). Minify files is always a good idea.
+3. Now, we need the fields for this block. So we go to ACF > Field Groups. And we create a new one:
+- Name: "Block: Demo"
+- For every field, we use demo_ before the field name. For example: demo_call_to_action, demo_background, etc.
+- Location: Show if Block is equal to NAME OF THE BLOCK (same as point 1)
+4. Now, we need to code the template, styles and scripts for this block. So we create the files IN YOUR ACTIVE THEME:
+- blocks/demo/template.php
+- blocks/demo/styles.min.css (only if we call it in the point 2)
+- blocks/demo/scripts.min.css (only if we call it in the point 2)
+5. That's it! Now you should see your new block full working with your custom fields.
+6. (Optional) You can later export your block and your fields in PHP and include theme in your theme or in a custom theme. Advanced Custom Fields: Extended Is no longer needed to properly work. ACF PRO is mandatory, though.
+
+Free SVG Icons:
+https://iconify.design/icon-sets/ (best icon search app)
+https://css.gg/
+https://akveo.github.io/eva-icons/#/
+https://material.io/resources/icons/?icon=aspect_ratio&style=round
+https://feathericons.com/
+https://ionicons.com/
+https://simpleicons.org/ (social icons)
+

@@ -7,10 +7,9 @@
 
 <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to the content', 'mate' ); ?></a>
 <a class="skip-link screen-reader-text" href="#nav"><?php _e( 'Skip to the main menu', 'mate' ); ?></a>
-    <div id="site">
-            <header class="header z-index:2 position:relative padding-top:grid padding-bottom:grid" id="header">
-
-                <div id="inner-header" class="container clearfix"><?php /* Fluid Container: <div id="site" class="container fluid"> */?>
+    <div id="site"><?php /* Fluid Container: <div id="site" class="container fluid"> */?>
+            <header class="header" id="header">
+                <div id="inner-header" class="container clearfix">
                     <div class="grid align-center">
                         <div id="siteinfo" class="col-bleed col-9 col-sm-auto">
                             <div id="logo">

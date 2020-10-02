@@ -6,7 +6,7 @@
 get_header();
 ?>
 
-    <div id="content">
+    <div id="content" class="container">
         <div id="inner-content" class="wrapper">
             <div class="grid">
                 <main id="main" class="col-12 col-sm-8">

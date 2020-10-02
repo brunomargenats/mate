@@ -27,8 +27,6 @@ if (!empty($mate_custom_plugins)){
 
         $mate_gravity_forms = FALSE;
 
-        $mate_gutenberg_custom_blocks = TRUE;
-
 }
 
 
@@ -36,5 +34,4 @@ if (!empty($mate_custom_plugins)){
 /* ============ LOAD PLUGINS FILES ============ */
 if (!empty($mate_contact_form_7)){get_template_part('functions/plugins/contact-form-7/contact-form-7');}
 if (!empty($mate_gravity_forms)){get_template_part('functions/plugins/gravity-forms/gravity-forms');}
-if (!empty($mate_gutenberg_custom_blocks)){get_template_part('functions/plugins/gutenberg-custom-blocks/gutenberg-custom-blocks');}
 

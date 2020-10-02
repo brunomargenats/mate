@@ -28,8 +28,8 @@ msgstr "404"
 
 #: functions/comments.php:51
 #, php-format
-msgid "<cite class=\"fn margin-right:grid\">%s</cite>"
-msgstr "<cite class=\"fn margin-right:grid\">%s</cite>"
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr "<cite class=\"fn\">%s</cite>"
 
 #. %s: post date
 #: functions/post-time.php:31

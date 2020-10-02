@@ -13,7 +13,7 @@ if ( function_exists('is_tag') && is_tag() || is_category() || is_tax() ) { ?>
 <?php } elseif ( is_archive() ) { ?>
 
 <h3 class="h2 entry-title">
-    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="text-decoration:none">
+    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
         <?php the_title(); ?>
     </a>
 </h3>
@@ -22,7 +22,7 @@ if ( function_exists('is_tag') && is_tag() || is_category() || is_tax() ) { ?>
 
 <h3 class="search-title entry-title">
 
-    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="text-decoration:none">
+    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
         <?php the_title(); ?>
     </a>
 
@@ -41,7 +41,7 @@ if ( function_exists('is_tag') && is_tag() || is_category() || is_tax() ) { ?>
 
 <h2 class="entry-title">
 
-    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="text-decoration:none">
+    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
         <?php the_title(); ?>
     </a>
 

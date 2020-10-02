@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-23 20:36+0000\n"
-"PO-Revision-Date: 2020-03-23 20:55+0000\n"
+"PO-Revision-Date: 2020-07-22 11:26-0400\n"
 "Last-Translator: bruz <brunomargenats@gmail.com>\n"
 "Language-Team: Spanish (Spain)\n"
 "Language: es_ES\n"
@@ -11,8 +11,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.3.1; wp-5.4-RC3-47477"
+"X-Generator: Poedit 2.2.4\n"
+"X-Loco-Version: 2.3.1; wp-5.4-RC3-47477\n"
 
 #: comments.php:49
 msgid "&larr; Previous Comments"
@@ -28,8 +28,8 @@ msgstr "404"
 
 #: functions/comments.php:51
 #, php-format
-msgid "<cite class=\"fn margin-right:grid\">%s</cite>"
-msgstr "<cite class=\"fn margin-right:grid\">%s</cite>"
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr "<cite class=\"fn\">%s</cite>"
 
 #. %s: post date
 #: functions/post-time.php:31
@@ -51,7 +51,7 @@ msgstr "Un comentario"
 
 #: template-parts/blocks/demoblock/demoblock.php:26
 msgid "A custom demo block."
-msgstr "Un bloque demo personalizado"
+msgstr "Un bloque demo personalizado."
 
 #. Author of the theme
 msgid "Bruno Margenats"
@@ -181,8 +181,8 @@ msgid ""
 "We could not find any results for your search. You can give it another try "
 "through the search form below."
 msgstr ""
-"No encontramos ningun resultado que coincida con los términos de la búsqueda."
-" Inténtelo de nuevo con algunas palabras clave diferentes."
+"No encontramos ningun resultado que coincida con los términos de la "
+"búsqueda. Inténtelo de nuevo con algunas palabras clave diferentes."
 
 #. %s: Number of search results.
 #: template-parts/content/content-search.php:19

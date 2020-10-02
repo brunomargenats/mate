@@ -21,7 +21,7 @@ if ((!empty($_SERVER['HTTP_USER_AGENT']) && strpos($_SERVER['HTTP_USER_AGENT'], 
 	if ( ! function_exists( 'mate_ie_style' ) ) {
 
 		function mate_ie_style() {
-			wp_register_style('mate_ie_css',get_theme_file_uri( '/assets/css/ie.css' ), array(), MATE_VERSION );
+			wp_register_style('mate_ie_css',get_theme_file_uri( '/assets/css/ie.min.css' ), array(), MATE_VERSION );
 			wp_enqueue_style('mate_ie_css');
 		}
 		add_action( 'get_footer', 'mate_ie_style');

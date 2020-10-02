@@ -7,8 +7,8 @@
 
     <footer id="footer" class="footer clearfix">
         <?php get_template_part( 'template-parts/footer/inner-footer-content'); ?>
-    </footer><!-- footer -->
-</div><!-- end of site -->
+    </footer><?php /* footer */ ?>
+</div><?php /* end of site */ ?>
 
 <?php wp_footer(); ?>
 </body>

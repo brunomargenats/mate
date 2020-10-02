@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-23 20:36+0000\n"
+"POT-Creation-Date: 2020-07-23 18:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.3.1; wp-5.4-RC3-47477"
+"X-Loco-Version: 2.4.0; wp-5.5-beta3-48571"
 
 #: comments.php:49
 msgid "&larr; Previous Comments"
@@ -29,7 +29,7 @@ msgstr ""
 
 #: functions/comments.php:51
 #, php-format
-msgid "<cite class=\"fn margin-right:grid\">%s</cite>"
+msgid "<cite class=\"fn\">%s</cite>"
 msgstr ""
 
 #. %s: post date
@@ -48,10 +48,6 @@ msgstr ""
 
 #: comments.php:22 template-parts/content/post/comment-count.php:15
 msgid "<span>One</span> Comment"
-msgstr ""
-
-#: template-parts/blocks/demoblock/demoblock.php:26
-msgid "A custom demo block."
 msgstr ""
 
 #. Author of the theme
@@ -80,7 +76,7 @@ msgstr ""
 msgid "Default Avatar"
 msgstr ""
 
-#: template-parts/blocks/demoblock/demoblock.php:25
+#: functions/plugins/gutenberg-custom-blocks/demoblock/demoblock.php:25
 msgid "Demo block"
 msgstr ""
 
@@ -109,7 +105,7 @@ msgid ""
 "Mate is my personal WordPress starter theme. Please ask me before using it."
 msgstr ""
 
-#: template-parts/header/inner-header-content.php:34
+#: template-parts/header/inner-header-content.php:33
 msgid "Menu"
 msgstr ""
 
@@ -130,7 +126,7 @@ msgstr ""
 msgid "Posts Categorized:"
 msgstr ""
 
-#: functions/menus.php:12 template-parts/header/inner-header-content.php:41
+#: functions/menus.php:12 template-parts/header/inner-header-content.php:40
 msgid "Primary Menu"
 msgstr ""
 
@@ -166,7 +162,7 @@ msgstr ""
 msgid "Tags:"
 msgstr ""
 
-#: template-parts/header/inner-header-content.php:42
+#: template-parts/header/inner-header-content.php:41
 msgid "The Main Menu"
 msgstr ""
 

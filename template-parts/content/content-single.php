@@ -21,7 +21,7 @@
 
     </header> <?php // end article header ?>
 
-    <div class="entry-content margin-bottom:grid">
+    <div class="entry-content">
         <?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
 
         <?php the_content();
@@ -38,7 +38,7 @@
 
     </div> <?php // end article ?>
 
-    <footer class="article-footer margin-bottom:grid">
+    <footer class="article-footer">
 
         <?php get_template_part( 'template-parts/content/category/category-tags'); ?>
 

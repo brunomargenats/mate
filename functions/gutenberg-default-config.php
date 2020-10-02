@@ -27,6 +27,9 @@ function mate_default_config() {
 	// Disable gradients
 	add_theme_support( 'editor-gradient-presets', array() );
 
+	// Remove core patterns
+	remove_theme_support( 'core-block-patterns' );
+
 }
 
 

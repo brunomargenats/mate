@@ -18,7 +18,7 @@
 
     </header>
 
-    <div class="entry-content margin-bottom:grid">
+    <div class="entry-content">
         <?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
         <?php
         if(get_option( 'rss_use_excerpt' )){
@@ -28,7 +28,7 @@
         } ?>
     </div>
 
-    <footer class="article-footer margin-bottom:grid">
+    <footer class="article-footer">
         <?php get_template_part( 'template-parts/content/category/category-tags'); ?>
         <?php 
         global $mate_use_comments;

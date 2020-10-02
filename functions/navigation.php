@@ -71,7 +71,7 @@ if ( ! function_exists( 'mate_add_class_to_items_link' ) ) {
 /* LOAD NAVIGATION JS */
 if ( ! function_exists( 'mate_nav_styles' ) ) {
     function mate_nav_styles() {
-            wp_register_style('mate_navigation_css',get_theme_file_uri( '/assets/css/navigation.css' ), array(), wp_get_theme( 'mate' )->get( 'Version' ) );
+            wp_register_style('mate_navigation_css',get_theme_file_uri( '/assets/css/navigation.min.css' ), array(), MATE_VERSION );
             wp_enqueue_style('mate_navigation_css');
     }
     add_action( 'wp_enqueue_scripts', 'mate_nav_styles', 80 );
@@ -80,7 +80,7 @@ if ( ! function_exists( 'mate_nav_styles' ) ) {
 /* LOAD NAVIGATION CSS */
 if ( ! function_exists( 'mate_nav_scripts' ) ) {
     function mate_nav_scripts() {
-        wp_register_script('mate_navigation_js', get_theme_file_uri('/assets/js/navigation.js'), array(), wp_get_theme( 'mate' )->get( 'Version' ), false );
+        wp_register_script('mate_navigation_js', get_theme_file_uri('/assets/js/navigation.min.js'), array(), MATE_VERSION, false );
         wp_enqueue_script('mate_navigation_js');
     }
     add_action( 'get_footer', 'mate_nav_scripts', 80 );

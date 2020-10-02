@@ -13,6 +13,15 @@ get_template_part('config/config');
 get_template_part('config/plugins');
 
 
+/* MATE WP-HEAD: Load scripts and content inside <head></head>
+------------------------------------------------ */
+get_template_part('functions/wp-head');
+
+/* MATE WP-FOOTER: Load scripts and content before </body>
+------------------------------------------------ */
+get_template_part('functions/wp-footer');
+
+
 /* DEBUG MODE
 ------------------------------------------------ */
 if (!empty($mate_debug_mode)){
@@ -113,14 +122,6 @@ if (!empty($mate_old_support) && !empty($_SERVER['HTTP_USER_AGENT'])){
 }
 
 
-/* ADD SMOOTH-SCROLL JAVASCRIPT
------------------------------------------------- */
-if (!empty($mate_smooth_scroll_script)){
-	get_template_part('functions/smooth-scroll-script');
-}
-
-
-
 /* POST TIME FUNCTION (from WP Twenty Seventeen theme)
 ------------------------------------------------ */
 get_template_part('functions/post-time');
@@ -136,11 +137,6 @@ get_template_part('functions/page-navi');
 get_template_part('functions/custom-excerpt');
 
 
-/* ENQUEUE CUSTOM SCRIPTS
------------------------------------------------- */
-get_template_part('functions/custom-styles-scripts'); /* LOAD NEW SCRIPTS AND STYLES FOR THIS THEME */
-
-
 /* MATE CONTENT TYPES
 ------------------------------------------------ */
 get_template_part('functions/content-types'); /* Define what type of template use for each type of content */
@@ -154,7 +150,9 @@ if ( ! function_exists( 'mate_setup' ) ) {
 
 		// Set content-width: Maximum allowed width for any content in the theme, like oEmbeds and images added to posts.
 		global $content_width;
-        if ( ! isset( $content_width ) ) $content_width = 1200;
+		if ( ! isset( $content_width ) ) {
+			$content_width = 1200;
+		}
 
 		// Automatic feed
 		add_theme_support( 'automatic-feed-links' );

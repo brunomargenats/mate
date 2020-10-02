@@ -1,8 +1,8 @@
 === Mate ===
 Contributors: Bruno Margenats
 Requires at least: 5.2
-Tested up to: 5.4
-Stable tag: Version 0.6.9
+Tested up to: 5.4.2
+Stable tag: Version 0.7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -44,6 +44,44 @@ Source: https://jhildenbiddle.github.io/css-vars-ponyfill/
 
 
 === Changelog ===
+
+Version 0.7.1
+-------------------------
+
+= Added =
+- "--base-font-size" variable.
+- <small></small> to Copyright section on footer
+- New "blocks" folder with a demo block render (the block has to be created using ACF PRO extended) + an instructions file.
+- mate_wp_head function: Load content and scripts inside <head></head> using wp_head from the core.
+- mate_wp_footer function: Load content and scripts before </body> using wp_footer from the core.
+- New gutenberg default configuration: remove core patterns.
+
+= Fixed =
+- $content_width conditional wasn't working.
+- Add class="container" to #content div on layouts templates.
+- French translation with HTML entities didn't always translate the HTML code. So, now we use HTML only for arrows, not letters.
+
+= Enhanced =
+- grid.css use fewer numbers on percentages
+- All fuctions that load styles and scripts are now using a .min version. For exemple: grid.min.css
+- We drop the use of utility classes. Now we will use BEM when possible.
+
+= Changed =
+- grid.css: order directives reduced from 12 to 5.
+- grid.css: xlg size changed for xl
+- wp_get_theme()->get( 'Version' ) changed for MATE_VERSION in some missing files.
+
+= Updated =
+- contact-form-7.css
+- JavaScript file version: css-vars-ponifill.min.js 2.3.1 to 2.3.2
+
+= Removed =
+- Utility Classes: This was a good idea for writing less code, but, maybe is better to only add some utility classes in a child theme than try to guess what classes we will need. 
+- style.css is not more enqueue on the front-end.
+- custom-styles-scripts.php and scripts.js files removed. We can easily add new scripts in a child theme using functions.php.
+- Smooth Scroll JavaScript is no longer included in this theme. We can always add it in a child theme if needed.
+- gutenberg-custom-blocks folder inside functions/plugins and function attached to it (I added another way to create blocks)
+- head-inline-scripts.php inside template-parts/header/. We use a function now.
 
 Version 0.7.0
 -------------------------

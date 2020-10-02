@@ -19,7 +19,7 @@
     <header class="entry-header article-header">
 
         <h3 class="h2 entry-title">
-            <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="text-decoration:none">
+            <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
                 <?php the_title(); ?>
             </a>
         </h3>
@@ -28,7 +28,7 @@
 
     </header>
 
-    <div class="entry-content margin-bottom:grid">
+    <div class="entry-content">
 
         <?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
 
@@ -41,7 +41,7 @@
 
     </div>
 
-    <footer class="article-footer margin-bottom:grid">
+    <footer class="article-footer">
 
         <?php get_template_part( 'template-parts/content/category/category-tags'); ?>
 

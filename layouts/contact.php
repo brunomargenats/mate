@@ -6,7 +6,7 @@
 get_header();
 ?>
 
-    <div id="content">
+    <div id="content" class="container">
         <div id="inner-content" class="wrapper">
             <main id="main">
                 <?php get_template_part( 'template-parts/content/content',mate_content_type());?>

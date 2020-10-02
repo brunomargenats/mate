@@ -27,7 +27,7 @@
             echo '<p>'.$archive_subtitle.'</p>';
         } else {
             $archive_subtitle = __( 'We could not find any results for your search. You can give it another try through the search form below.', 'mate' );
-            echo '<div class="entry-content margin-bottom:grid"><p>'.$archive_subtitle.'</p>';
+            echo '<div class="entry-content"><p>'.$archive_subtitle.'</p>';
             get_search_form().'</div>';
         }
 
@@ -48,7 +48,7 @@
 
     </header>
 
-    <div class="entry-content margin-bottom:grid">
+    <div class="entry-content">
 
 
         <?php get_template_part( 'template-parts/content/post/post-thumbnail'); ?>
@@ -62,7 +62,7 @@
 
     </div>
 
-    <footer class="article-footer margin-bottom:grid">
+    <footer class="article-footer">
 
         <?php get_template_part( 'template-parts/content/category/category-tags'); ?>
 

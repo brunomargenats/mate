@@ -15,7 +15,7 @@ if ( ! function_exists( 'custom_mate_scripts_styles_footer' ) ) {
 			//wp_enqueue_style( 'new_style');
 
 			/* == CUSTOM JS FOR THIS THEME == */
-			wp_register_script( 'site_scripts', get_theme_file_uri( '/assets/js/scripts.js'), array(), MATE_VERSION, true);
+			wp_register_script( 'site_scripts', get_theme_file_uri( '/assets/js/scripts.min.js'), array(), MATE_VERSION, true);
 			wp_enqueue_script('site_scripts');
 
 	}
@@ -25,7 +25,7 @@ if ( ! function_exists( 'custom_mate_scripts_styles_footer' ) ) {
 
 
 /* == SCRIPTS AND STYLES LOADED IN HEADER == */
-/* //REMOVE THIS LINE AND LINE 48 TO ACTIVATE
+/* //REMOVE THIS LINE AND LINE 46 TO ACTIVATE
 
 if ( ! function_exists( 'custom_mate_scripts_styles' ) ) {
 
@@ -36,11 +36,11 @@ function custom_mate_scripts_styles() {
 
 		// == CUSTOM JS IN HEADER ==
 		//wp_enqueue_script('jquery');
-		//wp_register_script( 'custom_script', get_theme_file_uri( '/assets/js/scripts.js'), array(), MATE_VERSION, false);
+		//wp_register_script( 'custom_script', get_theme_file_uri( '/assets/js/scripts.min.js'), array(), MATE_VERSION, false);
 		//wp_enqueue_script('custom_script');
 
 	}
 	add_action( 'wp_enqueue_scripts', 'custom_mate_scripts_styles' );
 
 }
- // REMOVE THIS LINE AND LINE 29 TO ACTIVATE */
+ // REMOVE THIS LINE AND LINE 28 TO ACTIVATE */

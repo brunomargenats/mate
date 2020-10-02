@@ -33,10 +33,11 @@ $mate_custom_cf7_templates_only = TRUE; /* Stop editing if FALSE */
         if (!empty($mate_custom_cf7_styles)){
 
             add_filter( 'wpcf7_load_css', '__return_false' ); //Disable GF7 CSS
+            add_filter( 'wpcf7cf_load_css', '__return_false' );
 
             if ( ! function_exists( 'mate_custom_CF7_styles_register' ) ) {
                 function mate_custom_CF7_styles_register() {
-                            wp_register_style('mate_cf7_css', get_theme_file_uri( '/functions/plugins/contact-form-7/contact-form-7.css' ), array(), wp_get_theme( 'mate' )->get( 'Version' ));
+                            wp_register_style('mate_cf7_css', get_theme_file_uri( '/functions/plugins/contact-form-7/contact-form-7.min.css' ), array(), MATE_VERSION);
                     }
                 add_action( 'wp_enqueue_scripts', 'mate_custom_CF7_styles_register');
             }
@@ -75,7 +76,13 @@ $mate_custom_cf7_templates_only = TRUE; /* Stop editing if FALSE */
                 $current_template = get_page_template_slug( get_the_ID() );
 
                 if (!in_array($current_template, $mate_custom_cf7_templates, true)) { //Check if page template doesn't match contact.php (or others)
+                    add_filter( 'wpcf7_load_js', '__return_false' );
                     add_filter( 'wpcf7_load_css', '__return_false' ); // If NOT: Disable GF7 CSS
+                    // disable disable Conditional scripts and styles
+                    add_filter( 'wpcf7cf_load_js', '__return_false' );
+                    add_filter( 'wpcf7cf_load_css', '__return_false' );
+                    wp_dequeue_script('contact-form-7');
+                    wp_dequeue_style('contact-form-7');
                     wp_deregister_script( 'contact-form-7' );// If NOT: Disable GF7 SCRIPT
                     wp_deregister_style( 'contact-form-7' );// If NOT: Disable GF7 STYLE
                 }

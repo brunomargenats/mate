@@ -8,6 +8,7 @@
 /* DON'T TOUCH THIS -->
 */
 global $mate_debug_mode;
+global $mate_theme_color;
 global $mate_google_fonts;
 global $mate_responsive_navigation;
 global $mate_fixed_navigation;
@@ -18,7 +19,6 @@ global $mate_use_comments_in_pages;
 global $mate_gutenberg_default_config;
 global $mate_scrollbar_fix;
 global $mate_old_support;
-global $mate_smooth_scroll_script;
 /*
 <-- DON'T TOUCH THIS */
 
@@ -34,10 +34,13 @@ Use TRUE/FALSE or the options provided in the comments.
 /* ============ DEVELOPMENT ============ */
 
 /* == DEBUG MODE == */
-$mate_debug_mode = TRUE; /* Login as administrator and add ?debug=true to your URL to active this: https://yoursite.com/?debug=true */
+$mate_debug_mode = FALSE; /* Login as administrator and add ?debug=true to your URL to active this: https://yoursite.com/?debug=true */
 
 
 /* ============ OPTIONS ============ */
+
+/* == THEME COLOR == */
+$mate_theme_color = '#000000'; /* Replace FALSE with a color like this '#000000'. Theme colors only works in Chrome for mobile: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color */
 
 /* == GOOGLE FONTS == */
 $mate_google_fonts = FALSE; /* If TRUE, you have to configure your fonts on functions/google-fonts.php and variables.css (--font-display and --font-text)
@@ -79,9 +82,5 @@ $mate_gutenberg_default_config = TRUE; // TRUE if you want to change some Gutenb
 $mate_old_support = TRUE;
 
 
-/* == ADD A SMOOTH-SCROLL JAVASCRIPT TO ALL BROWSERS INSTEAD OF RELYING ON Scroll-behavior FOR SOME OF THEM ==  */
-$mate_smooth_scroll_script = FALSE; /*FALSE if you don't care about smooth-scrolling*/
-
-
 /* == FIX SCROLLBAR BUG WHEN USING ALIGNWIDE AND ALIGNFULL ==*/
-$mate_scrollbar_fix = FALSE; // False if you don't need this.
+$mate_scrollbar_fix = TRUE; // False if you don't need this.
